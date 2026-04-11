@@ -77,11 +77,11 @@ export async function getAuditLogs(filters?: {
   }
 
   if (filters?.startDate) {
-    logs = logs.filter((log) => log.timestamp >= filters.startDate);
+    logs = logs.filter((log) => log.timestamp >= filters.startDate!);
   }
 
   if (filters?.endDate) {
-    logs = logs.filter((log) => log.timestamp <= filters.endDate);
+    logs = logs.filter((log) => log.timestamp <= filters.endDate!);
   }
 
   if (filters?.limit) {

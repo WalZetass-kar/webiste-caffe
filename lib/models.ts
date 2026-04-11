@@ -251,7 +251,7 @@ export type AuditLogRecord = {
   entity: AuditEntity;
   entityId?: string;
   entityName?: string;
-  changes?: Record<string, { old: unknown; new: unknown }>;
+  changes?: Record<string, { old?: unknown; new?: unknown }>;
   ipAddress?: string;
   userAgent?: string;
   timestamp: string;
@@ -381,7 +381,7 @@ export const auditLogPayloadSchema = z.object({
   entity: z.enum(auditEntityOptions),
   entityId: z.string().optional(),
   entityName: z.string().optional(),
-  changes: z.record(z.object({ old: z.unknown(), new: z.unknown() })).optional(),
+  changes: z.record(z.object({ old: z.unknown().optional(), new: z.unknown().optional() })).optional(),
   ipAddress: z.string().optional(),
   userAgent: z.string().optional(),
 });
