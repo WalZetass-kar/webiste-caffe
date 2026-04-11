@@ -1,0 +1,273 @@
+[
+  {
+    "id": "7eecfe11-4162-4581-ba15-86781296210b",
+    "branchId": "branch-1",
+    "branchName": "CafeFlow Pekanbaru",
+    "orderCode": "INV-CAFE-051",
+    "customerName": "tes fitur",
+    "tableNumber": "04",
+    "status": "Pramusaji",
+    "paymentMethod": "Transfer",
+    "items": [
+      {
+        "id": "277a942d-9936-45b2-82a0-cc849a8f59ac",
+        "menuId": "1fc953ae-d6ce-491c-bdb4-6831cd56048e",
+        "menuName": "Vanilla Cheesecake 202604100332",
+        "quantity": 1,
+        "unitPrice": 28000
+      }
+    ],
+    "notes": "tes fitur",
+    "subtotal": 28000,
+    "serviceFee": 6000,
+    "total": 34000,
+    "createdAt": "2026-04-11T07:08:23.076Z",
+    "updatedAt": "2026-04-11T07:08:23.076Z"
+  },
+  {
+    "id": "0ac2bf02-ae03-4f20-93ae-6e8ee76a0514",
+    "branchId": "branch-1",
+    "branchName": "CafeFlow Pekanbaru",
+    "orderCode": "INV-CAFE-050",
+    "customerName": "aris",
+    "tableNumber": "01",
+    "status": "Pramusaji",
+    "paymentMethod": "Cash",
+    "items": [
+      {
+        "id": "712bb482-3bc4-4428-8591-91c7f56d38ff",
+        "menuId": "1fc953ae-d6ce-491c-bdb4-6831cd56048e",
+        "menuName": "Vanilla Cheesecake 202604100332",
+        "quantity": 1,
+        "unitPrice": 28000
+      },
+      {
+        "id": "b52314d8-2dc3-4073-b4e9-d608810c4617",
+        "menuId": "menu-5",
+        "menuName": "Smoked Beef Sando",
+        "quantity": 1,
+        "unitPrice": 42000
+      }
+    ],
+    "notes": "gula nya jangan banyak",
+    "subtotal": 70000,
+    "serviceFee": 6000,
+    "total": 76000,
+    "createdAt": "2026-04-10T05:17:34.908Z",
+    "updatedAt": "2026-04-10T05:17:34.908Z"
+  },
+  {
+    "id": "d0d6e0c4-1e6b-4186-b9c9-b98a864403cd",
+    "branchId": "branch-3",
+    "branchName": "CafeFlow Bandung",
+    "orderCode": "INV-CAFE-049",
+    "customerName": "Customer Dummy 3",
+    "tableNumber": "Test-3",
+    "status": "Pramusaji",
+    "paymentMethod": "Cash",
+    "items": [
+      {
+        "id": "2ff11e06-4740-4e47-9bbe-525ec065c625",
+        "menuId": "1fc953ae-d6ce-491c-bdb4-6831cd56048e",
+        "menuName": "Vanilla Cheesecake 202604100332",
+        "quantity": 1,
+        "unitPrice": 28000
+      }
+    ],
+    "notes": "Seed batch 202604100332",
+    "subtotal": 28000,
+    "serviceFee": 6000,
+    "total": 34000,
+    "createdAt": "2026-04-10T03:32:09.526Z",
+    "updatedAt": "2026-04-10T03:32:09.526Z"
+  },
+  {
+    "id": "2a016e25-cecd-488c-b2b3-126080fcbf58",
+    "branchId": "branch-2",
+    "branchName": "CafeFlow Jakarta",
+    "orderCode": "INV-CAFE-048",
+    "customerName": "Customer Dummy 2",
+    "tableNumber": "Test-2",
+    "status": "Pramusaji",
+    "paymentMethod": "QRIS",
+    "items": [
+      {
+        "id": "b55e26ba-7600-4bd3-899a-df884bb70636",
+        "menuId": "1f294691-ed2e-4b82-9551-c73236173a9b",
+        "menuName": "Club Sandwich 202604100332",
+        "quantity": 1,
+        "unitPrice": 38000
+      }
+    ],
+    "notes": "Seed batch 202604100332",
+    "subtotal": 38000,
+    "serviceFee": 6000,
+    "total": 44000,
+    "createdAt": "2026-04-10T03:32:09.482Z",
+    "updatedAt": "2026-04-10T03:32:09.482Z"
+  },
+  {
+    "id": "f28b5a99-a8d7-4e09-b53b-3086f73814bb",
+    "branchId": "branch-1",
+    "branchName": "CafeFlow Pekanbaru",
+    "orderCode": "INV-CAFE-047",
+    "customerName": "Customer Dummy 1",
+    "tableNumber": "Test-1",
+    "status": "Pramusaji",
+    "paymentMethod": "Cash",
+    "items": [
+      {
+        "id": "5f07a109-39e4-48a9-a0fc-9ed8b4b9fb82",
+        "menuId": "b1466eca-b020-48d2-9743-947632d3e8e0",
+        "menuName": "Honey Latte 202604100332",
+        "quantity": 1,
+        "unitPrice": 32000
+      }
+    ],
+    "notes": "Seed batch 202604100332",
+    "subtotal": 32000,
+    "serviceFee": 6000,
+    "total": 38000,
+    "createdAt": "2026-04-10T03:32:09.423Z",
+    "updatedAt": "2026-04-10T03:32:09.423Z"
+  },
+  {
+    "id": "b0adab5a-4fc0-4844-8899-7f3fa045673f",
+    "branchId": "branch-1",
+    "branchName": "CafeFlow Pekanbaru",
+    "orderCode": "INV-CAFE-046",
+    "customerName": "qw",
+    "tableNumber": "qw",
+    "status": "Pramusaji",
+    "paymentMethod": "QRIS",
+    "items": [
+      {
+        "id": "8c455d99-8d6f-40fc-8f07-6f0524a83854",
+        "menuId": "menu-1",
+        "menuName": "Es Kopi Susu Aren",
+        "quantity": 1,
+        "unitPrice": 28000
+      }
+    ],
+    "notes": "qw | Metode pembayaran: QRIS",
+    "subtotal": 28000,
+    "serviceFee": 6000,
+    "total": 34000,
+    "createdAt": "2026-04-07T09:28:48.547Z",
+    "updatedAt": "2026-04-07T09:28:48.547Z"
+  },
+  {
+    "id": "2129eda7-862c-496b-9ec9-1e2ea0e0fd8b",
+    "branchId": "branch-1",
+    "branchName": "CafeFlow Pekanbaru",
+    "orderCode": "INV-CAFE-045",
+    "customerName": "iwal",
+    "tableNumber": "2",
+    "status": "Pramusaji",
+    "paymentMethod": "Cash",
+    "items": [
+      {
+        "id": "50d49034-c0aa-4e47-9899-9b7a004a4747",
+        "menuId": "menu-1",
+        "menuName": "Es Kopi Susu Aren",
+        "quantity": 1,
+        "unitPrice": 28000
+      }
+    ],
+    "notes": "gula",
+    "subtotal": 28000,
+    "serviceFee": 6000,
+    "total": 34000,
+    "createdAt": "2026-04-07T09:15:09.519Z",
+    "updatedAt": "2026-04-07T09:15:09.519Z"
+  },
+  {
+    "id": "0bbc836c-ad22-4d9f-8dfa-29da928f94b1",
+    "branchId": "branch-1",
+    "branchName": "CafeFlow Pekanbaru",
+    "orderCode": "INV-CAFE-044",
+    "customerName": "sdsds",
+    "tableNumber": "sdss",
+    "status": "Pramusaji",
+    "paymentMethod": "Cash",
+    "items": [
+      {
+        "id": "837b677a-4c76-4247-8332-6751af51eecf",
+        "menuId": "menu-1",
+        "menuName": "Es Kopi Susu Aren",
+        "quantity": 1,
+        "unitPrice": 28000
+      },
+      {
+        "id": "6032df6e-793e-4e46-89af-e221131803da",
+        "menuId": "menu-2",
+        "menuName": "Croissant Butter",
+        "quantity": 1,
+        "unitPrice": 24000
+      }
+    ],
+    "notes": "sssd",
+    "subtotal": 52000,
+    "serviceFee": 6000,
+    "total": 58000,
+    "createdAt": "2026-04-07T08:51:59.359Z",
+    "updatedAt": "2026-04-07T08:51:59.359Z"
+  },
+  {
+    "id": "order-1",
+    "branchId": "branch-1",
+    "branchName": "CafeFlow Pekanbaru",
+    "orderCode": "INV-CAFE-042",
+    "customerName": "Kartika",
+    "tableNumber": "Meja 07",
+    "status": "Dapur",
+    "paymentMethod": "QRIS",
+    "items": [
+      {
+        "id": "order-item-1",
+        "menuId": "menu-1",
+        "menuName": "Es Kopi Susu Aren",
+        "quantity": 2,
+        "unitPrice": 28000
+      },
+      {
+        "id": "order-item-2",
+        "menuId": "menu-2",
+        "menuName": "Croissant Butter",
+        "quantity": 1,
+        "unitPrice": 24000
+      }
+    ],
+    "notes": "Less ice untuk kopi.",
+    "subtotal": 80000,
+    "serviceFee": 6000,
+    "total": 86000,
+    "createdAt": "2026-04-07T00:00:00.000Z",
+    "updatedAt": "2026-04-07T00:00:00.000Z"
+  },
+  {
+    "id": "order-2",
+    "branchId": "branch-1",
+    "branchName": "CafeFlow Pekanbaru",
+    "orderCode": "INV-CAFE-043",
+    "customerName": "Yoga",
+    "tableNumber": "Meja 03",
+    "status": "Pramusaji",
+    "paymentMethod": "Cash",
+    "items": [
+      {
+        "id": "order-item-3",
+        "menuId": "menu-3",
+        "menuName": "Matcha Cream Latte",
+        "quantity": 2,
+        "unitPrice": 32000
+      }
+    ],
+    "notes": "Pickup 10 menit lagi.",
+    "subtotal": 64000,
+    "serviceFee": 6000,
+    "total": 70000,
+    "createdAt": "2026-04-07T00:00:00.000Z",
+    "updatedAt": "2026-04-07T00:00:00.000Z"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "branch-1",
+    "name": "CafeFlow Pekanbaru",
+    "address": "Jl. Jenderal Sudirman No. 88, Pekanbaru",
+    "manager": "Salsa Putri",
+    "phoneNumber": "0761-334455",
+    "createdAt": "2026-04-07T00:00:00.000Z",
+    "updatedAt": "2026-04-07T00:00:00.000Z"
+  },
+  {
+    "id": "branch-2",
+    "name": "CafeFlow Jakarta",
+    "address": "Jl. Kemang Raya No. 12, Jakarta Selatan",
+    "manager": "Rizky Pratama",
+    "phoneNumber": "021-778899",
+    "createdAt": "2026-04-07T00:00:00.000Z",
+    "updatedAt": "2026-04-07T00:00:00.000Z"
+  },
+  {
+    "id": "branch-3",
+    "name": "CafeFlow Bandung",
+    "address": "Jl. Braga No. 24, Bandung",
+    "manager": "Nadia Lestari",
+    "phoneNumber": "022-556677",
+    "createdAt": "2026-04-07T00:00:00.000Z",
+    "updatedAt": "2026-04-07T00:00:00.000Z"
+  }
+]

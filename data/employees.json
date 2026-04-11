@@ -1,0 +1,62 @@
+[
+  {
+    "id": "9049d269-0763-4d8b-8d4f-76391e01bd5b",
+    "branchId": "branch-2",
+    "branchName": "CafeFlow Jakarta",
+    "employeeName": "Salsa Dummy 0332",
+    "position": "Barista",
+    "phoneNumber": "0812300332",
+    "email": "dummy-branch-2-0332@cafeflow.id",
+    "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80",
+    "createdAt": "2026-04-10T03:32:09.399Z",
+    "updatedAt": "2026-04-10T03:32:09.399Z"
+  },
+  {
+    "id": "221184fa-1573-434d-80bf-f5e1ce0a1b52",
+    "branchId": "branch-1",
+    "branchName": "CafeFlow Pekanbaru",
+    "employeeName": "Andi Dummy 0332",
+    "position": "Cashier",
+    "phoneNumber": "08123100332",
+    "email": "dummy-branch-1-0332@cafeflow.id",
+    "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80",
+    "createdAt": "2026-04-10T03:32:09.367Z",
+    "updatedAt": "2026-04-10T03:32:09.367Z"
+  },
+  {
+    "id": "employee-1",
+    "branchId": "branch-1",
+    "branchName": "CafeFlow Pekanbaru",
+    "employeeName": "Ayu Maharani",
+    "position": "Barista",
+    "phoneNumber": "081234567890",
+    "email": "ayu@cafeflow.id",
+    "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80",
+    "createdAt": "2026-04-07T00:00:00.000Z",
+    "updatedAt": "2026-04-07T00:00:00.000Z"
+  },
+  {
+    "id": "employee-2",
+    "branchId": "branch-1",
+    "branchName": "CafeFlow Pekanbaru",
+    "employeeName": "Rizal Hidayat",
+    "position": "Cashier",
+    "phoneNumber": "081298765432",
+    "email": "rizal@cafeflow.id",
+    "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=80",
+    "createdAt": "2026-04-07T00:00:00.000Z",
+    "updatedAt": "2026-04-07T00:00:00.000Z"
+  },
+  {
+    "id": "employee-3",
+    "branchId": "branch-1",
+    "branchName": "CafeFlow Pekanbaru",
+    "employeeName": "Salsa Putri",
+    "position": "Manager",
+    "phoneNumber": "081223344556",
+    "email": "salsa@cafeflow.id",
+    "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=1200&q=80",
+    "createdAt": "2026-04-07T00:00:00.000Z",
+    "updatedAt": "2026-04-07T00:00:00.000Z"
+  }
+]

@@ -1,0 +1,286 @@
+[
+  {
+    "id": "1fc953ae-d6ce-491c-bdb4-6831cd56048e",
+    "slug": "vanilla-cheesecake-202604100332-1fc953ae",
+    "name": "Vanilla Cheesecake 202604100332",
+    "category": "Dessert",
+    "price": 28000,
+    "description": "Cheesecake vanila ringan untuk melengkapi data dummy frontend dan dashboard.",
+    "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=1400&q=80",
+    "stock": 15,
+    "status": "Spesial",
+    "story": "Dessert batch simulasi untuk uji laporan dan order history.",
+    "rating": 4.9,
+    "prepTime": "4 min",
+    "pairing": "House latte",
+    "ingredients": [
+      "Cream Cheese",
+      "Butter",
+      "Sugar"
+    ],
+    "recipe": [],
+    "featured": false,
+    "createdAt": "2026-04-10T03:32:09.308Z",
+    "updatedAt": "2026-04-10T03:32:09.308Z"
+  },
+  {
+    "id": "1f294691-ed2e-4b82-9551-c73236173a9b",
+    "slug": "club-sandwich-202604100332-1f294691",
+    "name": "Club Sandwich 202604100332",
+    "category": "Food",
+    "price": 38000,
+    "description": "Sandwich hangat dengan roast chicken dan sayur segar untuk demo menu.",
+    "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1200&q=80",
+    "stock": 18,
+    "status": "Aktif",
+    "story": "Comfort food yang aman dipakai untuk dummy order.",
+    "rating": 4.7,
+    "prepTime": "9 min",
+    "pairing": "Iced americano",
+    "ingredients": [
+      "Chicken",
+      "Bread",
+      "Lettuce"
+    ],
+    "recipe": [],
+    "featured": false,
+    "createdAt": "2026-04-10T03:32:09.294Z",
+    "updatedAt": "2026-04-10T03:32:09.294Z"
+  },
+  {
+    "id": "b1466eca-b020-48d2-9743-947632d3e8e0",
+    "slug": "honey-latte-202604100332-b1466eca",
+    "name": "Honey Latte 202604100332",
+    "category": "Coffee",
+    "price": 32000,
+    "description": "Latte madu dengan profil rasa floral untuk testing data operasional.",
+    "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=1200&q=80",
+    "stock": 25,
+    "status": "Promo",
+    "story": "Seasonal coffee blend untuk simulasi batch data admin.",
+    "rating": 4.8,
+    "prepTime": "6 min",
+    "pairing": "Butter croissant",
+    "ingredients": [
+      "Coffee Beans",
+      "Fresh Milk",
+      "Honey"
+    ],
+    "recipe": [],
+    "featured": false,
+    "createdAt": "2026-04-10T03:32:09.277Z",
+    "updatedAt": "2026-04-10T03:32:09.277Z"
+  },
+  {
+    "id": "menu-1",
+    "slug": "es-kopi-susu-aren",
+    "name": "Es Kopi Susu Aren",
+    "category": "Coffee",
+    "price": 28000,
+    "description": "Espresso creamy dengan susu segar dan manis karamel dari gula aren.",
+    "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=1400&q=80",
+    "stock": 58,
+    "status": "Aktif",
+    "story": "Minuman signature yang seimbang, ringan, dan jadi favorit untuk jam sibuk pagi hingga sore.",
+    "rating": 4.9,
+    "prepTime": "6 min",
+    "pairing": "Paling cocok dengan butter croissant hangat.",
+    "ingredients": [
+      "Coffee Beans",
+      "Fresh Milk",
+      "Palm Sugar"
+    ],
+    "recipe": [
+      {
+        "id": "recipe-1",
+        "supplyId": "supply-1",
+        "ingredientName": "Coffee Beans",
+        "quantity": 18,
+        "usageUnit": "g"
+      },
+      {
+        "id": "recipe-2",
+        "supplyId": "supply-2",
+        "ingredientName": "Fresh Milk",
+        "quantity": 180,
+        "usageUnit": "ml"
+      },
+      {
+        "id": "recipe-3",
+        "supplyId": "supply-3",
+        "ingredientName": "Palm Sugar",
+        "quantity": 20,
+        "usageUnit": "g"
+      }
+    ],
+    "featured": true,
+    "createdAt": "2026-04-07T00:00:00.000Z",
+    "updatedAt": "2026-04-07T00:00:00.000Z"
+  },
+  {
+    "id": "menu-2",
+    "slug": "croissant-butter",
+    "name": "Croissant Butter",
+    "category": "Dessert",
+    "price": 24000,
+    "description": "Pastry berlapis yang renyah di luar dan lembut di bagian tengah.",
+    "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1400&q=80",
+    "stock": 21,
+    "status": "Promo",
+    "story": "Dipanggang fresh setiap pagi untuk menemani kopi dengan tekstur flaky yang ringan.",
+    "rating": 4.8,
+    "prepTime": "4 min",
+    "pairing": "Nikmat dipadukan dengan long black atau cappuccino.",
+    "ingredients": [
+      "Butter Croissant"
+    ],
+    "recipe": [
+      {
+        "id": "recipe-4",
+        "supplyId": "supply-4",
+        "ingredientName": "Butter Croissant",
+        "quantity": 1,
+        "usageUnit": "pcs"
+      }
+    ],
+    "featured": true,
+    "createdAt": "2026-04-07T00:00:00.000Z",
+    "updatedAt": "2026-04-07T00:00:00.000Z"
+  },
+  {
+    "id": "menu-3",
+    "slug": "matcha-cream-latte",
+    "name": "Matcha Cream Latte",
+    "category": "Drink",
+    "price": 32000,
+    "description": "Latte matcha creamy dengan finish manis yang lembut dan earthy.",
+    "image": "https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=1400&q=80",
+    "stock": 16,
+    "status": "Aktif",
+    "story": "Pilihan non-coffee premium dengan foam halus dan warna hijau yang clean.",
+    "rating": 4.8,
+    "prepTime": "5 min",
+    "pairing": "Enak dinikmati bersama honey toast atau lemon cake.",
+    "ingredients": [
+      "Matcha Powder",
+      "Fresh Milk"
+    ],
+    "recipe": [
+      {
+        "id": "recipe-5",
+        "supplyId": "supply-5",
+        "ingredientName": "Matcha Powder",
+        "quantity": 12,
+        "usageUnit": "g"
+      },
+      {
+        "id": "recipe-6",
+        "supplyId": "supply-2",
+        "ingredientName": "Fresh Milk",
+        "quantity": 200,
+        "usageUnit": "ml"
+      }
+    ],
+    "featured": true,
+    "createdAt": "2026-04-07T00:00:00.000Z",
+    "updatedAt": "2026-04-07T00:00:00.000Z"
+  },
+  {
+    "id": "menu-4",
+    "slug": "truffle-cream-pasta",
+    "name": "Truffle Cream Pasta",
+    "category": "Food",
+    "price": 54000,
+    "description": "Pasta creamy dengan aroma truffle yang kaya dan plating modern.",
+    "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=1400&q=80",
+    "stock": 12,
+    "status": "Spesial",
+    "story": "Menu comfort food untuk lunch crowd dengan rasa gurih, creamy, dan terasa premium.",
+    "rating": 4.7,
+    "prepTime": "12 min",
+    "pairing": "Pasangkan dengan sparkling yuzu tea untuk rasa yang lebih segar.",
+    "ingredients": [
+      "Fresh Pasta",
+      "Fresh Milk"
+    ],
+    "recipe": [
+      {
+        "id": "recipe-7",
+        "supplyId": "supply-6",
+        "ingredientName": "Fresh Pasta",
+        "quantity": 1,
+        "usageUnit": "pcs"
+      },
+      {
+        "id": "recipe-8",
+        "supplyId": "supply-2",
+        "ingredientName": "Fresh Milk",
+        "quantity": 150,
+        "usageUnit": "ml"
+      }
+    ],
+    "featured": true,
+    "createdAt": "2026-04-07T00:00:00.000Z",
+    "updatedAt": "2026-04-07T00:00:00.000Z"
+  },
+  {
+    "id": "menu-5",
+    "slug": "smoked-beef-sando",
+    "name": "Smoked Beef Sando",
+    "category": "Food",
+    "price": 42000,
+    "description": "Roti lembut dengan smoked beef, mustard mayo, dan acar segar.",
+    "image": "https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&w=1400&q=80",
+    "stock": 18,
+    "status": "Aktif",
+    "story": "Menu brunch cepat saji yang tetap nyaman untuk dine-in maupun takeaway.",
+    "rating": 4.8,
+    "prepTime": "8 min",
+    "pairing": "Cocok dengan iced americano atau peach tea.",
+    "ingredients": [
+      "Fresh Milk"
+    ],
+    "recipe": [
+      {
+        "id": "recipe-9",
+        "supplyId": "supply-2",
+        "ingredientName": "Fresh Milk",
+        "quantity": 60,
+        "usageUnit": "ml"
+      }
+    ],
+    "featured": false,
+    "createdAt": "2026-04-07T00:00:00.000Z",
+    "updatedAt": "2026-04-07T00:00:00.000Z"
+  },
+  {
+    "id": "menu-6",
+    "slug": "caramel-sea-salt-cheesecake",
+    "name": "Caramel Sea Salt Cheesecake",
+    "category": "Dessert",
+    "price": 36000,
+    "description": "Cheesecake lembut dengan caramel glaze dan sentuhan sea salt.",
+    "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=1400&q=80",
+    "stock": 14,
+    "status": "Aktif",
+    "story": "Dessert signature untuk penutup yang manis, creamy, dan tetap seimbang.",
+    "rating": 4.9,
+    "prepTime": "3 min",
+    "pairing": "Paling pas dengan espresso atau dirty latte.",
+    "ingredients": [
+      "Cream Cheese"
+    ],
+    "recipe": [
+      {
+        "id": "recipe-10",
+        "supplyId": "supply-7",
+        "ingredientName": "Cream Cheese",
+        "quantity": 120,
+        "usageUnit": "g"
+      }
+    ],
+    "featured": false,
+    "createdAt": "2026-04-07T00:00:00.000Z",
+    "updatedAt": "2026-04-07T00:00:00.000Z"
+  }
+]

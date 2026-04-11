@@ -1,0 +1,29 @@
+[
+  {
+    "id": "0d39aa03-2fcc-4da1-aba1-169aac73d473",
+    "customerName": "Ihwal",
+    "serviceRating": 5,
+    "foodRating": 5,
+    "comment": "tes fitur penilaian",
+    "createdAt": "2026-04-09T17:28:36.835Z",
+    "updatedAt": "2026-04-09T17:28:36.835Z"
+  },
+  {
+    "id": "rating-1",
+    "customerName": "Kartika",
+    "serviceRating": 5,
+    "foodRating": 4,
+    "comment": "Pelayanannya ramah dan kopinya enak. Akan balik lagi.",
+    "createdAt": "2026-04-07T00:00:00.000Z",
+    "updatedAt": "2026-04-07T00:00:00.000Z"
+  },
+  {
+    "id": "rating-2",
+    "customerName": "Bima",
+    "serviceRating": 4,
+    "foodRating": 5,
+    "comment": "Makanan datang cepat dan rasanya mantap.",
+    "createdAt": "2026-04-07T00:00:00.000Z",
+    "updatedAt": "2026-04-07T00:00:00.000Z"
+  }
+]

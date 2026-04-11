@@ -1,0 +1,12 @@
+{
+  "id": "payment-settings",
+  "qrisImage": "",
+  "qrisLabel": "CafeFlow QRIS",
+  "transferBank": "BCA",
+  "transferAccountNumber": "1234567890",
+  "transferAccountName": "PT CafeFlow Nusantara",
+  "cashNote": "Silakan lakukan pembayaran tunai di kasir setelah pesanan dikonfirmasi.",
+  "qrisNote": "Scan QRIS yang ditampilkan lalu tunjukkan bukti pembayaran ke kasir.",
+  "transferNote": "Lakukan transfer terlebih dahulu dan simpan bukti pembayaran untuk verifikasi.",
+  "updatedAt": "2026-04-07T00:00:00.000Z"
+}

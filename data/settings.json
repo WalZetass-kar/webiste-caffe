@@ -1,0 +1,47 @@
+[
+  {
+    "key": "logo_url",
+    "value": "",
+    "updatedAt": "2026-04-09T00:00:00.000Z"
+  },
+  {
+    "key": "cafe_name",
+    "value": "CafeFlow",
+    "updatedAt": "2026-04-09T00:00:00.000Z"
+  },
+  {
+    "key": "address",
+    "value": "Jl. Kopi No. 8, Jakarta",
+    "updatedAt": "2026-04-09T00:00:00.000Z"
+  },
+  {
+    "key": "phone",
+    "value": "+62 812 3456 7890",
+    "updatedAt": "2026-04-09T00:00:00.000Z"
+  },
+  {
+    "key": "email",
+    "value": "hello@cafeflow.id",
+    "updatedAt": "2026-04-09T00:00:00.000Z"
+  },
+  {
+    "key": "footer_text",
+    "value": "Premium public website, modern mobile ordering flow, dan sistem operasional cafe yang tetap kuat di belakang layar.",
+    "updatedAt": "2026-04-09T00:00:00.000Z"
+  },
+  {
+    "key": "instagram_url",
+    "value": "https://instagram.com/cafeflow.id",
+    "updatedAt": "2026-04-09T00:00:00.000Z"
+  },
+  {
+    "key": "tiktok_url",
+    "value": "https://tiktok.com/@cafeflow.id",
+    "updatedAt": "2026-04-09T00:00:00.000Z"
+  },
+  {
+    "key": "whatsapp_url",
+    "value": "https://wa.me/6281234567890",
+    "updatedAt": "2026-04-09T00:00:00.000Z"
+  }
+]

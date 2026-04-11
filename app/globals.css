@@ -1,0 +1,165 @@
+@import "flatpickr/dist/themes/material_blue.css";
+@import "react-quill-new/dist/quill.snow.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --cafe-primary: #c8a27c;
+  --cafe-secondary: #e8d8c4;
+  --cafe-accent: #8b6f47;
+  --cafe-background: #f7f5f2;
+  --cafe-surface: #fcfaf7;
+  --cafe-line: #ded2c3;
+  --cafe-text: #3a3a3a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: rgba(200, 162, 124, 0.28);
+  color: #3a3a3a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(200, 162, 124, 0.14), transparent 22%),
+    radial-gradient(circle at top right, rgba(232, 216, 196, 0.42), transparent 20%),
+    linear-gradient(180deg, #f7f5f2 0%, #f4efe8 100%);
+  color: var(--cafe-text);
+  font-family: var(--font-inter), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-playfair-display), serif;
+  letter-spacing: -0.02em;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 111, 71, 0.28);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.glass-panel {
+  @apply border shadow-glass backdrop-blur-xl;
+  border-color: rgba(232, 220, 207, 0.92);
+  background-color: rgba(252, 250, 247, 0.88);
+}
+
+.glass-muted {
+  @apply border shadow-soft backdrop-blur-md;
+  border-color: rgba(234, 223, 206, 0.92);
+  background-color: rgba(252, 250, 247, 0.72);
+}
+
+.soft-ring {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.45);
+}
+
+.cafe-panel {
+  @apply rounded-xl border shadow-md transition-shadow duration-300;
+  border-color: rgba(228, 216, 202, 0.92);
+  background-color: rgba(252, 250, 247, 0.92);
+}
+
+.cafe-panel:hover {
+  @apply shadow-lg;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-8;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+#nprogress,
+[data-radix-portal] {
+  position: relative;
+  z-index: 60;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes reveal-up {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-grain {
+  position: relative;
+}
+
+.page-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08), transparent 22%),
+    radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.06), transparent 25%),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+  mix-blend-mode: screen;
+  opacity: 0.6;
+}
+
+.animate-float-slow {
+  animation: float-slow 12s ease-in-out infinite;
+}
+
+.animate-reveal-up {
+  animation: reveal-up 0.85s ease-out both;
+}
