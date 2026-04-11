@@ -6,6 +6,7 @@ export default function AuditPage() {
   return (
     <div className="min-h-screen bg-cafe-background">
       <PageHeader
+        eyebrow="Audit & Export"
         title="Audit & Export"
         description="Pantau aktivitas sistem dan export data"
       />
