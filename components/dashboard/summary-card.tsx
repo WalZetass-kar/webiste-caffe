@@ -11,7 +11,7 @@ type SummaryCardProps = {
 
 export function SummaryCard({ title, value, change, detail, tone }: SummaryCardProps) {
   return (
-    <Card className={cn("relative overflow-hidden border-cafe-line/80 bg-gradient-to-br", tone)}>
+    <Card className={cn("relative overflow-hidden border-cafe-line/80 bg-gradient-to-br hover-lift animate-scale-in", tone)}>
       <div className="absolute right-0 top-0 h-24 w-24 rounded-full bg-white/45 blur-2xl" />
       <div className="relative">
         <p className="text-sm text-cafe-accent/72">{title}</p>

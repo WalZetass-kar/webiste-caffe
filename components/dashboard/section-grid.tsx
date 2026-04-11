@@ -26,7 +26,7 @@ function getHistoryTone(changeType: StockHistoryRecord["changeType"]): "green" |
 export function SectionGrid({ lowStockItems, stockHistory, employees, orders }: SectionGridProps) {
   return (
     <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-      <Card className="space-y-4 bg-cafe-surface/95">
+      <Card className="space-y-4 bg-cafe-surface/95 animate-fade-in animate-delay-100">
         <div>
           <p className="text-xs uppercase tracking-[0.3em] text-cafe-accent/65">Notification Panel</p>
           <h3 className="mt-1 text-lg font-semibold text-cafe-text">Auto Restock Alert</h3>
@@ -55,7 +55,7 @@ export function SectionGrid({ lowStockItems, stockHistory, employees, orders }: 
         </div>
       </Card>
 
-      <Card className="space-y-4 bg-cafe-surface/95">
+      <Card className="space-y-4 bg-cafe-surface/95 animate-fade-in animate-delay-200">
         <div>
           <p className="text-xs uppercase tracking-[0.3em] text-cafe-accent/65">Supply History</p>
           <h3 className="mt-1 text-lg font-semibold text-cafe-text">Perubahan stok terbaru</h3>
@@ -86,7 +86,7 @@ export function SectionGrid({ lowStockItems, stockHistory, employees, orders }: 
         </div>
       </Card>
 
-      <Card className="space-y-4 bg-cafe-surface/95">
+      <Card className="space-y-4 bg-cafe-surface/95 animate-fade-in animate-delay-300">
         <div>
           <p className="text-xs uppercase tracking-[0.3em] text-cafe-accent/65">Digital Receipt</p>
           <h3 className="mt-1 text-lg font-semibold text-cafe-text">Receipt terbaru dari order masuk</h3>
@@ -101,7 +101,7 @@ export function SectionGrid({ lowStockItems, stockHistory, employees, orders }: 
               <Link
                 key={item.id}
                 href={getReceiptLink(item.orderCode)}
-                className="block rounded-xl border border-cafe-line bg-cafe-secondary/24 p-3 shadow-sm transition hover:bg-[#f7eee4]"
+                className="block rounded-xl border border-cafe-line bg-cafe-secondary/24 p-3 shadow-sm transition-all duration-300 hover:bg-[#f7eee4] hover:-translate-y-1 hover:shadow-md"
               >
                 <div className="flex items-center justify-between gap-3">
                   <div>
@@ -121,7 +121,7 @@ export function SectionGrid({ lowStockItems, stockHistory, employees, orders }: 
         </div>
       </Card>
 
-      <Card className="space-y-4 bg-cafe-surface/95">
+      <Card className="space-y-4 bg-cafe-surface/95 animate-fade-in animate-delay-400">
         <div>
           <p className="text-xs uppercase tracking-[0.3em] text-cafe-accent/65">Staff</p>
           <h3 className="mt-1 text-lg font-semibold text-cafe-text">Tim yang Sedang Aktif</h3>

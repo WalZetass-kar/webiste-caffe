@@ -102,7 +102,7 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
   return (
     <div className="bg-[#f7f5f2] text-cafe-text">
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition duration-500 ${
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
           scrolled ? "bg-[#102126]/92 shadow-[0_22px_60px_rgba(6,12,14,0.28)] backdrop-blur-xl" : "bg-transparent"
         }`}
       >
@@ -119,18 +119,18 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
 
           <nav className="hidden items-center gap-7 text-xs uppercase tracking-[0.24em] text-white/75 lg:flex">
             {navItems.map((item) => (
-              <a key={item.href} href={item.href} className="transition hover:text-white">
+              <a key={item.href} href={item.href} className="transition-all duration-300 hover:text-white hover:tracking-[0.28em]">
                 {item.label}
               </a>
             ))}
-            <Link href="/dashboard" className="transition hover:text-white">
+            <Link href="/dashboard" className="transition-all duration-300 hover:text-white hover:tracking-[0.28em]">
               Dashboard
             </Link>
           </nav>
 
           <Link
             href="/order"
-            className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#d8a23d] px-5 py-3 text-sm font-semibold text-[#1a1c1d] transition hover:-translate-y-0.5 hover:bg-[#e0ab4a]"
+            className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#d8a23d] px-5 py-3 text-sm font-semibold text-[#1a1c1d] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e0ab4a] hover:shadow-lg active:scale-95"
           >
             Order Online
           </Link>
@@ -170,20 +170,20 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Link
                   href="/order"
-                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#d8a23d] px-6 py-3 text-sm font-semibold text-[#152024] transition hover:-translate-y-0.5 hover:bg-[#e0ab4a]"
+                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#d8a23d] px-6 py-3 text-sm font-semibold text-[#152024] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e0ab4a] hover:shadow-xl active:scale-95"
                 >
                   View Menu
                 </Link>
                 <Link
                   href="/order"
-                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/18 bg-white/8 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:-translate-y-0.5 hover:bg-white/14"
+                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/18 bg-white/8 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/14 hover:border-white/30 active:scale-95"
                 >
                   Order Online
                 </Link>
               </div>
               <div className="grid gap-3 sm:grid-cols-3">
-                {cafeStats.map((stat) => (
-                  <div key={stat.label} className="rounded-[28px] border border-white/12 bg-white/6 p-5 backdrop-blur-sm">
+                {cafeStats.map((stat, index) => (
+                  <div key={stat.label} className={`rounded-[28px] border border-white/12 bg-white/6 p-5 backdrop-blur-sm animate-scale-in animate-delay-${(index + 3) * 100}`}>
                     <p className="text-3xl font-semibold text-white">{stat.value}</p>
                     <p className="mt-2 text-sm text-white/62">{stat.label}</p>
                   </div>
@@ -245,8 +245,8 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
           </div>
 
           <div className="mt-16 grid gap-4 lg:grid-cols-3">
-            {serviceHighlights.map((item) => (
-              <div key={item.title} className="rounded-[28px] border border-white/10 bg-white/6 p-5 backdrop-blur-sm">
+            {serviceHighlights.map((item, index) => (
+              <div key={item.title} className={`rounded-[28px] border border-white/10 bg-white/6 p-5 backdrop-blur-sm hover-lift animate-fade-in animate-delay-${(index + 1) * 200}`}>
                 <p className="text-xs uppercase tracking-[0.28em] text-[#d8a23d]">{item.label}</p>
                 <h2 className="mt-3 text-2xl font-semibold text-white">{item.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-white/66">{item.description}</p>
@@ -266,16 +266,16 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
           </div>
           <Link
             href="/order"
-            className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#e3d6c6] bg-white px-5 py-3 text-sm font-semibold text-cafe-accent shadow-soft transition hover:-translate-y-0.5"
+            className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#e3d6c6] bg-white px-5 py-3 text-sm font-semibold text-cafe-accent shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md active:scale-95"
           >
             Explore Full Menu
           </Link>
         </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {featuredMenus.map((item) => (
+          {featuredMenus.map((item, index) => (
             <article
               key={item.id}
-              className="group overflow-hidden rounded-[32px] bg-white shadow-[0_18px_40px_rgba(126,89,57,0.12)] transition duration-300 hover:-translate-y-2"
+              className={`group overflow-hidden rounded-[32px] bg-white shadow-[0_18px_40px_rgba(126,89,57,0.12)] transition duration-300 hover:-translate-y-2 animate-scale-in animate-delay-${index * 100}`}
             >
               <div className="relative h-72 overflow-hidden">
                 <Image
@@ -300,7 +300,7 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
                   <p className="text-lg font-semibold text-cafe-accent">{formatCurrency(item.price)}</p>
                   <Link
                     href={`/order/${item.slug}`}
-                    className="inline-flex min-h-10 items-center justify-center rounded-full bg-[#1a292e] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#24383f]"
+                    className="inline-flex min-h-10 items-center justify-center rounded-full bg-[#1a292e] px-4 py-2 text-xs font-semibold text-white transition-all duration-300 hover:bg-[#24383f] hover:shadow-lg active:scale-95"
                   >
                     Order
                   </Link>
@@ -327,7 +327,7 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
           {recommendedMenus.map((item, index) => (
             <article
               key={item.id}
-              className="overflow-hidden rounded-[32px] border border-[#eadfce] bg-[#fffaf5] shadow-soft"
+              className={`overflow-hidden rounded-[32px] border border-[#eadfce] bg-[#fffaf5] shadow-soft hover-lift animate-fade-in animate-delay-${index * 100}`}
             >
               <div className="relative h-52 overflow-hidden">
                 <Image src={item.image} alt={item.name} fill className="object-cover" />
@@ -361,10 +361,10 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
 
       <section className="section-shell pb-20 sm:pb-24">
         <div className="grid gap-5 lg:grid-cols-4">
-          {menuCategories.map((category) => (
-            <article key={category.title} className="overflow-hidden rounded-[32px] bg-white shadow-soft">
-              <div className="relative h-48">
-                <Image src={category.image} alt={category.title} fill className="object-cover" />
+          {menuCategories.map((category, index) => (
+            <article key={category.title} className={`overflow-hidden rounded-[32px] bg-white shadow-soft hover-scale animate-scale-in animate-delay-${index * 100}`}>
+              <div className="relative h-48 overflow-hidden">
+                <Image src={category.image} alt={category.title} fill className="object-cover transition duration-500 group-hover:scale-110" />
               </div>
               <div className="space-y-3 p-5">
                 <div className="flex items-center justify-between gap-4">
@@ -380,7 +380,7 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
 
       <section id="about" className="bg-[#102126] py-20 text-white sm:py-24">
         <div className="section-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div className="relative min-h-[420px] overflow-hidden rounded-[36px]">
+          <div className="relative min-h-[420px] overflow-hidden rounded-[36px] animate-slide-in-left">
             <Image
               src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80"
               alt="Cafe interior"
@@ -393,7 +393,7 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
               <p className="mt-3 font-serif text-3xl">Roasted for balance, served with warmth.</p>
             </div>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-6 animate-slide-in-right">
             <p className="text-xs uppercase tracking-[0.34em] text-[#d8a23d]">About {settings.cafeName}</p>
             <h2 className="max-w-3xl text-4xl font-semibold leading-tight text-white sm:text-5xl">
               Built around premium coffee, quiet luxury interiors, and a smoother ordering rhythm.
@@ -432,7 +432,7 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
           {galleryImages.map((image, index) => (
             <article
               key={image.title}
-              className={`group overflow-hidden rounded-[34px] bg-white shadow-soft ${
+              className={`group overflow-hidden rounded-[34px] bg-white shadow-soft hover-lift animate-fade-in animate-delay-${index * 100} ${
                 index === 1 ? "md:col-span-2" : ""
               }`}
             >
@@ -467,8 +467,8 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
         </div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {ratings.length > 0
-              ? ratings.slice(0, 3).map((rating) => (
-                  <article key={rating.id} className="rounded-[32px] bg-white p-6 shadow-soft">
+              ? ratings.slice(0, 3).map((rating, index) => (
+                  <article key={rating.id} className={`rounded-[32px] bg-white p-6 shadow-soft hover-lift animate-scale-in animate-delay-${index * 100}`}>
                     <div className="flex items-center justify-between gap-4">
                       <div>
                         <p className="text-xl font-semibold text-cafe-text">{rating.customerName}</p>
@@ -481,8 +481,8 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
                     <p className="mt-5 text-sm leading-8 text-cafe-accent/78">{rating.comment || "Pelanggan tidak menambahkan komentar."}</p>
                   </article>
                 ))
-              : testimonials.map((testimonial) => (
-                  <article key={testimonial.name} className="rounded-[32px] bg-white p-6 shadow-soft">
+              : testimonials.map((testimonial, index) => (
+                  <article key={testimonial.name} className={`rounded-[32px] bg-white p-6 shadow-soft hover-lift animate-scale-in animate-delay-${index * 100}`}>
                     <div className="flex items-center justify-between gap-4">
                       <div>
                         <p className="text-xl font-semibold text-cafe-text">{testimonial.name}</p>

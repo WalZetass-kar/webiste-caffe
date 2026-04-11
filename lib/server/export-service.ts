@@ -68,7 +68,7 @@ export function exportMenusToCSV(menus: MenuRecord[]): string {
   return arrayToCSV(headers, rows);
 }
 
-export function exportSuppliesTo CSV(supplies: SupplyRecord[]): string {
+export function exportSuppliesToCSV(supplies: SupplyRecord[]): string {
   const headers = [
     "ID",
     "Cabang",
