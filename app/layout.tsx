@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { cookies } from "next/headers";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Poppins, Lora } from "next/font/google";
 import "./globals.css";
 import { ChartProvider } from "@/components/providers/chart-provider";
 import { FontAwesomeProvider } from "@/components/providers/fontawesome-provider";
@@ -13,15 +13,17 @@ import { ToastProvider } from "@/components/providers/toast-provider";
 import { normalizeUserRole } from "@/lib/auth/roles";
 import { getCafeSettings } from "@/lib/server/settings-store";
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
-const playfairDisplay = Playfair_Display({
+const lora = Lora({
   subsets: ["latin"],
-  variable: "--font-playfair-display",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-lora",
   display: "swap",
 });
 
@@ -53,7 +55,7 @@ export default async function RootLayout({
 
   return (
     <html lang="id">
-      <body className={`${inter.variable} ${playfairDisplay.variable} bg-cafe-background font-sans text-cafe-text antialiased`}>
+      <body className={`${poppins.variable} ${lora.variable} bg-cafe-background font-sans text-cafe-text antialiased`}>
         <SettingsProvider initialSettings={initialSettings}>
           <RoleProvider initialRole={initialRole}>
             <ToastProvider>

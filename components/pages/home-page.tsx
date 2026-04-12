@@ -141,17 +141,32 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
         id="home"
         className="page-grain relative isolate min-h-screen overflow-hidden bg-[#0c1a1f] text-white"
       >
-        <Image
-          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1800&q=80"
-          alt="Barista pouring coffee"
-          fill
-          priority
-          className="object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(6,14,16,0.92)_18%,rgba(9,22,27,0.85)_48%,rgba(7,16,18,0.74)_100%)]" />
-        <div className="absolute inset-y-0 left-0 w-full bg-[radial-gradient(circle_at_20%_20%,rgba(200,162,124,0.22),transparent_22%)]" />
+        {/* Background Video */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="absolute inset-0 h-full w-full object-cover opacity-30"
+            poster="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1800&q=80"
+          >
+            <source
+              src="https://cdn.pixabay.com/video/2023/05/02/160547-822902404_large.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="https://videos.pexels.com/video-files/3044127/3044127-uhd_2560_1440_25fps.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        
+        <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(6,14,16,0.92)_18%,rgba(9,22,27,0.85)_48%,rgba(7,16,18,0.74)_100%)] z-[1]" />
+        <div className="absolute inset-y-0 left-0 w-full bg-[radial-gradient(circle_at_20%_20%,rgba(200,162,124,0.22),transparent_22%)] z-[1]" />
 
-        <div className="section-shell relative flex min-h-screen flex-col justify-center pb-16 pt-32">
+        <div className="section-shell relative flex min-h-screen flex-col justify-center pb-16 pt-32 z-[2]">
           <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div className="animate-reveal-up space-y-8">
               <Badge tone="cream" className="border-[#d8a23d]/40 bg-[#d8a23d]/10 px-4 py-1.5 text-[#f6d7a0]">

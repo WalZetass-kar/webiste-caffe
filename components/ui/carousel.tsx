@@ -20,8 +20,8 @@ export function Carousel({ slides }: CarouselProps) {
 
   return (
     <div className="space-y-4">
-      <div className="relative overflow-hidden rounded-[32px] border border-white/70 bg-coffee-glow p-6 shadow-glass sm:p-8">
-        <div className="absolute inset-y-0 right-0 hidden w-1/3 bg-grain opacity-70 lg:block" />
+      <div className="relative overflow-hidden rounded-[32px] border border-[#9F8B6C]/30 bg-gradient-to-br from-[#F5EFE7] to-[#EDE4D8] p-6 shadow-lg sm:p-8">
+        <div className="absolute inset-y-0 right-0 hidden w-1/3 bg-gradient-to-l from-[#9F8B6C]/5 to-transparent lg:block" />
         {slides.map((slide, slideIndex) => (
           <div
             key={slide.title}
@@ -30,9 +30,9 @@ export function Carousel({ slides }: CarouselProps) {
               slideIndex === index ? "opacity-100" : "absolute inset-0 opacity-0",
             )}
           >
-            <p className="text-xs uppercase tracking-[0.32em] text-cafe-accent/70">Highlight</p>
-            <h3 className="mt-3 max-w-2xl text-3xl font-semibold text-cafe-text sm:text-4xl">{slide.title}</h3>
-            <p className="mt-3 max-w-xl text-sm leading-7 text-cafe-accent/80 sm:text-base">{slide.subtitle}</p>
+            <p className="text-xs uppercase tracking-[0.32em] text-[#6B5D4F]">Highlight</p>
+            <h3 className="mt-3 max-w-2xl text-3xl font-semibold text-[#3D3428] sm:text-4xl">{slide.title}</h3>
+            <p className="mt-3 max-w-xl text-sm leading-7 text-[#6B5D4F] sm:text-base">{slide.subtitle}</p>
           </div>
         ))}
       </div>
@@ -41,9 +41,10 @@ export function Carousel({ slides }: CarouselProps) {
           <button
             key={slide.title}
             onClick={() => setIndex(slideIndex)}
+            aria-label={`Go to slide ${slideIndex + 1}`}
             className={cn(
-              "h-2 rounded-full transition-all",
-              slideIndex === index ? "w-10 bg-cafe-accent" : "w-4 bg-cafe-primary/35",
+              "h-2 rounded-full transition-all duration-300",
+              slideIndex === index ? "w-10 bg-[#9F8B6C]" : "w-4 bg-[#9F8B6C]/30 hover:bg-[#9F8B6C]/50",
             )}
           />
         ))}

@@ -49,13 +49,13 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
   const series = createSeries(orders);
 
   return (
-    <Card className="h-full bg-cafe-surface/95">
+    <Card className="h-full bg-[#F5EFE7] border-[#9F8B6C]/30">
       <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-cafe-accent/65">Laporan Penjualan</p>
-          <h3 className="mt-1 text-lg font-semibold text-cafe-text">Tren penjualan 7 hari terakhir</h3>
+          <p className="text-xs uppercase tracking-[0.3em] text-[#6B5D4F]">Laporan Penjualan</p>
+          <h3 className="mt-1 text-lg font-semibold text-[#3D3428]">Tren penjualan 7 hari terakhir</h3>
         </div>
-        <div className="rounded-lg border border-cafe-line bg-cafe-secondary/25 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-cafe-accent/72 shadow-sm">
+        <div className="rounded-lg border border-[#9F8B6C]/30 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B5D4F] shadow-sm">
           {branchLabel}
         </div>
       </div>
@@ -92,7 +92,7 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
                 position: "top",
                 labels: {
                   usePointStyle: true,
-                  color: "#6d5a45",
+                  color: "#3D3428",
                 },
               },
             },
@@ -102,7 +102,7 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
                   display: false,
                 },
                 ticks: {
-                  color: "#7d6a55",
+                  color: "#6B5D4F",
                 },
               },
               currency: {
@@ -110,10 +110,10 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
                 position: "left",
                 ticks: {
                   callback: (value) => formatCompactNumber(Number(value)),
-                  color: "#7d6a55",
+                  color: "#6B5D4F",
                 },
                 grid: {
-                  color: "rgba(200,162,124,0.18)",
+                  color: "rgba(159,139,108,0.15)",
                 },
               },
               count: {
@@ -122,7 +122,7 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
                 beginAtZero: true,
                 ticks: {
                   precision: 0,
-                  color: "#9b8669",
+                  color: "#8B7D6F",
                 },
                 grid: {
                   drawOnChartArea: false,

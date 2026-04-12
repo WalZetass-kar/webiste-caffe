@@ -102,14 +102,14 @@ export function DashboardPageView({
       value: formatCurrency(grossSales),
       change: `${filteredOrders.length} order tercatat untuk ${branchLabel}`,
       detail: "Data order live",
-      tone: "from-[#fcfaf7] via-[#f4ece3] to-[#e8d8c4]",
+      tone: "from-white to-[#F7F5F2]",
     },
     {
       title: "Open Orders",
       value: String(openOrders),
       change: `${filteredOrders.filter((order) => order.status === "Dapur").length} order aktif di kitchen`,
       detail: "Perlu diproses",
-      tone: "from-[#faf6f1] via-[#f2e8dc] to-[#e5d2bc]",
+      tone: "from-white to-[#E8DDD3]",
     },
     {
       title: "Low Stock",
@@ -119,21 +119,21 @@ export function DashboardPageView({
           ? `${filteredLowStockItems[0].materialName} perlu restock`
           : "Semua bahan aman",
       detail: "Alert inventori",
-      tone: "from-[#fcf8f3] via-[#f3e6da] to-[#ead6c4]",
+      tone: "from-white to-[#F7F5F2]",
     },
     {
       title: "Present Today",
       value: String(presentCount),
       change: `${Math.max(filteredEmployees.length - presentCount, 0)} employee belum check in`,
       detail: "Attendance summary",
-      tone: "from-[#fbf8f4] via-[#f1e7da] to-[#dfccb6]",
+      tone: "from-white to-[#E8DDD3]",
     },
     {
       title: "Late Employees",
       value: String(lateCount),
       change: lateCount > 0 ? "Perlu follow up shift pagi" : "Kedisiplinan hadir stabil",
       detail: "Kehadiran cabang",
-      tone: "from-[#fcfaf6] via-[#f4ebdf] to-[#ead8c7]",
+      tone: "from-white to-[#F7F5F2]",
     },
     {
       title: "Cafe Rating",
@@ -143,7 +143,7 @@ export function DashboardPageView({
           ? `${ratingsCount} penilaian pelanggan untuk ${branchLabel}`
           : "Belum ada penilaian pelanggan",
       detail: "Average customer experience",
-      tone: "from-[#fcfaf7] via-[#f5ede4] to-[#e9dccd]",
+      tone: "from-white to-[#E8DDD3]",
     },
   ];
 
@@ -165,22 +165,22 @@ export function DashboardPageView({
           ]}
         />
 
-        <Card className="bg-cafe-surface/95">
+        <Card className="starbucks-card">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-cafe-accent/65">Branch analytics</p>
-              <h2 className="mt-2 text-2xl font-semibold text-cafe-text">
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#00704A]">Branch analytics</p>
+              <h2 className="mt-2 text-2xl font-bold text-[#1E3932]">
                 Filter dashboard berdasarkan lokasi operasional
               </h2>
-              <p className="mt-3 max-w-3xl text-sm leading-7 text-cafe-accent/78">
+              <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#6B5D52]">
                 Gunakan filter ini untuk melihat order, sales, inventory alert, staff, dan attendance summary per
                 branch.
               </p>
             </div>
             <div className="w-full lg:w-72">
-              <label className="mb-2 block text-xs uppercase tracking-[0.22em] text-cafe-accent/60">Branch filter</label>
+              <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-[#6B5D52]">Branch filter</label>
               <select
-                className={selectClassName}
+                className="starbucks-input w-full"
                 value={selectedBranchId}
                 onChange={(event) => setSelectedBranchId(event.target.value)}
               >

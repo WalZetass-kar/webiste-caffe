@@ -7,13 +7,23 @@
 
 :root {
   color-scheme: light;
-  --cafe-primary: #c8a27c;
-  --cafe-secondary: #e8d8c4;
-  --cafe-accent: #8b6f47;
-  --cafe-background: #f7f5f2;
-  --cafe-surface: #fcfaf7;
-  --cafe-line: #ded2c3;
-  --cafe-text: #3a3a3a;
+  /* Starbucks-Inspired Color Palette */
+  --starbucks-dark: #1E3932;
+  --starbucks-green: #00704A;
+  --starbucks-cream: #F7F5F2;
+  --starbucks-beige: #E8DDD3;
+  --starbucks-latte: #D4C5B9;
+  --starbucks-accent: #00A862;
+  --starbucks-gold: #CBA258;
+  
+  /* Semantic Colors */
+  --cafe-primary: #1E3932;
+  --cafe-secondary: #E8DDD3;
+  --cafe-accent: #00704A;
+  --cafe-background: #F7F5F2;
+  --cafe-surface: #FFFFFF;
+  --cafe-line: #D4C5B9;
+  --cafe-text: #1E3932;
 }
 
 * {
@@ -21,8 +31,8 @@
 }
 
 *::selection {
-  background: rgba(200, 162, 124, 0.28);
-  color: #3a3a3a;
+  background: rgba(0, 112, 74, 0.2);
+  color: #1E3932;
 }
 
 html {
@@ -32,13 +42,12 @@ html {
 
 body {
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top left, rgba(200, 162, 124, 0.14), transparent 22%),
-    radial-gradient(circle at top right, rgba(232, 216, 196, 0.42), transparent 20%),
-    linear-gradient(180deg, #f7f5f2 0%, #f4efe8 100%);
+  background: linear-gradient(135deg, #F7F5F2 0%, #E8DDD3 100%);
   color: var(--cafe-text);
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-poppins), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -47,8 +56,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-playfair-display), serif;
+  font-family: var(--font-lora), Georgia, serif;
   letter-spacing: -0.02em;
+  color: #1E3932;
+  font-weight: 600;
 }
 
 button,
@@ -64,7 +75,7 @@ select {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(139, 111, 71, 0.28);
+  background: rgba(30, 57, 50, 0.3);
   border-radius: 999px;
 }
 
@@ -72,30 +83,32 @@ select {
   background: transparent;
 }
 
+/* Premium Card Styles */
 .glass-panel {
-  @apply border shadow-glass backdrop-blur-xl;
-  border-color: rgba(232, 220, 207, 0.92);
-  background-color: rgba(252, 250, 247, 0.88);
+  @apply border shadow-lg backdrop-blur-xl;
+  border-color: rgba(212, 197, 185, 0.4);
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 .glass-muted {
-  @apply border shadow-soft backdrop-blur-md;
-  border-color: rgba(234, 223, 206, 0.92);
-  background-color: rgba(252, 250, 247, 0.72);
+  @apply border shadow-md backdrop-blur-md;
+  border-color: rgba(212, 197, 185, 0.3);
+  background-color: rgba(247, 245, 242, 0.9);
 }
 
 .soft-ring {
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
 .cafe-panel {
-  @apply rounded-xl border shadow-md transition-shadow duration-300;
-  border-color: rgba(228, 216, 202, 0.92);
-  background-color: rgba(252, 250, 247, 0.92);
+  @apply rounded-2xl border shadow-md transition-all duration-300;
+  border-color: rgba(212, 197, 185, 0.4);
+  background-color: rgba(255, 255, 255, 0.98);
 }
 
 .cafe-panel:hover {
-  @apply shadow-lg;
+  @apply shadow-xl;
+  transform: translateY(-2px);
 }
 
 .section-shell {
@@ -106,10 +119,29 @@ select {
   text-wrap: balance;
 }
 
+/* Prevent text overflow */
+.text-truncate {
+  @apply truncate;
+}
+
+.text-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 a,
 button {
   -webkit-tap-highlight-color: transparent;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button:active {
@@ -118,7 +150,7 @@ button:active {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid rgba(200, 162, 124, 0.5);
+  outline: 2px solid rgba(0, 112, 74, 0.5);
   outline-offset: 2px;
 }
 
@@ -128,6 +160,7 @@ button:focus-visible {
   z-index: 60;
 }
 
+/* Animations */
 @keyframes float-slow {
   0%,
   100% {
@@ -210,11 +243,11 @@ button:focus-visible {
 @keyframes pulse-glow {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(200, 162, 124, 0.4);
+    box-shadow: 0 0 0 0 rgba(0, 112, 74, 0.4);
   }
 
   50% {
-    box-shadow: 0 0 0 8px rgba(200, 162, 124, 0);
+    box-shadow: 0 0 0 8px rgba(0, 112, 74, 0);
   }
 }
 
@@ -343,4 +376,27 @@ button:focus-visible {
 
 .image-zoom-hover:hover img {
   transform: scale(1.08);
+}
+
+/* Starbucks-style premium effects */
+.starbucks-card {
+  @apply rounded-2xl border border-[#D4C5B9]/40 bg-white shadow-lg transition-all duration-300;
+}
+
+.starbucks-card:hover {
+  @apply shadow-2xl;
+  transform: translateY(-4px);
+}
+
+.starbucks-button {
+  @apply rounded-full bg-[#00704A] px-6 py-3 font-semibold text-white shadow-md transition-all duration-300;
+}
+
+.starbucks-button:hover {
+  @apply bg-[#00A862] shadow-lg;
+  transform: translateY(-2px);
+}
+
+.starbucks-input {
+  @apply rounded-xl border border-[#D4C5B9] bg-white px-4 py-3 text-[#1E3932] transition-all duration-200 focus:border-[#00704A] focus:ring-2 focus:ring-[#00704A]/20;
 }
