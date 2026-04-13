@@ -16,7 +16,7 @@ type Activity = {
   title: string;
   description: string;
   timestamp: string;
-  icon: JSX.Element;
+  icon: React.ReactNode;
   color: string;
 };
 
@@ -43,18 +43,19 @@ export function RecentActivities({ orders, stockHistory, attendance }: RecentAct
 
     // Add recent stock changes
     stockHistory.slice(0, 2).forEach((stock) => {
+      const isRestock = stock.changeType === "Restock";
       result.push({
         id: `stock-${stock.id}`,
         type: "stock",
-        title: stock.type === "in" ? "Restock Bahan" : "Penggunaan Bahan",
-        description: `${stock.materialName} ${stock.type === "in" ? "+" : "-"}${stock.quantity} ${stock.unit}`,
-        timestamp: stock.createdAt,
+        title: isRestock ? "Restock Bahan" : "Penggunaan Bahan",
+        description: `${stock.materialName} ${isRestock ? "+" : "-"}${stock.quantityChanged} ${stock.unit}`,
+        timestamp: stock.date,
         icon: (
           <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
           </svg>
         ),
-        color: stock.type === "in" ? "from-[#CBA258] to-[#D4A574]" : "from-[#6B5D52] to-[#8B7D72]",
+        color: isRestock ? "from-[#CBA258] to-[#D4A574]" : "from-[#6B5D52] to-[#8B7D72]",
       });
     });
 

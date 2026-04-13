@@ -24,12 +24,12 @@ export function TopSellingItems({ orders }: TopSellingItemsProps) {
         const existing = salesMap.get(item.menuName);
         if (existing) {
           existing.quantity += item.quantity;
-          existing.revenue += item.price * item.quantity;
+          existing.revenue += item.unitPrice * item.quantity;
         } else {
           salesMap.set(item.menuName, {
             menuName: item.menuName,
             quantity: item.quantity,
-            revenue: item.price * item.quantity,
+            revenue: item.unitPrice * item.quantity,
           });
         }
       });
