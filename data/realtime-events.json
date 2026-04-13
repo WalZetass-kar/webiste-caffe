@@ -1,5 +1,50 @@
 [
   {
+    "id": "d9a8d511-b876-4f26-8f60-495f93be7e24",
+    "type": "stock",
+    "tone": "warning",
+    "title": "Stok Matcha Powder menipis",
+    "message": "Stok Matcha Powder tinggal 1.8 kg di CafeFlow Pekanbaru.",
+    "href": "/supply",
+    "createdAt": "2026-04-13T13:53:11.831Z"
+  },
+  {
+    "id": "a2216fd8-4c1d-4d45-8c80-9d288f834763",
+    "type": "stock",
+    "tone": "warning",
+    "title": "Stok Palm Sugar menipis",
+    "message": "Stok Palm Sugar tinggal 3.44 kg di CafeFlow Pekanbaru.",
+    "href": "/supply",
+    "createdAt": "2026-04-13T13:53:11.766Z"
+  },
+  {
+    "id": "cc032b7e-7450-4b43-8cca-d92707c6afa7",
+    "type": "stock",
+    "tone": "warning",
+    "title": "Stok Coffee Beans menipis",
+    "message": "Stok Coffee Beans tinggal 3.946 kg di CafeFlow Pekanbaru.",
+    "href": "/supply",
+    "createdAt": "2026-04-13T13:53:11.755Z"
+  },
+  {
+    "id": "85f12edf-dd76-4962-8070-f6cb87a8ff82",
+    "type": "payment",
+    "tone": "success",
+    "title": "Pembayaran INV-CAFE-052 berhasil",
+    "message": "Metode Cash dipilih untuk total 72.000.",
+    "href": "/receipt/INV-CAFE-052",
+    "createdAt": "2026-04-13T13:53:11.743Z"
+  },
+  {
+    "id": "c414d767-438f-45ec-a585-0f7422190fe9",
+    "type": "order",
+    "tone": "info",
+    "title": "Order INV-CAFE-052 berhasil masuk",
+    "message": "Pesanan baru dari fahri tercatat untuk CafeFlow Pekanbaru.",
+    "href": "/receipt/INV-CAFE-052",
+    "createdAt": "2026-04-13T13:53:11.730Z"
+  },
+  {
     "id": "880612da-a2ea-4df6-b888-96da880d1dbd",
     "type": "stock",
     "tone": "warning",

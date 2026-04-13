@@ -8,6 +8,11 @@ import { Badge } from "@/components/ui/badge";
 import type { MenuRecord, RecommendedMenuRecord, RatingRecord } from "@/lib/models";
 import { cafeStats, menuCategories, serviceHighlights, testimonials } from "@/lib/data";
 import { formatCurrency } from "@/lib/utils";
+import { TechStack } from "@/components/sections/tech-stack";
+import { TemplateFeatures } from "@/components/sections/template-features";
+import { DemoCredentials } from "@/components/sections/demo-credentials";
+import { TrustBadges } from "@/components/sections/trust-badges";
+import { FAQ } from "@/components/sections/faq";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -535,6 +540,16 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
             </p>
           </div>
         </section>
+
+      <TechStack />
+
+      <TemplateFeatures />
+
+      <DemoCredentials />
+
+      <TrustBadges />
+
+      <FAQ />
 
       <footer id="contact" className="bg-[#0f1d22] py-16 text-white">
 

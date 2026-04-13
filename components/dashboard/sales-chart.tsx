@@ -49,13 +49,13 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
   const series = createSeries(orders);
 
   return (
-    <Card className="h-full bg-[#F5EFE7] border-[#9F8B6C]/30">
+    <Card className="h-full starbucks-card">
       <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-[#6B5D4F]">Laporan Penjualan</p>
-          <h3 className="mt-1 text-lg font-semibold text-[#3D3428]">Tren penjualan 7 hari terakhir</h3>
+          <p className="text-xs uppercase tracking-[0.3em] text-[#00704A]">Laporan Penjualan</p>
+          <h3 className="mt-1 text-lg font-semibold text-[#1E3932]">Tren penjualan 7 hari terakhir</h3>
         </div>
-        <div className="rounded-lg border border-[#9F8B6C]/30 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B5D4F] shadow-sm">
+        <div className="rounded-lg border border-[#D4C5B9]/40 bg-[#F7F5F2] px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#00704A] shadow-sm">
           {branchLabel}
         </div>
       </div>
@@ -67,8 +67,8 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
               {
                 label: "Gross Sales",
                 data: series.map((item) => item.sales),
-                borderColor: "#8b6f47",
-                backgroundColor: "rgba(200,162,124,0.16)",
+                borderColor: "#00704A",
+                backgroundColor: "rgba(0, 112, 74, 0.1)",
                 fill: true,
                 tension: 0.35,
                 yAxisID: "currency",
@@ -76,8 +76,8 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
               {
                 label: "Orders",
                 data: series.map((item) => item.orders),
-                borderColor: "#c8a27c",
-                backgroundColor: "rgba(232,216,196,0.22)",
+                borderColor: "#00A862",
+                backgroundColor: "rgba(0, 168, 98, 0.15)",
                 fill: false,
                 tension: 0.35,
                 yAxisID: "count",
@@ -92,7 +92,11 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
                 position: "top",
                 labels: {
                   usePointStyle: true,
-                  color: "#3D3428",
+                  color: "#1E3932",
+                  font: {
+                    family: "Poppins, sans-serif",
+                    size: 12,
+                  },
                 },
               },
             },
@@ -102,7 +106,10 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
                   display: false,
                 },
                 ticks: {
-                  color: "#6B5D4F",
+                  color: "#00704A",
+                  font: {
+                    family: "Poppins, sans-serif",
+                  },
                 },
               },
               currency: {
@@ -110,10 +117,13 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
                 position: "left",
                 ticks: {
                   callback: (value) => formatCompactNumber(Number(value)),
-                  color: "#6B5D4F",
+                  color: "#00704A",
+                  font: {
+                    family: "Poppins, sans-serif",
+                  },
                 },
                 grid: {
-                  color: "rgba(159,139,108,0.15)",
+                  color: "rgba(212, 197, 185, 0.3)",
                 },
               },
               count: {
@@ -122,7 +132,10 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
                 beginAtZero: true,
                 ticks: {
                   precision: 0,
-                  color: "#8B7D6F",
+                  color: "#1E3932",
+                  font: {
+                    family: "Poppins, sans-serif",
+                  },
                 },
                 grid: {
                   drawOnChartArea: false,

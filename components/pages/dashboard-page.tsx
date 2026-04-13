@@ -7,6 +7,12 @@ import { OrderKanban } from "@/components/dashboard/order-kanban";
 import { SalesChart } from "@/components/dashboard/sales-chart";
 import { SectionGrid } from "@/components/dashboard/section-grid";
 import { SummaryCard } from "@/components/dashboard/summary-card";
+import { QuickActions } from "@/components/dashboard/quick-actions";
+import { TodayPerformance } from "@/components/dashboard/today-performance";
+import { TopSellingItems } from "@/components/dashboard/top-selling-items";
+import { PeakHoursChart } from "@/components/dashboard/peak-hours-chart";
+import { RecentActivities } from "@/components/dashboard/recent-activities";
+import { StaffPerformance } from "@/components/dashboard/staff-performance";
 import { Carousel } from "@/components/ui/carousel";
 import { Card } from "@/components/ui/card";
 import type {
@@ -195,18 +201,40 @@ export function DashboardPageView({
           </div>
         </Card>
 
+        <QuickActions />
+
+        <TodayPerformance orders={filteredOrders} />
+
         <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {summaryCards.map((item) => (
             <SummaryCard key={item.title} {...item} />
           ))}
         </section>
 
-        <section className="grid gap-6 xl:grid-cols-[1.4fr_1fr]">
-          <SalesChart orders={filteredOrders} branchLabel={branchLabel} />
-          <OrderKanban orders={filteredOrders} />
-        </section>
+        <SalesChart orders={filteredOrders} branchLabel={branchLabel} />
 
-        <CustomerReviews ratings={filteredRatings} />
+        <OrderKanban orders={filteredOrders} />
+
+        <div className="grid gap-6 lg:grid-cols-2">
+          <TopSellingItems orders={filteredOrders} />
+          <PeakHoursChart orders={filteredOrders} />
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-2">
+          <RecentActivities 
+            orders={filteredOrders} 
+            stockHistory={filteredStockHistory}
+            attendance={filteredAttendance}
+          />
+          <CustomerReviews ratings={filteredRatings} />
+        </div>
+
+        <StaffPerformance 
+          employees={filteredEmployees}
+          attendance={filteredAttendance}
+          orders={filteredOrders}
+        />
+
         <SectionGrid
           lowStockItems={filteredLowStockItems}
           stockHistory={filteredStockHistory}

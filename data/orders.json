@@ -1,5 +1,37 @@
 [
   {
+    "id": "89a5bc24-236c-433a-b679-657f3387b5a9",
+    "branchId": "branch-1",
+    "branchName": "CafeFlow Pekanbaru",
+    "orderCode": "INV-CAFE-052",
+    "customerName": "fahri",
+    "tableNumber": "09",
+    "status": "Pramusaji",
+    "paymentMethod": "Cash",
+    "items": [
+      {
+        "id": "e924c6a3-61ac-4c49-9b17-11b971e1763e",
+        "menuId": "1fc953ae-d6ce-491c-bdb4-6831cd56048e",
+        "menuName": "Vanilla Cheesecake 202604100332",
+        "quantity": 1,
+        "unitPrice": 28000
+      },
+      {
+        "id": "e04a07db-1352-47f2-a6f8-fd1830ea1d64",
+        "menuId": "1f294691-ed2e-4b82-9551-c73236173a9b",
+        "menuName": "Club Sandwich 202604100332",
+        "quantity": 1,
+        "unitPrice": 38000
+      }
+    ],
+    "notes": "jangan tambah gula banyak banyak",
+    "subtotal": 66000,
+    "serviceFee": 6000,
+    "total": 72000,
+    "createdAt": "2026-04-13T13:53:11.616Z",
+    "updatedAt": "2026-04-13T13:53:11.616Z"
+  },
+  {
     "id": "7eecfe11-4162-4581-ba15-86781296210b",
     "branchId": "branch-1",
     "branchName": "CafeFlow Pekanbaru",

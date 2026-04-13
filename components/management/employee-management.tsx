@@ -278,7 +278,49 @@ export function EmployeeManagement({ initialItems, branches, attendance }: Emplo
 
   return (
     <div className="space-y-6">
-      <section className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
+      {/* Navigation Menu */}
+      <Card className="bg-[#fffaf5]">
+        <nav className="flex flex-wrap gap-2">
+          <a
+            href="#data-staff"
+            className="inline-flex items-center gap-2 rounded-full border border-[#eadfce] bg-white px-4 py-2 text-sm font-medium text-cafe-text transition-all duration-300 hover:bg-[#fbf0e2] hover:border-cafe-accent/40"
+          >
+            Data Staff
+          </a>
+          <a
+            href="/staff/attendance"
+            className="inline-flex items-center gap-2 rounded-full border border-[#eadfce] bg-white px-4 py-2 text-sm font-medium text-cafe-text transition-all duration-300 hover:bg-[#fbf0e2] hover:border-cafe-accent/40"
+          >
+            Absensi
+          </a>
+          <a
+            href="#cuti"
+            className="inline-flex items-center gap-2 rounded-full border border-[#eadfce] bg-white px-4 py-2 text-sm font-medium text-cafe-text transition-all duration-300 hover:bg-[#fbf0e2] hover:border-cafe-accent/40"
+          >
+            Cuti
+          </a>
+          <a
+            href="#gaji"
+            className="inline-flex items-center gap-2 rounded-full border border-[#eadfce] bg-white px-4 py-2 text-sm font-medium text-cafe-text transition-all duration-300 hover:bg-[#fbf0e2] hover:border-cafe-accent/40"
+          >
+            Penggajian
+          </a>
+          <a
+            href="#rekrutmen"
+            className="inline-flex items-center gap-2 rounded-full border border-[#eadfce] bg-white px-4 py-2 text-sm font-medium text-cafe-text transition-all duration-300 hover:bg-[#fbf0e2] hover:border-cafe-accent/40"
+          >
+            Rekrutmen
+          </a>
+          <a
+            href="#bonus"
+            className="inline-flex items-center gap-2 rounded-full border border-[#eadfce] bg-white px-4 py-2 text-sm font-medium text-cafe-text transition-all duration-300 hover:bg-[#fbf0e2] hover:border-cafe-accent/40"
+          >
+            Bonus Bulanan
+          </a>
+        </nav>
+      </Card>
+
+      <section className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]" id="data-staff">
         <Card className="space-y-5 bg-[#fffaf5]">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
