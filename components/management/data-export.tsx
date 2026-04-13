@@ -123,7 +123,7 @@ export function DataExport() {
       </div>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-        <h4 className="font-medium text-blue-900 mb-2">💡 Tips</h4>
+        <h4 className="font-medium text-blue-900 mb-2">Tips</h4>
         <ul className="text-sm text-blue-800 space-y-1">
           <li>• File CSV bisa dibuka dengan Excel, Google Sheets, atau aplikasi spreadsheet lainnya</li>
           <li>• Data yang diexport adalah snapshot saat ini</li>

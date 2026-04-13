@@ -495,7 +495,7 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
                         <p className="mt-1 text-sm text-cafe-accent/68">Table {rating.tableNumber ?? "-"}</p>
                       </div>
                       <span className="rounded-full bg-[#fbf0df] px-3 py-1 text-sm font-semibold text-cafe-accent">
-                        {((rating.serviceRating + rating.foodRating) / 2).toFixed(1)} ⭐
+                        {((rating.serviceRating + rating.foodRating) / 2).toFixed(1)}
                       </span>
                     </div>
                     <p className="mt-5 text-sm leading-8 text-cafe-accent/78">{rating.comment || "Pelanggan tidak menambahkan komentar."}</p>

@@ -75,7 +75,7 @@ export function ReceiptRating({
             <h2 className="mt-2 text-2xl font-semibold text-cafe-text">Thank you for your feedback</h2>
           </div>
           <div className="rounded-full bg-[#fef5e9] px-4 py-2 text-sm font-semibold text-[#b27a36]">
-            {averageRating} ⭐
+            {averageRating}
           </div>
         </div>
         <div className="rounded-[28px] border border-[#efe1d1] bg-[#fffaf5] p-5">
