@@ -46,7 +46,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
-        serif: ["var(--font-playfair-display)", "serif"],
+        serif: ["var(--font-inter)", "sans-serif"],
       },
       backgroundImage: {
         "soft-mesh":

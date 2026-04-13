@@ -43,19 +43,23 @@ export function DashboardSidebar() {
   }, [isActive, visibleMenu]);
 
   return (
-    <aside className="relative z-20 sticky top-6 hidden h-[calc(100vh-3rem)] w-[304px] rounded-xl border border-cafe-line bg-[#fcfaf7]/94 p-5 shadow-glass backdrop-blur-xl lg:flex lg:flex-col">
-      <Link href="/" className="mb-8 flex items-center gap-3 px-2">
-        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cafe-secondary text-lg font-bold text-cafe-accent shadow-md">
-          CF
+    <aside className="relative z-20 sticky top-0 hidden h-screen w-[240px] bg-[#3d3027] lg:flex lg:flex-col">
+      {/* Header */}
+      <div className="flex items-center gap-3 px-5 py-6 border-b border-[#4d4037]">
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#5a4a3a] text-sm font-bold text-[#d4c5b9]">
+          <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H4V5h16v14zM6 10h2v7H6zm4-3h2v10h-2zm4 6h2v4h-2zm4-8h2v11h-2z"/>
+          </svg>
         </div>
         <div>
-          <h1 className="text-lg font-semibold text-cafe-text">{settings.cafeName}</h1>
-          <p className="text-xs uppercase tracking-[0.22em] text-cafe-accent/70">{roleLabels[role]} workspace</p>
+          <h1 className="text-sm font-semibold text-[#f5f0e8]">{settings.cafeName}</h1>
+          <p className="text-xs text-[#a89885]">Management Dashboard</p>
         </div>
-      </Link>
+      </div>
 
-      <nav className="overflow-y-auto pr-1">
-        <ul className="space-y-2">
+      {/* Navigation */}
+      <nav className="flex-1 overflow-y-auto px-3 py-4">
+        <ul className="space-y-1">
         {visibleMenu.map((item) => {
           const children = "children" in item ? item.children : undefined;
           const visibleChildren = children?.filter((child) => canAccessPath(role, child.href.split("#")[0]));
@@ -66,7 +70,7 @@ export function DashboardSidebar() {
               ? (openSections[item.href] ?? autoOpenSections[item.href] ?? active)
               : false;
           return (
-            <li key={item.label} className="space-y-2">
+            <li key={item.label} className="space-y-1">
               {visibleChildren && visibleChildren.length > 0 ? (
                 <button
                   type="button"
@@ -77,10 +81,10 @@ export function DashboardSidebar() {
                     }))
                   }
                   className={cn(
-                    "relative z-20 flex w-full items-center gap-3 rounded-lg px-4 py-3 text-left text-sm font-medium transition duration-200",
+                    "relative flex w-full items-center gap-3 rounded-lg px-4 py-2.5 text-left text-sm font-medium transition-all duration-200",
                     active
-                      ? "bg-cafe-secondary text-cafe-text shadow-md"
-                      : "text-cafe-accent hover:bg-cafe-secondary/35 hover:text-cafe-text",
+                      ? "bg-[#5a4a3a] text-[#f5f0e8] shadow-sm"
+                      : "text-[#c4b5a3] hover:bg-[#4d4037] hover:text-[#f5f0e8]",
                   )}
                   aria-expanded={expanded}
                   aria-controls={`sidebar-section-${item.href.replace(/[^\w-]/g, "")}`}
@@ -89,17 +93,17 @@ export function DashboardSidebar() {
                   <span className="flex-1">{item.label}</span>
                   <FontAwesomeIcon
                     icon={faChevronDown}
-                    className={cn("h-3.5 w-3.5 transition-transform duration-200", expanded ? "rotate-180" : "")}
+                    className={cn("h-3 w-3 transition-transform duration-200", expanded ? "rotate-180" : "")}
                   />
                 </button>
               ) : (
                 <Link
                   href={item.href}
                   className={cn(
-                    "relative z-20 flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium transition duration-200",
+                    "relative flex items-center gap-3 rounded-lg px-4 py-2.5 text-sm font-medium transition-all duration-200",
                     active
-                      ? "bg-cafe-secondary text-cafe-text shadow-md"
-                      : "text-cafe-accent hover:bg-cafe-secondary/35 hover:text-cafe-text",
+                      ? "bg-[#5a4a3a] text-[#f5f0e8] shadow-sm"
+                      : "text-[#c4b5a3] hover:bg-[#4d4037] hover:text-[#f5f0e8]",
                   )}
                 >
                   <FontAwesomeIcon icon={item.icon} className="h-4 w-4" />
@@ -107,16 +111,16 @@ export function DashboardSidebar() {
                 </Link>
               )}
               {visibleChildren && expanded && (
-                <ul id={`sidebar-section-${item.href.replace(/[^\w-]/g, "")}`} className="space-y-1 pl-5">
+                <ul id={`sidebar-section-${item.href.replace(/[^\w-]/g, "")}`} className="space-y-0.5 pl-11 mt-1">
                   {visibleChildren.map((child) => (
                     <li key={child.href}>
                       <Link
                         href={child.href}
                         className={cn(
-                          "relative z-20 block rounded-lg px-4 py-2 text-sm transition duration-200",
+                          "relative block rounded-md px-3 py-2 text-sm transition-all duration-200",
                           isActive(child.href)
-                            ? "bg-cafe-secondary/55 text-cafe-text"
-                            : "text-cafe-accent/80 hover:bg-cafe-surface hover:text-cafe-text",
+                            ? "bg-[#4d4037] text-[#f5f0e8] font-medium"
+                            : "text-[#b5a693] hover:bg-[#4d4037]/50 hover:text-[#f5f0e8]",
                         )}
                       >
                         {child.label}
@@ -131,17 +135,19 @@ export function DashboardSidebar() {
         </ul>
       </nav>
 
-      <div className="mt-6 rounded-xl border border-cafe-line bg-cafe-secondary/45 p-4">
-        <p className="text-sm font-semibold text-cafe-text">Storefront Ready</p>
-        <p className="mt-1 text-xs leading-5 text-cafe-accent/80">
-          Brand, pengaturan pembayaran, dan akses per role kini mengikuti konfigurasi {settings.cafeName} secara terpusat.
-        </p>
-        <Link
-          href="/order"
-          className="mt-4 inline-flex rounded-lg bg-cafe-primary px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-cafe-text transition hover:bg-cafe-accent hover:text-[#fcfaf7]"
-        >
-          Open ordering
-        </Link>
+      {/* Footer */}
+      <div className="border-t border-[#4d4037] p-4">
+        <div className="flex items-center gap-3 rounded-lg bg-[#4d4037] p-3">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#5a4a3a]">
+            <svg className="h-4 w-4 text-[#d4c5b9]" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+            </svg>
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="text-xs font-medium text-[#f5f0e8] truncate">Powered by Coffee</p>
+            <p className="text-xs text-[#a89885] truncate">v1.0.0</p>
+          </div>
+        </div>
       </div>
     </aside>
   );
