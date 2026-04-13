@@ -28,13 +28,13 @@ export function SectionGrid({ lowStockItems, stockHistory, employees, orders }: 
     <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
       <Card className="space-y-4 starbucks-card animate-fade-in animate-delay-100">
         <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-[#00704A]">Notification Panel</p>
-          <h3 className="mt-1 text-lg font-semibold text-[#1E3932]">Auto Restock Alert</h3>
+          <p className="text-xs uppercase tracking-[0.3em] text-[#00704A]">Panel Notifikasi</p>
+          <h3 className="mt-1 text-lg font-semibold text-[#1E3932]">Peringatan Restock Otomatis</h3>
         </div>
         <div className="space-y-3">
           {lowStockItems.length === 0 ? (
             <div className="rounded-xl border border-[#D4C5B9]/30 bg-[#F7F5F2] p-3 text-sm text-[#1E3932]/70">
-              Semua stok aman. Belum ada alert aktif.
+              Semua stok aman. Belum ada peringatan aktif.
             </div>
           ) : (
             lowStockItems.map((item) => (
@@ -57,13 +57,13 @@ export function SectionGrid({ lowStockItems, stockHistory, employees, orders }: 
 
       <Card className="space-y-4 starbucks-card animate-fade-in animate-delay-200">
         <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-[#00704A]">Supply History</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-[#00704A]">Riwayat Persediaan</p>
           <h3 className="mt-1 text-lg font-semibold text-[#1E3932]">Perubahan stok terbaru</h3>
         </div>
         <div className="space-y-3">
           {stockHistory.length === 0 ? (
             <div className="rounded-xl border border-[#D4C5B9]/30 bg-[#F7F5F2] p-3 text-sm text-[#1E3932]/70">
-              Belum ada histori stok yang tercatat.
+              Belum ada riwayat stok yang tercatat.
             </div>
           ) : (
             stockHistory.slice(0, 4).map((item) => (
@@ -88,13 +88,13 @@ export function SectionGrid({ lowStockItems, stockHistory, employees, orders }: 
 
       <Card className="space-y-4 starbucks-card animate-fade-in animate-delay-300">
         <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-[#00704A]">Digital Receipt</p>
-          <h3 className="mt-1 text-lg font-semibold text-[#1E3932]">Receipt terbaru dari order masuk</h3>
+          <p className="text-xs uppercase tracking-[0.3em] text-[#00704A]">Struk Digital</p>
+          <h3 className="mt-1 text-lg font-semibold text-[#1E3932]">Struk terbaru dari pesanan masuk</h3>
         </div>
         <div className="space-y-3">
           {orders.length === 0 ? (
             <div className="rounded-xl border border-[#D4C5B9]/30 bg-[#F7F5F2] p-3 text-sm text-[#1E3932]/70">
-              Belum ada receipt yang bisa ditampilkan.
+              Belum ada struk yang bisa ditampilkan.
             </div>
           ) : (
             orders.slice(0, 4).map((item) => (
@@ -123,7 +123,7 @@ export function SectionGrid({ lowStockItems, stockHistory, employees, orders }: 
 
       <Card className="space-y-4 starbucks-card animate-fade-in animate-delay-400">
         <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-[#00704A]">Staff</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-[#00704A]">Karyawan</p>
           <h3 className="mt-1 text-lg font-semibold text-[#1E3932]">Tim yang Sedang Aktif</h3>
         </div>
         <div className="space-y-3">

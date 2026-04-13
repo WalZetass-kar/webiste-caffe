@@ -319,7 +319,7 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
               </h3>
             </div>
             <Button onClick={openCreateModal} className="w-full md:w-auto">
-              Add Menu
+              Tambah Menu
             </Button>
           </div>
           <div className="grid gap-4 md:grid-cols-[1fr_auto] md:items-center">
@@ -411,7 +411,7 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
                 <p className="text-lg font-semibold text-cafe-accent">{formatCurrency(item.price)}</p>
                 <div className="grid grid-cols-3 gap-2">
                   <Button variant="glass" className="min-h-10 px-3 py-2 text-xs truncate" onClick={() => setDetailItem(item)}>
-                    View
+                    Lihat
                   </Button>
                   <Button variant="secondary" className="min-h-10 px-3 py-2 text-xs truncate" onClick={() => openEditModal(item)}>
                     Edit
@@ -450,11 +450,11 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
         ))}
       </section>
 
-      <Modal open={modalOpen} title={editingItem ? "Edit Menu" : "Add Menu"} onClose={closeModal} className="sm:max-w-5xl">
+      <Modal open={modalOpen} title={editingItem ? "Edit Menu" : "Tambah Menu"} onClose={closeModal} className="sm:max-w-5xl">
         <form className="space-y-5" onSubmit={saveItem}>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-2">
-              <label className="text-sm font-medium text-cafe-text">Menu Name</label>
+              <label className="text-sm font-medium text-cafe-text">Nama Menu</label>
               <Input
                 value={form.name}
                 onChange={(event) => setForm((current) => ({ ...current, name: event.target.value }))}
@@ -463,7 +463,7 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
               />
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-medium text-cafe-text">Category</label>
+              <label className="text-sm font-medium text-cafe-text">Kategori</label>
               <select
                 className={selectClassName}
                 value={form.category}
@@ -479,11 +479,11 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
               </select>
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-medium text-cafe-text">Price</label>
+              <label className="text-sm font-medium text-cafe-text">Harga</label>
               <CurrencyInput value={form.price} onChange={(value) => setForm((current) => ({ ...current, price: value }))} />
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-medium text-cafe-text">Catalog Stock</label>
+              <label className="text-sm font-medium text-cafe-text">Stok Katalog</label>
               <Input
                 type="number"
                 min={0}
@@ -492,7 +492,7 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
               />
             </div>
             <div className="space-y-2 md:col-span-2">
-              <label className="text-sm font-medium text-cafe-text">Description</label>
+              <label className="text-sm font-medium text-cafe-text">Deskripsi</label>
               <Textarea
                 value={form.description}
                 onChange={(event) => setForm((current) => ({ ...current, description: event.target.value }))}
@@ -501,7 +501,7 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
               />
             </div>
             <div className="space-y-2 md:col-span-2">
-              <label className="text-sm font-medium text-cafe-text">Story / Detail</label>
+              <label className="text-sm font-medium text-cafe-text">Cerita / Detail</label>
               <Textarea
                 value={form.story}
                 onChange={(event) => setForm((current) => ({ ...current, story: event.target.value }))}
@@ -525,7 +525,7 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
               </select>
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-medium text-cafe-text">Prep Time</label>
+              <label className="text-sm font-medium text-cafe-text">Waktu Persiapan</label>
               <Input
                 value={form.prepTime}
                 onChange={(event) => setForm((current) => ({ ...current, prepTime: event.target.value }))}
@@ -533,7 +533,7 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
               />
             </div>
             <div className="space-y-2 md:col-span-2">
-              <label className="text-sm font-medium text-cafe-text">Pairing</label>
+              <label className="text-sm font-medium text-cafe-text">Pasangan Menu</label>
               <Input
                 value={form.pairing}
                 onChange={(event) => setForm((current) => ({ ...current, pairing: event.target.value }))}
@@ -544,19 +544,19 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
             <div className="space-y-4 rounded-[26px] bg-[#fbf4ec] p-4 md:col-span-2">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <p className="text-sm font-semibold text-cafe-text">Menu Ingredients</p>
+                  <p className="text-sm font-semibold text-cafe-text">Bahan Menu</p>
                   <p className="mt-1 text-sm text-cafe-accent/75">
                     Hubungkan menu dengan supply agar stok otomatis berkurang ketika pesanan dibuat.
                   </p>
                 </div>
                 <Button type="button" variant="secondary" onClick={addRecipeRow}>
-                  Add Ingredient
+                  Tambah Bahan
                 </Button>
               </div>
 
               {form.recipe.length === 0 ? (
                 <div className="rounded-[22px] border border-dashed border-[#dbc8b3] bg-white/60 px-4 py-5 text-sm text-cafe-accent/75">
-                  Belum ada ingredient. Tambahkan minimal satu bahan untuk mengaktifkan stock deduction.
+                  Belum ada bahan. Tambahkan minimal satu bahan untuk mengaktifkan pengurangan stok.
                 </div>
               ) : null}
 
@@ -572,7 +572,7 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
                       <div className="grid gap-4 lg:grid-cols-[1.2fr_0.5fr_0.45fr_auto]">
                         <div className="space-y-2">
                           <label className="text-xs uppercase tracking-[0.22em] text-cafe-accent/60">
-                            Ingredient 0{index + 1}
+                            Bahan 0{index + 1}
                           </label>
                           <select
                             className={selectClassName}
@@ -587,7 +587,7 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
                           </select>
                         </div>
                         <div className="space-y-2">
-                          <label className="text-xs uppercase tracking-[0.22em] text-cafe-accent/60">Quantity</label>
+                          <label className="text-xs uppercase tracking-[0.22em] text-cafe-accent/60">Jumlah</label>
                           <Input
                             type="number"
                             min={0}
@@ -601,7 +601,7 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
                           />
                         </div>
                         <div className="space-y-2">
-                          <label className="text-xs uppercase tracking-[0.22em] text-cafe-accent/60">Unit</label>
+                          <label className="text-xs uppercase tracking-[0.22em] text-cafe-accent/60">Satuan</label>
                           <select
                             className={selectClassName}
                             value={entry.usageUnit}
@@ -624,14 +624,14 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
                             className="w-full lg:w-auto"
                             onClick={() => removeRecipeRow(entry.id)}
                           >
-                            Remove
+                            Hapus
                           </Button>
                         </div>
                       </div>
                       {selectedSupply ? (
                         <div className="mt-3 flex flex-wrap gap-2 text-xs text-cafe-accent/70">
                           <Badge tone="slate">
-                            Stock {formatQuantity(selectedSupply.stockQuantity, selectedSupply.unit)}
+                            Stok {formatQuantity(selectedSupply.stockQuantity, selectedSupply.unit)}
                           </Badge>
                           <Badge tone="cream">Supplier {selectedSupply.supplier}</Badge>
                         </div>
@@ -648,12 +648,12 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
                 checked={form.featured}
                 onChange={(event) => setForm((current) => ({ ...current, featured: event.target.checked }))}
               />
-              Tampilkan sebagai featured menu di storefront
+              Tampilkan sebagai menu unggulan di storefront
             </label>
 
             <div className="md:col-span-2">
               <ImageDropzone
-                label="Menu Image Upload"
+                label="Upload Gambar Menu"
                 description="Preview tampil sebelum data disimpan. Gambar baru akan masuk ke storage lokal aplikasi."
                 initialImage={form.image}
                 onChange={setImageFile}
@@ -666,7 +666,7 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
               Batal
             </Button>
             <Button type="submit" disabled={submitting}>
-              {submitting ? "Menyimpan..." : editingItem ? "Update Menu" : "Simpan Menu"}
+              {submitting ? "Menyimpan..." : editingItem ? "Perbarui Menu" : "Simpan Menu"}
             </Button>
           </div>
         </form>
@@ -693,13 +693,13 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
               <p className="text-sm leading-7 text-cafe-accent/78">{detailItem.story}</p>
             </div>
             <div className="space-y-3 rounded-[24px] bg-[#fbf4ec] p-4">
-              <p className="text-sm font-semibold text-cafe-text">Ingredient mapping</p>
+              <p className="text-sm font-semibold text-cafe-text">Pemetaan Bahan</p>
               <div className="space-y-3">
                 {detailItem.recipe.map((ingredient) => (
                   <div key={ingredient.id} className="flex items-center justify-between rounded-[20px] bg-white/80 px-4 py-3">
                     <div>
                       <p className="font-medium text-cafe-text">{ingredient.ingredientName}</p>
-                      <p className="mt-1 text-xs text-cafe-accent/68">Supply ID: {ingredient.supplyId}</p>
+                      <p className="mt-1 text-xs text-cafe-accent/68">ID Supply: {ingredient.supplyId}</p>
                     </div>
                     <Badge tone="slate">{formatQuantity(ingredient.quantity, ingredient.usageUnit)}</Badge>
                   </div>

@@ -104,51 +104,51 @@ export function DashboardPageView({
 
   const summaryCards = [
     {
-      title: "Gross Sales",
+      title: "Total Penjualan",
       value: formatCurrency(grossSales),
-      change: `${filteredOrders.length} order tercatat untuk ${branchLabel}`,
-      detail: "Data order live",
+      change: `${filteredOrders.length} pesanan tercatat untuk ${branchLabel}`,
+      detail: "Data pesanan live",
       tone: "from-white to-[#F7F5F2]",
     },
     {
-      title: "Open Orders",
+      title: "Pesanan Aktif",
       value: String(openOrders),
-      change: `${filteredOrders.filter((order) => order.status === "Dapur").length} order aktif di kitchen`,
+      change: `${filteredOrders.filter((order) => order.status === "Dapur").length} pesanan aktif di dapur`,
       detail: "Perlu diproses",
       tone: "from-white to-[#E8DDD3]",
     },
     {
-      title: "Low Stock",
+      title: "Stok Menipis",
       value: String(filteredLowStockItems.length),
       change:
         filteredLowStockItems.length > 0
           ? `${filteredLowStockItems[0].materialName} perlu restock`
           : "Semua bahan aman",
-      detail: "Alert inventori",
+      detail: "Peringatan inventori",
       tone: "from-white to-[#F7F5F2]",
     },
     {
-      title: "Present Today",
+      title: "Hadir Hari Ini",
       value: String(presentCount),
-      change: `${Math.max(filteredEmployees.length - presentCount, 0)} employee belum check in`,
-      detail: "Attendance summary",
+      change: `${Math.max(filteredEmployees.length - presentCount, 0)} karyawan belum check in`,
+      detail: "Ringkasan kehadiran",
       tone: "from-white to-[#E8DDD3]",
     },
     {
-      title: "Late Employees",
+      title: "Karyawan Terlambat",
       value: String(lateCount),
       change: lateCount > 0 ? "Perlu follow up shift pagi" : "Kedisiplinan hadir stabil",
       detail: "Kehadiran cabang",
       tone: "from-white to-[#F7F5F2]",
     },
     {
-      title: "Cafe Rating",
+      title: "Rating Cafe",
       value: `${avgRating}/5`,
       change:
         ratingsCount > 0
           ? `${ratingsCount} penilaian pelanggan untuk ${branchLabel}`
           : "Belum ada penilaian pelanggan",
-      detail: "Average customer experience",
+      detail: "Rata-rata pengalaman pelanggan",
       tone: "from-white to-[#E8DDD3]",
     },
   ];
@@ -161,12 +161,12 @@ export function DashboardPageView({
             {
               title: `${branchLabel} kini punya monitoring penjualan, stok, dan absensi dalam satu dashboard.`,
               subtitle:
-                "Branch filter membantu owner membaca performa cafe per lokasi tanpa kehilangan konteks operasional harian.",
+                "Filter cabang membantu owner membaca performa cafe per lokasi tanpa kehilangan konteks operasional harian.",
             },
             {
-              title: "Order, inventory, employee, dan attendance sekarang saling terhubung.",
+              title: "Pesanan, inventori, karyawan, dan kehadiran sekarang saling terhubung.",
               subtitle:
-                "Begitu branch dipilih, angka penjualan, low-stock alert, antrian order, dan staff attendance langsung menyesuaikan.",
+                "Begitu cabang dipilih, angka penjualan, peringatan stok menipis, antrian pesanan, dan kehadiran staff langsung menyesuaikan.",
             },
           ]}
         />
@@ -174,23 +174,22 @@ export function DashboardPageView({
         <Card className="starbucks-card">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#00704A]">Branch analytics</p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#00704A]">Analitik Cabang</p>
               <h2 className="mt-2 text-2xl font-bold text-[#1E3932]">
                 Filter dashboard berdasarkan lokasi operasional
               </h2>
               <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#6B5D52]">
-                Gunakan filter ini untuk melihat order, sales, inventory alert, staff, dan attendance summary per
-                branch.
+                Gunakan filter ini untuk melihat pesanan, penjualan, peringatan inventori, staff, dan ringkasan kehadiran per cabang.
               </p>
             </div>
             <div className="w-full lg:w-72">
-              <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-[#6B5D52]">Branch filter</label>
+              <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-[#6B5D52]">Filter Cabang</label>
               <select
                 className="starbucks-input w-full"
                 value={selectedBranchId}
                 onChange={(event) => setSelectedBranchId(event.target.value)}
               >
-                <option value="all">Semua Branch</option>
+                <option value="all">Semua Cabang</option>
                 {branches.map((branch) => (
                   <option key={branch.id} value={branch.id}>
                     {branch.name}
@@ -212,8 +211,6 @@ export function DashboardPageView({
         </section>
 
         <SalesChart orders={filteredOrders} branchLabel={branchLabel} />
-
-        <OrderKanban orders={filteredOrders} />
 
         <div className="grid gap-6 lg:grid-cols-2">
           <TopSellingItems orders={filteredOrders} />
@@ -241,6 +238,8 @@ export function DashboardPageView({
           employees={filteredEmployees}
           orders={filteredOrders}
         />
+
+        <OrderKanban orders={filteredOrders} />
       </div>
     </AppShell>
   );
