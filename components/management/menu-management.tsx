@@ -407,17 +407,17 @@ export function MenuManagement({ initialItems, supplies, recommendedItems, speci
                 <span>Mapped ingredients {item.recipe.length}</span>
                 <span>{item.prepTime}</span>
               </div>
-              <div className="flex items-center justify-between gap-3">
+              <div className="flex flex-col gap-3">
                 <p className="text-lg font-semibold text-cafe-accent">{formatCurrency(item.price)}</p>
-                <div className="flex gap-2">
-                  <Button variant="glass" className="min-h-10 px-4 py-2 text-xs" onClick={() => setDetailItem(item)}>
-                    View Details
+                <div className="grid grid-cols-3 gap-2">
+                  <Button variant="glass" className="min-h-10 px-3 py-2 text-xs truncate" onClick={() => setDetailItem(item)}>
+                    View
                   </Button>
-                  <Button variant="secondary" className="min-h-10 px-4 py-2 text-xs" onClick={() => openEditModal(item)}>
+                  <Button variant="secondary" className="min-h-10 px-3 py-2 text-xs truncate" onClick={() => openEditModal(item)}>
                     Edit
                   </Button>
-                  <Button className="min-h-10 px-4 py-2 text-xs" onClick={() => deleteItem(item)}>
-                    Delete
+                  <Button className="min-h-10 px-3 py-2 text-xs truncate" onClick={() => deleteItem(item)}>
+                    Hapus
                   </Button>
                 </div>
               </div>

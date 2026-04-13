@@ -35,6 +35,9 @@ const defaultCafeSettings: CafeSettingsRecord = {
   updatedAt: new Date().toISOString(),
 };
 
+// In-memory storage for production environments (Vercel)
+let memorySettings: CafeSettingsRecord | null = null;
+
 function getSettingsFilePath() {
   return path.join(/* turbopackIgnore: true */ process.cwd(), "data", "settings.json");
 }
@@ -49,9 +52,28 @@ function toSettingsEntries(settings: CafeSettingsRecord): SettingsEntryRecord[] 
   );
 }
 
-async function ensureSettingsFile() {
-  const filePath = getSettingsFilePath();
+async function isFileSystemWritable(): Promise<boolean> {
+  try {
+    const testPath = path.join(/* turbopackIgnore: true */ process.cwd(), "data");
+    await mkdir(testPath, { recursive: true });
+    return true;
+  } catch {
+    return false;
+  }
+}
 
+async function ensureSettingsFile() {
+  const writable = await isFileSystemWritable();
+  
+  if (!writable) {
+    // Production environment (Vercel) - use in-memory storage
+    if (!memorySettings) {
+      memorySettings = { ...defaultCafeSettings };
+    }
+    return;
+  }
+
+  const filePath = getSettingsFilePath();
   await mkdir(path.dirname(filePath), { recursive: true });
 
   try {
@@ -91,9 +113,20 @@ function normalizeCafeSettings(entries: SettingsEntryRecord[] | null | undefined
 
 export async function getCafeSettings() {
   await ensureSettingsFile();
-  const raw = await readFile(getSettingsFilePath(), "utf8");
+  
+  const writable = await isFileSystemWritable();
+  
+  if (!writable) {
+    // Return in-memory settings for production
+    return memorySettings || defaultCafeSettings;
+  }
 
-  return normalizeCafeSettings(JSON.parse(raw) as SettingsEntryRecord[]);
+  try {
+    const raw = await readFile(getSettingsFilePath(), "utf8");
+    return normalizeCafeSettings(JSON.parse(raw) as SettingsEntryRecord[]);
+  } catch {
+    return defaultCafeSettings;
+  }
 }
 
 export async function updateCafeSettings(input: CafeSettingsPayload) {
@@ -103,7 +136,20 @@ export async function updateCafeSettings(input: CafeSettingsPayload) {
     updatedAt: new Date().toISOString(),
   };
 
-  await writeFile(getSettingsFilePath(), JSON.stringify(toSettingsEntries(nextSettings), null, 2), "utf8");
+  const writable = await isFileSystemWritable();
+  
+  if (!writable) {
+    // Store in memory for production
+    memorySettings = nextSettings;
+    return nextSettings;
+  }
+
+  try {
+    await writeFile(getSettingsFilePath(), JSON.stringify(toSettingsEntries(nextSettings), null, 2), "utf8");
+  } catch {
+    // Fallback to memory if write fails
+    memorySettings = nextSettings;
+  }
 
   return nextSettings;
 }

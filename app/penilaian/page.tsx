@@ -35,8 +35,8 @@ export default async function PenilaianPage() {
           title="Masukan pelanggan untuk pelayanan dan makanan"
           description="Kumpulkan penilaian pelanggan secara langsung untuk memantau kualitas pelayanan, rasa makanan, dan pengalaman kunjungan di kafe."
         />
-        <div className="grid gap-6 xl:grid-cols-[minmax(0,420px)_minmax(0,1fr)]">
-          <Card className="bg-[#fffaf5]">
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)]">
+          <Card className="bg-[#fffaf5] h-fit">
             <div className="space-y-3">
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-cafe-accent/65">Form penilaian</p>
@@ -52,11 +52,11 @@ export default async function PenilaianPage() {
 
           <div className="space-y-4">
             <div className="flex items-center justify-between rounded-[28px] border border-white/70 bg-white/60 px-5 py-4 shadow-soft">
-              <div>
+              <div className="flex-1 min-w-0">
                 <p className="text-xs uppercase tracking-[0.3em] text-cafe-accent/65">Daftar masukan</p>
-                <h2 className="mt-1 text-xl font-semibold text-cafe-text">Penilaian terbaru pelanggan</h2>
+                <h2 className="mt-1 text-xl font-semibold text-cafe-text truncate">Penilaian terbaru pelanggan</h2>
               </div>
-              <div className="rounded-full bg-cafe-secondary/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-cafe-accent">
+              <div className="rounded-full bg-cafe-secondary/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-cafe-accent whitespace-nowrap ml-3">
                 {ratings.length} ulasan
               </div>
             </div>

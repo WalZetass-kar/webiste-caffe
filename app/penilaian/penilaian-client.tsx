@@ -164,15 +164,15 @@ export function PenilaianClient({
             {ratings.map((rating) => (
               <Card key={rating.id} className="bg-[#fffaf5]">
                 <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.28em] text-cafe-accent/65">
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs uppercase tracking-[0.28em] text-cafe-accent/65 truncate">
                       {rating.customerName || "Pelanggan"}
                     </p>
-                    <h3 className="mt-2 text-lg font-semibold text-cafe-text">
+                    <h3 className="mt-2 text-lg font-semibold text-cafe-text break-words">
                       Pelayanan {rating.serviceRating}/5 • Makanan {rating.foodRating}/5
                     </h3>
                   </div>
-                  <span className="rounded-full bg-cafe-secondary/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-cafe-accent">
+                  <span className="rounded-full bg-cafe-secondary/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-cafe-accent whitespace-nowrap flex-shrink-0">
                     {formatDate(rating.updatedAt)}
                   </span>
                 </div>
@@ -180,7 +180,7 @@ export function PenilaianClient({
                   <RatingPill label="Pelayanan" value={rating.serviceRating} />
                   <RatingPill label="Makanan" value={rating.foodRating} />
                 </div>
-                <p className="mt-4 text-sm leading-7 text-cafe-text">
+                <p className="mt-4 text-sm leading-7 text-cafe-text break-words">
                   {rating.comment || "Pelanggan tidak menambahkan komentar tambahan."}
                 </p>
               </Card>
