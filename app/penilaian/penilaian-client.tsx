@@ -60,7 +60,7 @@ function RatingPill({ label, value }: { label: string; value: number }) {
       <p className="text-[11px] uppercase tracking-[0.24em] text-cafe-accent/60">{label}</p>
       <div className="mt-2 flex items-end justify-between gap-3">
         <p className="text-2xl font-semibold text-cafe-text">{value}/5</p>
-        <span className="rounded-full bg-cafe-secondary/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-cafe-accent">
+        <span className="rounded-full bg-cafe-secondary/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-cafe-accent whitespace-nowrap flex-shrink-0">
           {getRatingLabel(value)}
         </span>
       </div>

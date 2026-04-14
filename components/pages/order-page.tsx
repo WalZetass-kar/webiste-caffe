@@ -326,7 +326,7 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
         </div>
       </section>
 
-      <div className="section-shell pb-14 pt-[420px] md:pt-[380px]">
+      <div className="section-shell pb-14 pt-8 md:pt-12">
         {successOrder ? (
           <div className="mb-6 rounded-[28px] border border-[#bcaaa4] bg-white p-5 shadow-soft">
             <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
@@ -350,62 +350,10 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
           </div>
         ) : null}
 
-        <section className="mb-6 space-y-4">
-          <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="text-xs uppercase tracking-[0.28em] text-[#8d6e63]">Previous Orders</p>
-              <h2 className="mt-2 text-2xl font-semibold text-[#4e342e]">Riwayat pesanan pelanggan</h2>
-            </div>
-            {activeCustomerName ? (
-              <Badge tone="slate">{activeCustomerName}</Badge>
-            ) : (
-              <p className="text-sm text-[#6d4c41]">Isi nama pelanggan untuk melihat order sebelumnya.</p>
-            )}
-          </div>
-          {customerOrderHistory.length === 0 ? (
-            <div className="rounded-[28px] border border-[#bcaaa4] bg-white p-5 text-sm text-[#6d4c41] shadow-soft">
-              Belum ada riwayat order untuk pelanggan ini. Setelah order pertama berhasil, daftar previous orders akan muncul di sini.
-            </div>
-          ) : (
-            <div className="grid gap-4 lg:grid-cols-2">
-              {customerOrderHistory.map((order) => (
-                <div key={order.id} className="rounded-[28px] border border-[#bcaaa4] bg-white p-5 shadow-soft">
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.24em] text-[#8d6e63]">Order #{order.orderCode}</p>
-                      <h3 className="mt-2 text-xl font-semibold text-[#4e342e]">{order.branchName}</h3>
-                    </div>
-                    <Badge tone="cream">{formatDate(order.createdAt)}</Badge>
-                  </div>
-                  <div className="mt-4 space-y-2 text-sm text-[#6d4c41]">
-                    {order.items.map((item) => (
-                      <p key={item.id}>
-                        {item.menuName} x{item.quantity}
-                      </p>
-                    ))}
-                  </div>
-                  <div className="mt-4 flex flex-col gap-3 border-t border-[#d7ccc8] pt-4 sm:flex-row sm:items-center sm:justify-between">
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.2em] text-[#8d6e63]">Total</p>
-                      <p className="mt-1 text-lg font-semibold text-[#5d4037]">{formatCurrency(order.total)}</p>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      <Link href={getReceiptLink(order.orderCode)} className={buttonStyles("secondary", "px-4 py-2 text-xs")}>
-                        View Details
-                      </Link>
-                      <Button className="px-4 py-2 text-xs" onClick={() => reorderOrder(order)}>
-                        Reorder
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </section>
-
         <div className="space-y-6">
-          <section className="space-y-4">
+          {/* Main Content */}
+          <div className="space-y-6 min-w-0">
+            <section className="space-y-4">
               <div>
                 <p className="text-xs uppercase tracking-[0.28em] text-[#8d6e63]">Recommended for you</p>
                 <h2 className="mt-2 text-2xl font-semibold text-[#4e342e]">Popular menu berdasarkan order terbanyak</h2>
@@ -526,8 +474,10 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
               })}
             </section>
 
-            <div className="space-y-6 max-w-2xl mx-auto">
-            <section className="rounded-[34px] bg-[#4e342e] p-6 text-[#d7ccc8] shadow-[0_22px_50px_rgba(62,39,35,0.3)]">
+            {/* Checkout and Cart Summary - Side by Side */}
+            <div className="grid gap-6 lg:grid-cols-2">
+              {/* Checkout Form */}
+              <section className="rounded-[34px] bg-[#4e342e] p-6 text-[#d7ccc8] shadow-[0_22px_50px_rgba(62,39,35,0.3)]">
                 <p className="text-xs uppercase tracking-[0.3em] text-[#a1887f]">Checkout</p>
                 <h2 className="mt-2 text-2xl font-semibold text-[#efebe9]">Pickup or dine-in</h2>
                 <form
@@ -651,6 +601,7 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
             </div>
           </div>
         </div>
+      </div>
 
       <Modal
         open={paymentModalOpen}
