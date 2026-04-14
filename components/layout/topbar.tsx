@@ -143,7 +143,7 @@ export function Topbar() {
           </div>
 
           <div className="flex flex-col gap-3 lg:flex-row lg:items-start">
-            <div ref={searchRef} className="relative flex-1">
+            <div ref={searchRef} className="relative flex-1 overflow-visible">
               <Input
                 placeholder="Cari menu, order, staff..."
                 value={query}
@@ -156,20 +156,22 @@ export function Topbar() {
                 autoComplete="off"
               />
               {open ? (
-                <div className="absolute left-0 right-0 top-[calc(100%+0.75rem)] z-50 rounded-xl border border-cafe-line bg-cafe-surface p-3 shadow-glass">
-                  {loading ? (
-                    <div className="rounded-xl bg-cafe-secondary/20 px-4 py-5 text-sm text-cafe-accent/75">
-                      Mencari data di menu, order, dan staff...
-                    </div>
-                  ) : query.trim().length < 2 ? (
-                    <div className="rounded-xl bg-cafe-secondary/20 px-4 py-5 text-sm text-cafe-accent/75">
-                      Ketik minimal 2 huruf untuk mulai mencari.
-                    </div>
-                  ) : results.length === 0 ? (
-                    <div className="rounded-xl bg-cafe-secondary/20 px-4 py-5 text-sm text-cafe-accent/75">
-                      Tidak ada hasil untuk kata kunci ini.
-                    </div>
-                  ) : (
+                <>
+                  <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} />
+                  <div className="absolute left-0 right-0 top-[calc(100%+0.75rem)] z-50 max-h-[400px] overflow-y-auto rounded-xl border border-cafe-line bg-cafe-surface p-3 shadow-glass">
+                    {loading ? (
+                      <div className="rounded-xl bg-cafe-secondary/20 px-4 py-5 text-sm text-cafe-accent/75">
+                        Mencari data di menu, order, dan staff...
+                      </div>
+                    ) : query.trim().length < 2 ? (
+                      <div className="rounded-xl bg-cafe-secondary/20 px-4 py-5 text-sm text-cafe-accent/75">
+                        Ketik minimal 2 huruf untuk mulai mencari.
+                      </div>
+                    ) : results.length === 0 ? (
+                      <div className="rounded-xl bg-cafe-secondary/20 px-4 py-5 text-sm text-cafe-accent/75">
+                        Tidak ada hasil untuk kata kunci ini.
+                      </div>
+                    ) : (
                     <div className="space-y-3">
                       {(["menu", "order", "staff"] as const).map((group) =>
                         groupedResults[group].length > 0 ? (
@@ -201,6 +203,7 @@ export function Topbar() {
                     </div>
                   )}
                 </div>
+                </>
               ) : null}
             </div>
             <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
