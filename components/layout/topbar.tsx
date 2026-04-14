@@ -39,9 +39,17 @@ export function Topbar() {
       }
     };
 
-    document.addEventListener("mousedown", handlePointerDown);
+    const handleScroll = () => {
+      setOpen(false);
+    };
 
-    return () => document.removeEventListener("mousedown", handlePointerDown);
+    document.addEventListener("mousedown", handlePointerDown);
+    window.addEventListener("scroll", handleScroll, true);
+
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      window.removeEventListener("scroll", handleScroll, true);
+    };
   }, [setOpen]);
 
   const groupedResults = useMemo(
