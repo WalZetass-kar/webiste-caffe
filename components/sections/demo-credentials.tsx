@@ -35,10 +35,10 @@ export function DemoCredentials() {
   return (
     <section id="demo" className="section-shell py-20 sm:py-24">
       <div className="mb-12 text-center">
-        <p className="text-xs uppercase tracking-[0.34em] text-[#00704A]">
+        <p className="text-xs uppercase tracking-[0.34em] text-[#5a4a3a]">
           Try Live Demo
         </p>
-        <h2 className="mt-3 text-4xl font-semibold text-[#1E3932] sm:text-5xl">
+        <h2 className="mt-3 text-4xl font-semibold text-[#3d3027] sm:text-5xl">
           Test All User Roles
         </h2>
         <p className="mt-4 text-lg text-[#6B5D52] max-w-3xl mx-auto">
@@ -56,10 +56,10 @@ export function DemoCredentials() {
               {item.role.charAt(0)}
             </div>
             
-            <h3 className="text-xl font-semibold text-[#1E3932] mb-1">
+            <h3 className="text-xl font-semibold text-[#3d3027] mb-1">
               {item.role}
             </h3>
-            <p className="text-sm font-medium text-[#00704A] mb-3">
+            <p className="text-sm font-medium text-[#5a4a3a] mb-3">
               {item.access}
             </p>
             <p className="text-sm text-[#6B5D52] leading-relaxed mb-4">
@@ -67,12 +67,12 @@ export function DemoCredentials() {
             </p>
             
             <div className="space-y-2 mb-4">
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#00704A]">
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#5a4a3a]">
                 Features:
               </p>
               {item.features.map((feature) => (
                 <div key={feature} className="flex items-center gap-2 text-sm text-[#6B5D52]">
-                  <svg className="h-4 w-4 text-[#00704A]" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="h-4 w-4 text-[#5a4a3a]" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   <span>{feature}</span>
@@ -86,7 +86,7 @@ export function DemoCredentials() {
       <div className="mt-12 rounded-3xl border border-[#D4C5B9]/40 bg-gradient-to-br from-white to-[#F7F5F2] p-8 shadow-lg">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
           <div>
-            <h3 className="text-2xl font-semibold text-[#1E3932] mb-4">
+            <h3 className="text-2xl font-semibold text-[#3d3027] mb-4">
               Ready to Explore?
             </h3>
             <p className="text-[#6B5D52] leading-relaxed mb-6">
@@ -96,7 +96,7 @@ export function DemoCredentials() {
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
                 href="/dashboard"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#00704A] px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#00A862] hover:shadow-xl hover:-translate-y-1"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#5a4a3a] px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#6B5D52] hover:shadow-xl hover:-translate-y-1"
               >
                 <span>Open Dashboard</span>
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,7 +105,7 @@ export function DemoCredentials() {
               </Link>
               <Link
                 href="/order"
-                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#00704A] bg-transparent px-6 py-3 text-sm font-semibold text-[#00704A] transition-all duration-300 hover:bg-[#00704A] hover:text-white"
+                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#5a4a3a] bg-transparent px-6 py-3 text-sm font-semibold text-[#5a4a3a] transition-all duration-300 hover:bg-[#5a4a3a] hover:text-white"
               >
                 <span>Try Ordering</span>
               </Link>
@@ -113,21 +113,21 @@ export function DemoCredentials() {
           </div>
           
           <div className="rounded-2xl border border-[#D4C5B9]/40 bg-white p-6">
-            <p className="text-xs font-semibold uppercase tracking-wider text-[#00704A] mb-4">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#5a4a3a] mb-4">
               Quick Access
             </p>
             <div className="space-y-3">
               <div className="flex items-center justify-between p-3 rounded-lg bg-[#F7F5F2]">
-                <span className="text-sm font-medium text-[#1E3932]">Default Role</span>
-                <span className="text-sm text-[#00704A]">Owner</span>
+                <span className="text-sm font-medium text-[#3d3027]">Default Role</span>
+                <span className="text-sm text-[#5a4a3a]">Owner</span>
               </div>
               <div className="flex items-center justify-between p-3 rounded-lg bg-[#F7F5F2]">
-                <span className="text-sm font-medium text-[#1E3932]">Switch Role</span>
-                <span className="text-sm text-[#00704A]">From Dashboard</span>
+                <span className="text-sm font-medium text-[#3d3027]">Switch Role</span>
+                <span className="text-sm text-[#5a4a3a]">From Dashboard</span>
               </div>
               <div className="flex items-center justify-between p-3 rounded-lg bg-[#F7F5F2]">
-                <span className="text-sm font-medium text-[#1E3932]">Sample Data</span>
-                <span className="text-sm text-[#00704A]">Included</span>
+                <span className="text-sm font-medium text-[#3d3027]">Sample Data</span>
+                <span className="text-sm text-[#5a4a3a]">Included</span>
               </div>
             </div>
           </div>

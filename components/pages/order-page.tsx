@@ -70,7 +70,7 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
   const [successPaymentMethod, setSuccessPaymentMethod] = useState<PaymentMethod | null>(null);
   const deferredSearch = useDeferredValue(search);
   const darkFieldClassName =
-    "border-white/12 bg-white/[0.08] text-white placeholder:text-white/45 shadow-none focus:border-[#d8a23d]/55 focus:ring-[#d8a23d]/18";
+    "border-[#d7ccc8]/15 bg-[#d7ccc8]/10 text-[#efebe9] placeholder:text-[#d7ccc8]/50 shadow-none focus:border-[#a1887f]/60 focus:ring-[#a1887f]/20";
   const paymentOptions: Array<{
     value: PaymentMethod;
     label: string;
@@ -260,31 +260,31 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
   };
 
   return (
-    <div className="min-h-screen bg-[#f6f0e7]">
-      <section className="page-grain relative overflow-hidden bg-[#0f1d22] text-white">
+    <div className="min-h-screen bg-[#efebe9]">
+      <section className="page-grain fixed inset-x-0 top-0 z-50 overflow-hidden bg-[#4e342e] text-[#d7ccc8]">
         <Image
           src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1800&q=80"
           alt="Cafe ordering atmosphere"
           fill
-          className="object-cover opacity-20"
+          className="object-cover opacity-15"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(8,16,18,0.9),rgba(10,24,28,0.84))]" />
+        <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(62,39,35,0.92),rgba(78,52,46,0.88))]" />
         <div className="section-shell relative pb-14 pt-7">
-          <div className="flex flex-col gap-4 rounded-[32px] border border-white/10 bg-white/6 p-5 backdrop-blur-sm md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col gap-4 rounded-[32px] border border-[#d7ccc8]/12 bg-[#d7ccc8]/8 p-5 backdrop-blur-sm md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-[#d8a23d]">Mobile Ordering</p>
-              <h1 className="mt-2 text-3xl font-semibold text-white sm:text-4xl">{settings.cafeName} Ordering Studio</h1>
+              <p className="text-xs uppercase tracking-[0.3em] text-[#a1887f]">Mobile Ordering</p>
+              <h1 className="mt-2 text-3xl font-semibold text-[#efebe9] sm:text-4xl">{settings.cafeName} Ordering Studio</h1>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/"
-                className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/14 bg-white/8 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/14"
+                className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#d7ccc8]/18 bg-[#d7ccc8]/10 px-5 py-3 text-sm font-semibold text-[#efebe9] transition hover:bg-[#d7ccc8]/18"
               >
                 Back to Home
               </Link>
               <Link
                 href="/dashboard"
-                className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#d8a23d] px-5 py-3 text-sm font-semibold text-[#162127] transition hover:bg-[#e0ab4a]"
+                className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#8d6e63] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#a1887f]"
               >
                 Open Dashboard
               </Link>
@@ -293,13 +293,13 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
 
           <div className="mt-10 grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
             <div className="space-y-5">
-              <Badge tone="cream" className="border-[#d8a23d]/40 bg-[#d8a23d]/12 text-[#f2d59e]">
+              <Badge tone="cream" className="border-[#a1887f]/40 bg-[#a1887f]/15 text-[#efebe9]">
                 Premium cafe ordering flow
               </Badge>
-              <h2 className="max-w-3xl text-4xl font-semibold leading-tight text-white sm:text-5xl">
+              <h2 className="max-w-3xl text-4xl font-semibold leading-tight text-[#efebe9] sm:text-5xl">
                 Touch-friendly menu browsing with a checkout panel that feels built for mobile first.
               </h2>
-              <p className="max-w-2xl text-base leading-8 text-white/70">
+              <p className="max-w-2xl text-base leading-8 text-[#d7ccc8]/80">
                 Pilih kategori, buka detail menu, dan checkout langsung. Begitu pesanan dibuat, stok bahan di sistem
                 admin akan berkurang otomatis sesuai resep setiap item.
               </p>
@@ -316,9 +316,9 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
                 "Quick cart controls",
                 "Live stock deduction",
               ].map((item, index) => (
-                <div key={item} className="rounded-[26px] border border-white/10 bg-white/6 p-5 backdrop-blur-sm">
-                  <p className="text-xs uppercase tracking-[0.22em] text-[#d8a23d]">0{index + 1}</p>
-                  <p className="mt-3 text-sm leading-7 text-white/72">{item}</p>
+                <div key={item} className="rounded-[26px] border border-[#d7ccc8]/12 bg-[#d7ccc8]/8 p-5 backdrop-blur-sm">
+                  <p className="text-xs uppercase tracking-[0.22em] text-[#a1887f]">0{index + 1}</p>
+                  <p className="mt-3 text-sm leading-7 text-[#d7ccc8]/80">{item}</p>
                 </div>
               ))}
             </div>
@@ -326,18 +326,18 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
         </div>
       </section>
 
-      <div className="section-shell pb-14 pt-8">
+      <div className="section-shell pb-14 pt-[420px] md:pt-[380px]">
         {successOrder ? (
-          <div className="mb-6 rounded-[28px] border border-[#e2d2bc] bg-white p-5 shadow-soft">
+          <div className="mb-6 rounded-[28px] border border-[#bcaaa4] bg-white p-5 shadow-soft">
             <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
               <div>
-                <p className="text-xs uppercase tracking-[0.28em] text-cafe-accent/60">Order berhasil dibuat</p>
-                <h2 className="mt-2 text-2xl font-semibold text-cafe-text">{successOrder.orderCode}</h2>
-                <p className="mt-2 text-sm text-cafe-accent/78">
+                <p className="text-xs uppercase tracking-[0.28em] text-[#8d6e63]">Order berhasil dibuat</p>
+                <h2 className="mt-2 text-2xl font-semibold text-[#4e342e]">{successOrder.orderCode}</h2>
+                <p className="mt-2 text-sm text-[#6d4c41]">
                   Pesanan untuk {successOrder.customerName} di {successOrder.branchName} sudah masuk ke sistem dan stok bahan telah diperbarui.
                 </p>
                 {successPaymentMethod ? (
-                  <p className="mt-2 text-sm text-cafe-accent/72">Pembayaran dipilih: {successPaymentMethod}</p>
+                  <p className="mt-2 text-sm text-[#6d4c41]">Pembayaran dipilih: {successPaymentMethod}</p>
                 ) : null}
               </div>
               <div className="flex flex-wrap gap-3">
@@ -353,41 +353,41 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
         <section className="mb-6 space-y-4">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-xs uppercase tracking-[0.28em] text-cafe-accent/60">Previous Orders</p>
-              <h2 className="mt-2 text-2xl font-semibold text-cafe-text">Riwayat pesanan pelanggan</h2>
+              <p className="text-xs uppercase tracking-[0.28em] text-[#8d6e63]">Previous Orders</p>
+              <h2 className="mt-2 text-2xl font-semibold text-[#4e342e]">Riwayat pesanan pelanggan</h2>
             </div>
             {activeCustomerName ? (
               <Badge tone="slate">{activeCustomerName}</Badge>
             ) : (
-              <p className="text-sm text-cafe-accent/72">Isi nama pelanggan untuk melihat order sebelumnya.</p>
+              <p className="text-sm text-[#6d4c41]">Isi nama pelanggan untuk melihat order sebelumnya.</p>
             )}
           </div>
           {customerOrderHistory.length === 0 ? (
-            <div className="rounded-[28px] border border-[#eadfce] bg-white p-5 text-sm text-cafe-accent/75 shadow-soft">
+            <div className="rounded-[28px] border border-[#bcaaa4] bg-white p-5 text-sm text-[#6d4c41] shadow-soft">
               Belum ada riwayat order untuk pelanggan ini. Setelah order pertama berhasil, daftar previous orders akan muncul di sini.
             </div>
           ) : (
             <div className="grid gap-4 lg:grid-cols-2">
               {customerOrderHistory.map((order) => (
-                <div key={order.id} className="rounded-[28px] border border-[#eadfce] bg-white p-5 shadow-soft">
+                <div key={order.id} className="rounded-[28px] border border-[#bcaaa4] bg-white p-5 shadow-soft">
                   <div className="flex items-start justify-between gap-3">
                     <div>
-                      <p className="text-xs uppercase tracking-[0.24em] text-cafe-accent/60">Order #{order.orderCode}</p>
-                      <h3 className="mt-2 text-xl font-semibold text-cafe-text">{order.branchName}</h3>
+                      <p className="text-xs uppercase tracking-[0.24em] text-[#8d6e63]">Order #{order.orderCode}</p>
+                      <h3 className="mt-2 text-xl font-semibold text-[#4e342e]">{order.branchName}</h3>
                     </div>
                     <Badge tone="cream">{formatDate(order.createdAt)}</Badge>
                   </div>
-                  <div className="mt-4 space-y-2 text-sm text-cafe-accent/78">
+                  <div className="mt-4 space-y-2 text-sm text-[#6d4c41]">
                     {order.items.map((item) => (
                       <p key={item.id}>
                         {item.menuName} x{item.quantity}
                       </p>
                     ))}
                   </div>
-                  <div className="mt-4 flex flex-col gap-3 border-t border-[#efe1d1] pt-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="mt-4 flex flex-col gap-3 border-t border-[#d7ccc8] pt-4 sm:flex-row sm:items-center sm:justify-between">
                     <div>
-                      <p className="text-xs uppercase tracking-[0.2em] text-cafe-accent/58">Total</p>
-                      <p className="mt-1 text-lg font-semibold text-cafe-accent">{formatCurrency(order.total)}</p>
+                      <p className="text-xs uppercase tracking-[0.2em] text-[#8d6e63]">Total</p>
+                      <p className="mt-1 text-lg font-semibold text-[#5d4037]">{formatCurrency(order.total)}</p>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       <Link href={getReceiptLink(order.orderCode)} className={buttonStyles("secondary", "px-4 py-2 text-xs")}>
@@ -404,19 +404,18 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
           )}
         </section>
 
-        <div className="grid gap-6 xl:grid-cols-[1.12fr_0.88fr]">
-          <div className="space-y-6">
-            <section className="space-y-4">
+        <div className="space-y-6">
+          <section className="space-y-4">
               <div>
-                <p className="text-xs uppercase tracking-[0.28em] text-cafe-accent/60">Recommended for you</p>
-                <h2 className="mt-2 text-2xl font-semibold text-cafe-text">Popular menu berdasarkan order terbanyak</h2>
+                <p className="text-xs uppercase tracking-[0.28em] text-[#8d6e63]">Recommended for you</p>
+                <h2 className="mt-2 text-2xl font-semibold text-[#4e342e]">Popular menu berdasarkan order terbanyak</h2>
               </div>
               <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
                 {recommendedMenus.map((item) => (
                   <Link
                     key={item.id}
                     href={`/order/${item.slug}`}
-                    className="group overflow-hidden rounded-[28px] border border-[#eadfce] bg-white shadow-soft transition hover:-translate-y-1"
+                    className="group overflow-hidden rounded-[28px] border border-[#bcaaa4] bg-white shadow-soft transition hover:-translate-y-1"
                   >
                     <div className="relative h-36 overflow-hidden">
                       <Image
@@ -425,16 +424,16 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
                         fill
                         className="object-cover transition duration-500 group-hover:scale-105"
                       />
-                      <div className="absolute left-3 top-3 rounded-full bg-[#102126]/80 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-[#f1d4a1]">
+                      <div className="absolute left-3 top-3 rounded-full bg-[#4e342e]/85 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-[#d7ccc8]">
                         Best seller
                       </div>
                     </div>
                     <div className="space-y-2 p-4">
                       <div className="flex items-start justify-between gap-3">
-                        <p className="font-semibold text-cafe-text">{item.name}</p>
+                        <p className="font-semibold text-[#4e342e]">{item.name}</p>
                         <Badge tone="cream">{item.orderCount}</Badge>
                       </div>
-                      <p className="text-sm text-cafe-accent/74">{formatCurrency(item.price)}</p>
+                      <p className="text-sm text-[#6d4c41]">{formatCurrency(item.price)}</p>
                     </div>
                   </Link>
                 ))}
@@ -452,8 +451,8 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
                     onClick={() => setCategory(option)}
                     className={`rounded-full px-5 py-3 text-sm font-semibold transition ${
                       active
-                        ? "bg-[#1c2c31] text-white shadow-soft"
-                        : "border border-[#e3d6c6] bg-white text-cafe-accent hover:bg-[#fbf2e8]"
+                        ? "bg-[#6d4c41] text-white shadow-soft"
+                        : "border border-[#bcaaa4] bg-white text-[#5d4037] hover:bg-[#efebe9]"
                     }`}
                   >
                     {option}
@@ -476,8 +475,8 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
                         <div className="min-w-0 space-y-3 sm:space-y-4 sm:p-5">
                           <div className="flex items-start justify-between gap-4">
                             <div className="min-w-0">
-                              <p className="text-xs uppercase tracking-[0.24em] text-cafe-accent/60">{item.category}</p>
-                              <h3 className="mt-2 text-xl font-semibold text-cafe-text sm:text-2xl">{item.name}</h3>
+                              <p className="text-xs uppercase tracking-[0.24em] text-[#8d6e63]">{item.category}</p>
+                              <h3 className="mt-2 text-xl font-semibold text-[#4e342e] sm:text-2xl">{item.name}</h3>
                             </div>
                             <Badge
                               tone={item.status === "Promo" ? "cream" : item.status === "Spesial" ? "green" : "blue"}
@@ -485,35 +484,35 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
                               {item.status}
                             </Badge>
                           </div>
-                          <p className="text-sm leading-7 text-cafe-accent/78">{item.description}</p>
-                          <div className="flex flex-wrap items-center gap-3 text-sm text-cafe-accent/68">
+                          <p className="text-sm leading-7 text-[#6d4c41]">{item.description}</p>
+                          <div className="flex flex-wrap items-center gap-3 text-sm text-[#8d6e63]">
                             <span>{item.prepTime}</span>
                             <span>{item.rating.toFixed(1)} rating</span>
                           </div>
                           <div className="flex items-center justify-between">
-                            <p className="text-lg font-semibold text-cafe-accent">{formatCurrency(item.price)}</p>
+                            <p className="text-lg font-semibold text-[#5d4037]">{formatCurrency(item.price)}</p>
                             <Link
                               href={`/order/${item.slug}`}
-                              className="inline-flex min-h-10 items-center justify-center rounded-full border border-[#eadfce] bg-[#fffaf5] px-4 py-2 text-xs font-semibold text-cafe-accent transition hover:bg-[#f8ecde]"
+                              className="inline-flex min-h-10 items-center justify-center rounded-full border border-[#bcaaa4] bg-[#efebe9] px-4 py-2 text-xs font-semibold text-[#5d4037] transition hover:bg-[#d7ccc8]"
                             >
                               Detail
                             </Link>
                           </div>
                         </div>
                       </div>
-                      <div className="flex items-center gap-3 border-t border-[#f0e4d6] pt-3 sm:px-5 sm:pb-5 sm:pt-0">
+                      <div className="flex items-center gap-3 border-t border-[#d7ccc8] pt-3 sm:px-5 sm:pb-5 sm:pt-0">
                         <button
                           type="button"
                           onClick={() => updateQuantity(item.id, quantity - 1)}
-                          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#eadfce] bg-[#fffaf5] text-lg text-cafe-accent"
+                          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#bcaaa4] bg-[#efebe9] text-lg text-[#5d4037]"
                         >
                           -
                         </button>
-                        <div className="min-w-10 text-center text-sm font-semibold text-cafe-text">{quantity}</div>
+                        <div className="min-w-10 text-center text-sm font-semibold text-[#4e342e]">{quantity}</div>
                         <button
                           type="button"
                           onClick={() => updateQuantity(item.id, quantity + 1)}
-                          className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-cafe-accent text-lg text-white"
+                          className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#6d4c41] text-lg text-white"
                         >
                           +
                         </button>
@@ -526,58 +525,11 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
                 );
               })}
             </section>
-          </div>
 
-          <aside className="xl:sticky xl:top-6 xl:self-start">
-            <div className="space-y-6">
-              <section className="rounded-[34px] bg-white p-6 shadow-[0_22px_50px_rgba(90,61,34,0.12)]">
-                <div className="flex items-center justify-between gap-4">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-cafe-accent/60">Cart summary</p>
-                    <h2 className="mt-2 text-2xl font-semibold text-cafe-text">Your order</h2>
-                  </div>
-                  <Badge tone="slate">{cartItems.reduce((sum, item) => sum + item.quantity, 0)} items</Badge>
-                </div>
-                <div className="mt-5 space-y-3">
-                  {cartItems.length === 0 ? (
-                    <div className="rounded-[24px] bg-[#fbf4ec] p-5 text-sm text-cafe-accent/75">
-                      Keranjang masih kosong. Tambahkan item dari menu di sebelah kiri.
-                    </div>
-                  ) : (
-                    cartItems.map((item) => (
-                      <div key={item.id} className="rounded-[24px] bg-[#fbf4ec] p-4">
-                        <div className="flex items-start justify-between gap-4">
-                          <div>
-                            <p className="font-semibold text-cafe-text">{item.name}</p>
-                            <p className="mt-1 text-sm text-cafe-accent/72">
-                              {item.quantity} x {formatCurrency(item.price)}
-                            </p>
-                          </div>
-                          <p className="font-semibold text-cafe-accent">{formatCurrency(item.price * item.quantity)}</p>
-                        </div>
-                      </div>
-                    ))
-                  )}
-                </div>
-                <div className="mt-5 space-y-3 border-t border-[#efe1d1] pt-5 text-sm">
-                  <div className="flex justify-between text-cafe-accent/75">
-                    <span>Subtotal</span>
-                    <span>{formatCurrency(subtotal)}</span>
-                  </div>
-                  <div className="flex justify-between text-cafe-accent/75">
-                    <span>Service fee</span>
-                    <span>{formatCurrency(serviceFee)}</span>
-                  </div>
-                  <div className="flex justify-between font-semibold text-cafe-text">
-                    <span>Total</span>
-                    <span>{formatCurrency(total)}</span>
-                  </div>
-                </div>
-              </section>
-
-              <section className="rounded-[34px] bg-[#112126] p-6 text-white shadow-[0_22px_50px_rgba(15,28,33,0.24)]">
-                <p className="text-xs uppercase tracking-[0.3em] text-[#d8a23d]">Checkout</p>
-                <h2 className="mt-2 text-2xl font-semibold">Pickup or dine-in</h2>
+            <div className="space-y-6 max-w-2xl mx-auto">
+            <section className="rounded-[34px] bg-[#4e342e] p-6 text-[#d7ccc8] shadow-[0_22px_50px_rgba(62,39,35,0.3)]">
+                <p className="text-xs uppercase tracking-[0.3em] text-[#a1887f]">Checkout</p>
+                <h2 className="mt-2 text-2xl font-semibold text-[#efebe9]">Pickup or dine-in</h2>
                 <form
                   className="mt-5 space-y-4"
                   onSubmit={(event) => {
@@ -586,7 +538,7 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
                   }}
                 >
                   <div className="space-y-2">
-                    <label className="text-xs font-medium uppercase tracking-[0.22em] text-white/68">Branch</label>
+                    <label className="text-xs font-medium uppercase tracking-[0.22em] text-[#d7ccc8]/75">Branch</label>
                     <select
                       value={checkoutForm.branchId}
                       onChange={(event) =>
@@ -595,14 +547,14 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
                       className={`min-h-12 w-full rounded-[22px] border px-4 py-3 text-sm outline-none ${darkFieldClassName}`}
                     >
                       {branches.map((branch) => (
-                        <option key={branch.id} value={branch.id} className="text-cafe-text">
+                        <option key={branch.id} value={branch.id} className="text-[#4e342e]">
                           {branch.name}
                         </option>
                       ))}
                     </select>
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-medium uppercase tracking-[0.22em] text-white/68">
+                    <label className="text-xs font-medium uppercase tracking-[0.22em] text-[#d7ccc8]/75">
                       Customer Name
                     </label>
                     <Input
@@ -616,7 +568,7 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-medium uppercase tracking-[0.22em] text-white/68">
+                    <label className="text-xs font-medium uppercase tracking-[0.22em] text-[#d7ccc8]/75">
                       Table Number
                     </label>
                     <Input
@@ -630,7 +582,7 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-medium uppercase tracking-[0.22em] text-white/68">
+                    <label className="text-xs font-medium uppercase tracking-[0.22em] text-[#d7ccc8]/75">
                       Order Note
                     </label>
                     <Textarea
@@ -644,17 +596,61 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
                   <Button
                     type="button"
                     onClick={openPaymentModal}
-                    className="w-full bg-[#d8a23d] text-[#162127] hover:bg-[#e0ab4a]"
+                    className="w-full bg-[#8d6e63] text-white hover:bg-[#a1887f]"
                     disabled={submitting}
                   >
                     {submitting ? "Processing order..." : "Proceed to Checkout"}
                   </Button>
                 </form>
               </section>
+
+              <section className="rounded-[34px] bg-white p-6 shadow-[0_22px_50px_rgba(78,52,46,0.15)]">
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.3em] text-[#8d6e63]">Cart summary</p>
+                    <h2 className="mt-2 text-2xl font-semibold text-[#4e342e]">Your order</h2>
+                  </div>
+                  <Badge tone="slate">{cartItems.reduce((sum, item) => sum + item.quantity, 0)} items</Badge>
+                </div>
+                <div className="mt-5 space-y-3">
+                  {cartItems.length === 0 ? (
+                    <div className="rounded-[24px] bg-[#efebe9] p-5 text-sm text-[#6d4c41]">
+                      Keranjang masih kosong. Tambahkan item dari menu di sebelah kiri.
+                    </div>
+                  ) : (
+                    cartItems.map((item) => (
+                      <div key={item.id} className="rounded-[24px] bg-[#efebe9] p-4">
+                        <div className="flex items-start justify-between gap-4">
+                          <div>
+                            <p className="font-semibold text-[#4e342e]">{item.name}</p>
+                            <p className="mt-1 text-sm text-[#6d4c41]">
+                              {item.quantity} x {formatCurrency(item.price)}
+                            </p>
+                          </div>
+                          <p className="font-semibold text-[#5d4037]">{formatCurrency(item.price * item.quantity)}</p>
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </div>
+                <div className="mt-5 space-y-3 border-t border-[#d7ccc8] pt-5 text-sm">
+                  <div className="flex justify-between text-[#6d4c41]">
+                    <span>Subtotal</span>
+                    <span>{formatCurrency(subtotal)}</span>
+                  </div>
+                  <div className="flex justify-between text-[#6d4c41]">
+                    <span>Service fee</span>
+                    <span>{formatCurrency(serviceFee)}</span>
+                  </div>
+                  <div className="flex justify-between font-semibold text-[#4e342e]">
+                    <span>Total</span>
+                    <span>{formatCurrency(total)}</span>
+                  </div>
+                </div>
+              </section>
             </div>
-          </aside>
+          </div>
         </div>
-      </div>
 
       <Modal
         open={paymentModalOpen}
@@ -663,10 +659,10 @@ export function OrderPageView({ menus, paymentSettings, recommendedMenus, branch
         className="sm:max-w-xl"
       >
         <div className="space-y-5">
-          <p className="text-sm leading-7 text-cafe-accent/75">
+          <p className="text-sm leading-7 text-[#6d4c41]">
             Pilih metode pembayaran untuk order {checkoutForm.customerName || "pelanggan"} di{" "}
-            <span className="font-semibold text-cafe-text">{selectedBranch?.name ?? "branch aktif"}</span> dengan total{" "}
-            <span className="font-semibold text-cafe-text">{formatCurrency(total)}</span>.
+            <span className="font-semibold text-[#4e342e]">{selectedBranch?.name ?? "branch aktif"}</span> dengan total{" "}
+            <span className="font-semibold text-[#4e342e]">{formatCurrency(total)}</span>.
           </p>
 
           <div className="grid gap-3">

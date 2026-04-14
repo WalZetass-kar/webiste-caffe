@@ -77,10 +77,10 @@ export function TemplateFeatures() {
   return (
     <section className="section-shell py-20 sm:py-24">
       <div className="mb-12 text-center">
-        <p className="text-xs uppercase tracking-[0.34em] text-[#00704A]">
+        <p className="text-xs uppercase tracking-[0.34em] text-[#5a4a3a]">
           Template Features
         </p>
-        <h2 className="mt-3 text-4xl font-semibold text-[#1E3932] sm:text-5xl">
+        <h2 className="mt-3 text-4xl font-semibold text-[#3d3027] sm:text-5xl">
           Everything You Need to Run a Modern Cafe
         </h2>
         <p className="mt-4 text-lg text-[#6B5D52] max-w-3xl mx-auto">
@@ -97,7 +97,7 @@ export function TemplateFeatures() {
             <div className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${feature.color} text-3xl shadow-lg mb-4`}>
               {/* Icon removed */}
             </div>
-            <h3 className="text-lg font-semibold text-[#1E3932] mb-2">
+            <h3 className="text-lg font-semibold text-[#3d3027] mb-2">
               {feature.title}
             </h3>
             <p className="text-sm text-[#6B5D52] leading-relaxed">
@@ -110,7 +110,7 @@ export function TemplateFeatures() {
       <div className="mt-12 text-center">
         <a
           href="#demo"
-          className="inline-flex items-center gap-2 rounded-full bg-[#00704A] px-8 py-4 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#00A862] hover:shadow-xl hover:-translate-y-1"
+          className="inline-flex items-center gap-2 rounded-full bg-[#5a4a3a] px-8 py-4 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#6B5D52] hover:shadow-xl hover:-translate-y-1"
         >
           <span>View Live Demo</span>
           <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -39,7 +39,7 @@ export function TechStack() {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-[#1E3932] to-[#0c1a1f] py-20 text-white sm:py-24">
+    <section className="bg-gradient-to-br from-[#3d3027] to-[#0c1a1f] py-20 text-white sm:py-24">
       <div className="section-shell">
         <div className="mb-12 text-center">
           <p className="text-xs uppercase tracking-[0.34em] text-[#CBA258]">

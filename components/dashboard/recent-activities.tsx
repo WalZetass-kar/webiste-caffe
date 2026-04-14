@@ -37,7 +37,7 @@ export function RecentActivities({ orders, stockHistory, attendance }: RecentAct
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
           </svg>
         ),
-        color: "from-[#00704A] to-[#00A862]",
+        color: "from-[#5a4a3a] to-[#6B5D52]",
       });
     });
 
@@ -74,7 +74,7 @@ export function RecentActivities({ orders, stockHistory, attendance }: RecentAct
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
           </svg>
         ),
-        color: att.isLate ? "from-[#D4A574] to-[#CBA258]" : "from-[#1E3932] to-[#2A4F47]",
+        color: att.isLate ? "from-[#D4A574] to-[#CBA258]" : "from-[#3d3027] to-[#2A4F47]",
       });
     });
 
@@ -87,10 +87,10 @@ export function RecentActivities({ orders, stockHistory, attendance }: RecentAct
   return (
     <Card className="starbucks-card">
       <div className="mb-5">
-        <p className="text-xs font-semibold uppercase tracking-wider text-[#00704A]">
+        <p className="text-xs font-semibold uppercase tracking-wider text-[#6B5D52]">
           Recent Activities
         </p>
-        <h3 className="mt-1 text-xl font-bold text-[#1E3932]">
+        <h3 className="mt-1 text-xl font-bold text-[#3d3027]">
           Aktivitas terbaru
         </h3>
       </div>
@@ -109,13 +109,13 @@ export function RecentActivities({ orders, stockHistory, attendance }: RecentAct
           activities.map((activity) => (
             <div
               key={activity.id}
-              className="flex items-start gap-3 rounded-xl border border-[#D4C5B9]/30 bg-white p-3 transition-all duration-300 hover:shadow-md"
+              className="flex items-start gap-3 rounded-xl border border-[#D4C5B9]/30 bg-white/80 backdrop-blur-sm p-3 transition-all duration-300 hover:bg-white hover:shadow-md"
             >
-              <div className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br ${activity.color} text-white`}>
+              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-[#5a4a3a] text-white">
                 {activity.icon}
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-semibold text-[#1E3932] text-sm truncate">
+                <p className="font-semibold text-[#3d3027] text-sm truncate">
                   {activity.title}
                 </p>
                 <p className="text-xs text-[#6B5D52] mt-1 line-clamp-2">
@@ -143,11 +143,11 @@ export function RecentActivities({ orders, stockHistory, attendance }: RecentAct
           background: transparent;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: rgba(30, 57, 50, 0.2);
+          background: rgba(61, 48, 39, 0.2);
           border-radius: 999px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: rgba(30, 57, 50, 0.3);
+          background: rgba(61, 48, 39, 0.3);
         }
       `}</style>
     </Card>

@@ -38,16 +38,16 @@ export function PeakHoursChart({ orders }: PeakHoursChartProps) {
     <Card className="starbucks-card">
       <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wider text-[#00704A]">
+          <p className="text-xs font-semibold uppercase tracking-wider text-[#6B5D52]">
             Peak Hours
           </p>
-          <h3 className="mt-1 text-xl font-bold text-[#1E3932]">
+          <h3 className="mt-1 text-xl font-bold text-[#3d3027]">
             Jam sibuk cafe
           </h3>
         </div>
         <div className="rounded-lg border border-[#D4C5B9]/40 bg-[#F7F5F2] px-4 py-2">
           <p className="text-xs text-[#6B5D52]">Jam tersibuk</p>
-          <p className="text-lg font-bold text-[#00704A]">
+          <p className="text-lg font-bold text-[#5a4a3a]">
             {peakHour.label} ({peakHour.orders} orders)
           </p>
         </div>
@@ -61,16 +61,8 @@ export function PeakHoursChart({ orders }: PeakHoursChartProps) {
               {
                 label: "Orders per Jam",
                 data: hourlyData.map((h) => h.orders),
-                backgroundColor: hourlyData.map((h) => 
-                  h.orders === maxOrders 
-                    ? "rgba(203, 162, 88, 0.8)" 
-                    : "rgba(0, 112, 74, 0.6)"
-                ),
-                borderColor: hourlyData.map((h) => 
-                  h.orders === maxOrders 
-                    ? "#CBA258" 
-                    : "#00704A"
-                ),
+                backgroundColor: "rgba(90, 74, 58, 0.7)",
+                borderColor: "#5a4a3a",
                 borderWidth: 2,
                 borderRadius: 8,
               },
@@ -99,9 +91,9 @@ export function PeakHoursChart({ orders }: PeakHoursChartProps) {
                   display: false,
                 },
                 ticks: {
-                  color: "#00704A",
+                  color: "#6B5D52",
                   font: {
-                    family: "Poppins, sans-serif",
+                    family: "Inter, sans-serif",
                     size: 11,
                   },
                 },
@@ -110,9 +102,9 @@ export function PeakHoursChart({ orders }: PeakHoursChartProps) {
                 beginAtZero: true,
                 ticks: {
                   precision: 0,
-                  color: "#1E3932",
+                  color: "#3d3027",
                   font: {
-                    family: "Poppins, sans-serif",
+                    family: "Inter, sans-serif",
                   },
                 },
                 grid: {

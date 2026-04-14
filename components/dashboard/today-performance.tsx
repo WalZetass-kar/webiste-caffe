@@ -50,7 +50,7 @@ export function TodayPerformance({ orders }: TodayPerformanceProps) {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      color: "from-[#00704A] to-[#00A862]",
+      color: "from-[#5a4a3a] to-[#6B5D52]",
     },
     {
       label: "Rata-rata Order",
@@ -72,7 +72,7 @@ export function TodayPerformance({ orders }: TodayPerformanceProps) {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      color: "from-[#1E3932] to-[#2A4F47]",
+      color: "from-[#3d3027] to-[#2A4F47]",
     },
     {
       label: "Jam Terakhir",
@@ -90,10 +90,10 @@ export function TodayPerformance({ orders }: TodayPerformanceProps) {
   return (
     <Card className="starbucks-card">
       <div className="mb-5">
-        <p className="text-xs font-semibold uppercase tracking-wider text-[#00704A]">
+        <p className="text-xs font-semibold uppercase tracking-wider text-[#5a4a3a]">
           Today's Performance
         </p>
-        <h3 className="mt-1 text-xl font-bold text-[#1E3932]">
+        <h3 className="mt-1 text-xl font-bold text-[#3d3027]">
           Performa hari ini - {new Date().toLocaleDateString("id-ID", { 
             weekday: "long", 
             day: "numeric", 
@@ -108,7 +108,7 @@ export function TodayPerformance({ orders }: TodayPerformanceProps) {
             key={metric.label}
             className="group relative overflow-hidden rounded-2xl border border-[#D4C5B9]/40 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-lg"
           >
-            <div className="absolute right-0 top-0 h-20 w-20 rounded-full bg-[#00704A]/5 blur-2xl" />
+            <div className="absolute right-0 top-0 h-20 w-20 rounded-full bg-[#5a4a3a]/5 blur-2xl" />
             <div className="relative space-y-3">
               <div className={`inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${metric.color} text-white shadow-md transition-transform duration-300 group-hover:scale-110`}>
                 {metric.icon}
@@ -117,7 +117,7 @@ export function TodayPerformance({ orders }: TodayPerformanceProps) {
                 <p className="text-xs font-medium text-[#6B5D52] mb-1">
                   {metric.label}
                 </p>
-                <p className="text-2xl font-bold text-[#1E3932]">
+                <p className="text-2xl font-bold text-[#3d3027]">
                   {metric.value}
                 </p>
                 <p className="text-xs text-[#9B8B7E] mt-1">

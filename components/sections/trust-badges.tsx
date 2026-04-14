@@ -65,10 +65,10 @@ export function TrustBadges() {
               key={badge.title}
               className={`rounded-2xl border border-[#D4C5B9]/40 bg-white p-6 text-center shadow-sm hover:shadow-lg transition-all duration-300 animate-fade-in animate-delay-${index * 50}`}
             >
-              <div className="inline-flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-[#00704A] to-[#00A862] text-white mb-3">
+              <div className="inline-flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-[#5a4a3a] to-[#6B5D52] text-white mb-3">
                 {badge.icon}
               </div>
-              <h3 className="text-sm font-semibold text-[#1E3932] mb-1">
+              <h3 className="text-sm font-semibold text-[#3d3027] mb-1">
                 {badge.title}
               </h3>
               <p className="text-xs text-[#6B5D52]">

@@ -57,7 +57,7 @@ export function Toast({ id, title, message, type = "info", duration = 5000, onCl
       case "warning":
         return "border-yellow-200 bg-yellow-50 text-yellow-900";
       default:
-        return "border-[#00704A]/20 bg-white text-[#1E3932]";
+        return "border-[#5a4a3a]/20 bg-white text-[#3d3027]";
     }
   };
 

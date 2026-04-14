@@ -14,7 +14,7 @@ export function QuickActions() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
         </svg>
       ),
-      color: "from-[#00704A] to-[#00A862]",
+      color: "from-[#5a4a3a] to-[#6B5D52]",
     },
     {
       title: "Kelola Menu",
@@ -36,7 +36,7 @@ export function QuickActions() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
         </svg>
       ),
-      color: "from-[#1E3932] to-[#2A4F47]",
+      color: "from-[#3d3027] to-[#2A4F47]",
     },
     {
       title: "Kelola Staff",
@@ -58,7 +58,7 @@ export function QuickActions() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
         </svg>
       ),
-      color: "from-[#00704A] to-[#1E3932]",
+      color: "from-[#5a4a3a] to-[#3d3027]",
     },
     {
       title: "Pengaturan",
@@ -77,10 +77,10 @@ export function QuickActions() {
   return (
     <Card className="starbucks-card">
       <div className="mb-5">
-        <p className="text-xs font-semibold uppercase tracking-wider text-[#00704A]">
+        <p className="text-xs font-semibold uppercase tracking-wider text-[#5a4a3a]">
           Quick Actions
         </p>
-        <h3 className="mt-1 text-xl font-bold text-[#1E3932]">
+        <h3 className="mt-1 text-xl font-bold text-[#3d3027]">
           Akses cepat ke fitur utama
         </h3>
       </div>
@@ -95,7 +95,7 @@ export function QuickActions() {
             <div className={`inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${action.color} text-white shadow-md mb-3 transition-transform duration-300 group-hover:scale-110`}>
               {action.icon}
             </div>
-            <h4 className="text-sm font-semibold text-[#1E3932] mb-1 truncate">
+            <h4 className="text-sm font-semibold text-[#3d3027] mb-1 truncate">
               {action.title}
             </h4>
             <p className="text-xs text-[#6B5D52] truncate">

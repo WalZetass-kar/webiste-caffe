@@ -52,10 +52,10 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
     <Card className="h-full starbucks-card">
       <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-[#00704A]">Laporan Penjualan</p>
-          <h3 className="mt-1 text-lg font-semibold text-[#1E3932]">Tren penjualan 7 hari terakhir</h3>
+          <p className="text-xs uppercase tracking-[0.3em] text-[#5a4a3a]">Laporan Penjualan</p>
+          <h3 className="mt-1 text-lg font-semibold text-[#3d3027]">Tren penjualan 7 hari terakhir</h3>
         </div>
-        <div className="rounded-lg border border-[#D4C5B9]/40 bg-[#F7F5F2] px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#00704A] shadow-sm">
+        <div className="rounded-lg border border-[#D4C5B9]/40 bg-[#F7F5F2] px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#5a4a3a] shadow-sm">
           {branchLabel}
         </div>
       </div>
@@ -67,7 +67,7 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
               {
                 label: "Gross Sales",
                 data: series.map((item) => item.sales),
-                borderColor: "#00704A",
+                borderColor: "#5a4a3a",
                 backgroundColor: "rgba(0, 112, 74, 0.1)",
                 fill: true,
                 tension: 0.35,
@@ -76,7 +76,7 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
               {
                 label: "Orders",
                 data: series.map((item) => item.orders),
-                borderColor: "#00A862",
+                borderColor: "#6B5D52",
                 backgroundColor: "rgba(0, 168, 98, 0.15)",
                 fill: false,
                 tension: 0.35,
@@ -92,7 +92,7 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
                 position: "top",
                 labels: {
                   usePointStyle: true,
-                  color: "#1E3932",
+                  color: "#3d3027",
                   font: {
                     family: "Poppins, sans-serif",
                     size: 12,
@@ -106,7 +106,7 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
                   display: false,
                 },
                 ticks: {
-                  color: "#00704A",
+                  color: "#5a4a3a",
                   font: {
                     family: "Poppins, sans-serif",
                   },
@@ -117,7 +117,7 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
                 position: "left",
                 ticks: {
                   callback: (value) => formatCompactNumber(Number(value)),
-                  color: "#00704A",
+                  color: "#5a4a3a",
                   font: {
                     family: "Poppins, sans-serif",
                   },
@@ -132,7 +132,7 @@ export function SalesChart({ orders, branchLabel = "Semua Branch" }: SalesChartP
                 beginAtZero: true,
                 ticks: {
                   precision: 0,
-                  color: "#1E3932",
+                  color: "#3d3027",
                   font: {
                     family: "Poppins, sans-serif",
                   },

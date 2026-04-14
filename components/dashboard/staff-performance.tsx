@@ -89,9 +89,9 @@ export function StaffPerformance({ employees, attendance, orders }: StaffPerform
   const getStatusColor = (status: StaffMetrics["status"]) => {
     switch (status) {
       case "excellent":
-        return "from-[#00704A] to-[#00A862]";
+        return "from-[#5a4a3a] to-[#6B5D52]";
       case "good":
-        return "from-[#1E3932] to-[#2A4F47]";
+        return "from-[#3d3027] to-[#2A4F47]";
       case "needs-improvement":
         return "from-[#CBA258] to-[#D4A574]";
     }
@@ -105,10 +105,10 @@ export function StaffPerformance({ employees, attendance, orders }: StaffPerform
     <Card className="starbucks-card">
       <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wider text-[#00704A]">
+          <p className="text-xs font-semibold uppercase tracking-wider text-[#5a4a3a]">
             Staff Performance
           </p>
-          <h3 className="mt-1 text-xl font-bold text-[#1E3932]">
+          <h3 className="mt-1 text-xl font-bold text-[#3d3027]">
             Performa karyawan (30 hari terakhir)
           </h3>
         </div>
@@ -131,7 +131,7 @@ export function StaffPerformance({ employees, attendance, orders }: StaffPerform
                   {staff.employeeName.charAt(0)}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="font-semibold text-[#1E3932] truncate">
+                  <p className="font-semibold text-[#3d3027] truncate">
                     {staff.employeeName}
                   </p>
                   <p className="text-xs text-[#6B5D52] mt-1">
@@ -145,19 +145,19 @@ export function StaffPerformance({ employees, attendance, orders }: StaffPerform
             <div className="grid grid-cols-3 gap-3">
               <div className="rounded-lg bg-[#F7F5F2] p-3">
                 <p className="text-xs text-[#6B5D52] mb-1">Attendance</p>
-                <p className="text-lg font-bold text-[#1E3932]">
+                <p className="text-lg font-bold text-[#3d3027]">
                   {staff.attendanceRate}%
                 </p>
               </div>
               <div className="rounded-lg bg-[#F7F5F2] p-3">
                 <p className="text-xs text-[#6B5D52] mb-1">Late</p>
-                <p className="text-lg font-bold text-[#1E3932]">
+                <p className="text-lg font-bold text-[#3d3027]">
                   {staff.lateCount}x
                 </p>
               </div>
               <div className="rounded-lg bg-[#F7F5F2] p-3">
                 <p className="text-xs text-[#6B5D52] mb-1">Orders</p>
-                <p className="text-lg font-bold text-[#1E3932]">
+                <p className="text-lg font-bold text-[#3d3027]">
                   {staff.ordersHandled}
                 </p>
               </div>

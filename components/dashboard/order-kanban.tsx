@@ -68,16 +68,16 @@ export function OrderKanban({ orders }: OrderKanbanProps) {
       <Card className="starbucks-card space-y-5">
         <div className="flex items-center justify-between flex-wrap gap-3">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-[#00704A]">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#5a4a3a]">
               Manajemen Pesanan
             </p>
-            <h3 className="mt-1 text-xl font-bold text-[#1E3932]">
+            <h3 className="mt-1 text-xl font-bold text-[#3d3027]">
               Antrian order live per status
             </h3>
           </div>
           <div className="flex items-center gap-2 text-sm text-[#6B5D52]">
             <span>Total:</span>
-            <span className="font-semibold text-[#1E3932]">{orders.length}</span>
+            <span className="font-semibold text-[#3d3027]">{orders.length}</span>
           </div>
         </div>
 
@@ -94,7 +94,7 @@ export function OrderKanban({ orders }: OrderKanbanProps) {
               >
                 {/* Column Header */}
                 <div className="flex items-center justify-between gap-2 border-b border-[#D4C5B9]/30 bg-white/80 px-4 py-3 rounded-t-2xl">
-                  <h4 className="text-sm font-semibold text-[#1E3932] truncate flex-1">
+                  <h4 className="text-sm font-semibold text-[#3d3027] truncate flex-1">
                     {column}
                   </h4>
                   <Badge tone={getTone(column)} className="flex-shrink-0">
@@ -108,7 +108,7 @@ export function OrderKanban({ orders }: OrderKanbanProps) {
                     // Empty State
                     <div className="flex flex-col items-center justify-center p-8 text-center min-h-[200px]">
                       <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-[#E8DDD3]">
-                        <span className="text-sm font-semibold text-[#1E3932]/50">{column.charAt(0)}</span>
+                        <span className="text-sm font-semibold text-[#3d3027]/50">{column.charAt(0)}</span>
                       </div>
                       <p className="text-sm text-[#9B8B7E]">Tidak ada pesanan</p>
                     </div>
@@ -129,15 +129,15 @@ export function OrderKanban({ orders }: OrderKanbanProps) {
                               "group relative rounded-2xl border bg-white p-4 shadow-sm transition-all duration-300",
                               "hover:shadow-md hover:-translate-y-0.5",
                               isNew
-                                ? "border-[#00A862] bg-[#00A862]/5 ring-2 ring-[#00A862]/20"
+                                ? "border-[#6B5D52] bg-[#6B5D52]/5 ring-2 ring-[#6B5D52]/20"
                                 : "border-[#D4C5B9]/30"
                             )}
                           >
                             {/* New Order Badge */}
                             {isNew && (
                               <div className="absolute -top-2 -right-2 z-10">
-                                <span className="relative inline-flex items-center gap-1 rounded-full bg-[#00A862] px-3 py-1 text-xs font-semibold text-white shadow-lg">
-                                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#00A862] opacity-75"></span>
+                                <span className="relative inline-flex items-center gap-1 rounded-full bg-[#6B5D52] px-3 py-1 text-xs font-semibold text-white shadow-lg">
+                                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#6B5D52] opacity-75"></span>
                                   <span className="relative">BARU</span>
                                 </span>
                               </div>
@@ -147,7 +147,7 @@ export function OrderKanban({ orders }: OrderKanbanProps) {
                               {/* Table Number & Order Code */}
                               <div className="flex items-start justify-between gap-3">
                                 <div className="flex-1 min-w-0">
-                                  <p className="font-bold text-[#1E3932] text-lg truncate">
+                                  <p className="font-bold text-[#3d3027] text-lg truncate">
                                     {item.tableNumber}
                                   </p>
                                   <p className="text-sm text-[#6B5D52] truncate font-medium mt-1">
@@ -167,7 +167,7 @@ export function OrderKanban({ orders }: OrderKanbanProps) {
                               {/* Order Items Preview */}
                               {item.items.length > 0 && (
                                 <div className="pt-3 border-t border-[#D4C5B9]/20">
-                                  <p className="text-xs font-semibold text-[#00704A] mb-2 uppercase tracking-wider">
+                                  <p className="text-xs font-semibold text-[#5a4a3a] mb-2 uppercase tracking-wider">
                                     Item Pesanan
                                   </p>
                                   <div className="space-y-1.5">
@@ -192,7 +192,7 @@ export function OrderKanban({ orders }: OrderKanbanProps) {
 
                               {/* Footer Info */}
                               <div className="flex items-center justify-between pt-3 border-t border-[#D4C5B9]/20">
-                                <span className="text-xs font-medium text-[#00704A]">
+                                <span className="text-xs font-medium text-[#5a4a3a]">
                                   {totalItems} items
                                 </span>
                                 <span className="text-xs text-[#9B8B7E]">
@@ -206,7 +206,7 @@ export function OrderKanban({ orders }: OrderKanbanProps) {
                               {/* Notes if any */}
                               {item.notes && (
                                 <div className="pt-3 border-t border-[#D4C5B9]/20">
-                                  <p className="text-xs font-semibold text-[#00704A] mb-1 uppercase tracking-wider">
+                                  <p className="text-xs font-semibold text-[#5a4a3a] mb-1 uppercase tracking-wider">
                                     Catatan
                                   </p>
                                   <p className="text-xs text-[#6B5D52] line-clamp-2 break-words leading-relaxed">

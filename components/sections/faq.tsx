@@ -43,10 +43,10 @@ export function FAQ() {
   return (
     <section className="section-shell py-20 sm:py-24">
       <div className="mb-12 text-center">
-        <p className="text-xs uppercase tracking-[0.34em] text-[#00704A]">
+        <p className="text-xs uppercase tracking-[0.34em] text-[#5a4a3a]">
           FAQ
         </p>
-        <h2 className="mt-3 text-4xl font-semibold text-[#1E3932] sm:text-5xl">
+        <h2 className="mt-3 text-4xl font-semibold text-[#3d3027] sm:text-5xl">
           Frequently Asked Questions
         </h2>
         <p className="mt-4 text-lg text-[#6B5D52] max-w-3xl mx-auto">
@@ -64,11 +64,11 @@ export function FAQ() {
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
               className="flex w-full items-center justify-between gap-4 p-6 text-left"
             >
-              <h3 className="text-lg font-semibold text-[#1E3932]">
+              <h3 className="text-lg font-semibold text-[#3d3027]">
                 {faq.question}
               </h3>
               <svg
-                className={`h-6 w-6 flex-shrink-0 text-[#00704A] transition-transform duration-300 ${
+                className={`h-6 w-6 flex-shrink-0 text-[#5a4a3a] transition-transform duration-300 ${
                   openIndex === index ? "rotate-180" : ""
                 }`}
                 fill="none"
@@ -104,7 +104,7 @@ export function FAQ() {
         </p>
         <a
           href="mailto:support@example.com"
-          className="inline-flex items-center gap-2 rounded-full border-2 border-[#00704A] bg-transparent px-6 py-3 text-sm font-semibold text-[#00704A] transition-all duration-300 hover:bg-[#00704A] hover:text-white"
+          className="inline-flex items-center gap-2 rounded-full border-2 border-[#5a4a3a] bg-transparent px-6 py-3 text-sm font-semibold text-[#5a4a3a] transition-all duration-300 hover:bg-[#5a4a3a] hover:text-white"
         >
           <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

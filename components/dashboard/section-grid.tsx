@@ -28,25 +28,25 @@ export function SectionGrid({ lowStockItems, stockHistory, employees, orders }: 
     <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
       <Card className="space-y-4 starbucks-card animate-fade-in animate-delay-100">
         <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-[#00704A]">Panel Notifikasi</p>
-          <h3 className="mt-1 text-lg font-semibold text-[#1E3932]">Peringatan Restock Otomatis</h3>
+          <p className="text-xs uppercase tracking-[0.3em] text-[#5a4a3a]">Panel Notifikasi</p>
+          <h3 className="mt-1 text-lg font-semibold text-[#3d3027]">Peringatan Restock Otomatis</h3>
         </div>
         <div className="space-y-3">
           {lowStockItems.length === 0 ? (
-            <div className="rounded-xl border border-[#D4C5B9]/30 bg-[#F7F5F2] p-3 text-sm text-[#1E3932]/70">
+            <div className="rounded-xl border border-[#D4C5B9]/30 bg-[#F7F5F2] p-3 text-sm text-[#3d3027]/70">
               Semua stok aman. Belum ada peringatan aktif.
             </div>
           ) : (
             lowStockItems.map((item) => (
               <div key={item.id} className="rounded-xl border border-[#D4C5B9]/30 bg-[#F7F5F2] p-3 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center justify-between gap-2">
-                  <p className="font-medium text-[#1E3932] truncate">{item.materialName}</p>
+                  <p className="font-medium text-[#3d3027] truncate">{item.materialName}</p>
                   <Badge tone="rose">{formatQuantity(item.stockQuantity, item.unit)}</Badge>
                 </div>
-                <p className="mt-1 text-xs text-[#00704A]/80 truncate">
+                <p className="mt-1 text-xs text-[#5a4a3a]/80 truncate">
                   {item.branchName} | {item.supplier}
                 </p>
-                <p className="mt-2 text-xs text-[#1E3932]/60">
+                <p className="mt-2 text-xs text-[#3d3027]/60">
                   Minimum aman {formatQuantity(item.lowStockThreshold, item.unit)}
                 </p>
               </div>
@@ -57,12 +57,12 @@ export function SectionGrid({ lowStockItems, stockHistory, employees, orders }: 
 
       <Card className="space-y-4 starbucks-card animate-fade-in animate-delay-200">
         <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-[#00704A]">Riwayat Persediaan</p>
-          <h3 className="mt-1 text-lg font-semibold text-[#1E3932]">Perubahan stok terbaru</h3>
+          <p className="text-xs uppercase tracking-[0.3em] text-[#5a4a3a]">Riwayat Persediaan</p>
+          <h3 className="mt-1 text-lg font-semibold text-[#3d3027]">Perubahan stok terbaru</h3>
         </div>
         <div className="space-y-3">
           {stockHistory.length === 0 ? (
-            <div className="rounded-xl border border-[#D4C5B9]/30 bg-[#F7F5F2] p-3 text-sm text-[#1E3932]/70">
+            <div className="rounded-xl border border-[#D4C5B9]/30 bg-[#F7F5F2] p-3 text-sm text-[#3d3027]/70">
               Belum ada riwayat stok yang tercatat.
             </div>
           ) : (
@@ -70,14 +70,14 @@ export function SectionGrid({ lowStockItems, stockHistory, employees, orders }: 
               <div key={item.id} className="rounded-xl border border-[#D4C5B9]/30 bg-[#F7F5F2] p-3 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex-1 min-w-0">
-                    <p className="font-medium text-[#1E3932] truncate">{item.materialName}</p>
-                    <p className="mt-1 text-xs text-[#00704A]/80 truncate">
+                    <p className="font-medium text-[#3d3027] truncate">{item.materialName}</p>
+                    <p className="mt-1 text-xs text-[#5a4a3a]/80 truncate">
                       {item.branchName} | {formatDateTime(item.date)}
                     </p>
                   </div>
                   <Badge tone={getHistoryTone(item.changeType)}>{item.changeType}</Badge>
                 </div>
-                <p className="mt-2 text-xs text-[#1E3932]/60 truncate">
+                <p className="mt-2 text-xs text-[#3d3027]/60 truncate">
                   {item.reference} | {formatQuantity(item.quantityChanged, item.unit)}
                 </p>
               </div>
@@ -88,12 +88,12 @@ export function SectionGrid({ lowStockItems, stockHistory, employees, orders }: 
 
       <Card className="space-y-4 starbucks-card animate-fade-in animate-delay-300">
         <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-[#00704A]">Struk Digital</p>
-          <h3 className="mt-1 text-lg font-semibold text-[#1E3932]">Struk terbaru dari pesanan masuk</h3>
+          <p className="text-xs uppercase tracking-[0.3em] text-[#5a4a3a]">Struk Digital</p>
+          <h3 className="mt-1 text-lg font-semibold text-[#3d3027]">Struk terbaru dari pesanan masuk</h3>
         </div>
         <div className="space-y-3">
           {orders.length === 0 ? (
-            <div className="rounded-xl border border-[#D4C5B9]/30 bg-[#F7F5F2] p-3 text-sm text-[#1E3932]/70">
+            <div className="rounded-xl border border-[#D4C5B9]/30 bg-[#F7F5F2] p-3 text-sm text-[#3d3027]/70">
               Belum ada struk yang bisa ditampilkan.
             </div>
           ) : (
@@ -105,14 +105,14 @@ export function SectionGrid({ lowStockItems, stockHistory, employees, orders }: 
               >
                 <div className="flex items-center justify-between gap-3">
                   <div className="flex-1 min-w-0">
-                    <p className="font-medium text-[#1E3932] truncate">{item.orderCode}</p>
-                    <p className="mt-1 text-xs text-[#00704A]/80 truncate">
+                    <p className="font-medium text-[#3d3027] truncate">{item.orderCode}</p>
+                    <p className="mt-1 text-xs text-[#5a4a3a]/80 truncate">
                       {item.branchName} | {formatDateTime(item.createdAt)}
                     </p>
                   </div>
                   <Badge tone="cream">{item.paymentMethod}</Badge>
                 </div>
-                <p className="mt-2 text-xs text-[#1E3932]/60 truncate">
+                <p className="mt-2 text-xs text-[#3d3027]/60 truncate">
                   {item.customerName} - {item.tableNumber}
                 </p>
               </Link>
@@ -123,22 +123,22 @@ export function SectionGrid({ lowStockItems, stockHistory, employees, orders }: 
 
       <Card className="space-y-4 starbucks-card animate-fade-in animate-delay-400">
         <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-[#00704A]">Karyawan</p>
-          <h3 className="mt-1 text-lg font-semibold text-[#1E3932]">Tim yang Sedang Aktif</h3>
+          <p className="text-xs uppercase tracking-[0.3em] text-[#5a4a3a]">Karyawan</p>
+          <h3 className="mt-1 text-lg font-semibold text-[#3d3027]">Tim yang Sedang Aktif</h3>
         </div>
         <div className="space-y-3">
           {employees.slice(0, 4).map((item, index) => (
             <div key={item.id} className="rounded-xl border border-[#D4C5B9]/30 bg-[#F7F5F2] p-3 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center justify-between gap-2">
                 <div className="flex-1 min-w-0">
-                  <p className="font-medium text-[#1E3932] truncate">{item.employeeName}</p>
-                  <p className="text-xs text-[#00704A]/80 truncate">
+                  <p className="font-medium text-[#3d3027] truncate">{item.employeeName}</p>
+                  <p className="text-xs text-[#5a4a3a]/80 truncate">
                     {item.position} | {item.branchName}
                   </p>
                 </div>
                 <Badge tone="blue">0{index + 1}</Badge>
               </div>
-              <p className="mt-2 text-xs text-[#1E3932]/60 truncate">{item.email}</p>
+              <p className="mt-2 text-xs text-[#3d3027]/60 truncate">{item.email}</p>
             </div>
           ))}
         </div>

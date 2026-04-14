@@ -174,8 +174,8 @@ export function DashboardPageView({
         <Card className="starbucks-card">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#00704A]">Analitik Cabang</p>
-              <h2 className="mt-2 text-2xl font-bold text-[#1E3932]">
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#5a4a3a]">Analitik Cabang</p>
+              <h2 className="mt-2 text-2xl font-bold text-[#3d3027]">
                 Filter dashboard berdasarkan lokasi operasional
               </h2>
               <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#6B5D52]">
