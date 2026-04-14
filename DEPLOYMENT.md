@@ -38,18 +38,18 @@ The template is ready to deploy to Vercel:
 **Note:** Settings changes in production will persist only during the current deployment. For permanent storage, integrate a database.
 
 #### Features Working in Production
-✅ All UI components
-✅ Menu management
-✅ Order tracking
-✅ Staff management
-✅ Reports and analytics
-✅ Rating system
-✅ PWA functionality
+- All UI components
+- Menu management
+- Order tracking
+- Staff management
+- Reports and analytics
+- Rating system
+- PWA functionality
 
 #### Features Requiring Database for Production
-⚠️ Persistent settings across deployments
-⚠️ Data persistence between deployments
-⚠️ Multi-instance data synchronization
+- Persistent settings across deployments
+- Data persistence between deployments
+- Multi-instance data synchronization
 
 ### Template Purpose
 This is a **template for sale** - buyers can customize and integrate their preferred database solution based on their needs.
@@ -94,18 +94,18 @@ Template siap di-deploy ke Vercel:
 **Catatan:** Perubahan settings di production hanya bertahan selama deployment saat ini. Untuk penyimpanan permanen, integrasikan database.
 
 #### Fitur yang Berfungsi di Production
-✅ Semua komponen UI
-✅ Manajemen menu
-✅ Tracking pesanan
-✅ Manajemen staff
-✅ Laporan dan analytics
-✅ Sistem rating
-✅ Fungsionalitas PWA
+- Semua komponen UI
+- Manajemen menu
+- Tracking pesanan
+- Manajemen staff
+- Laporan dan analytics
+- Sistem rating
+- Fungsionalitas PWA
 
 #### Fitur yang Memerlukan Database untuk Production
-⚠️ Settings persisten antar deployment
-⚠️ Persistensi data antar deployment
-⚠️ Sinkronisasi data multi-instance
+- Settings persisten antar deployment
+- Persistensi data antar deployment
+- Sinkronisasi data multi-instance
 
 ### Tujuan Template
 Ini adalah **template untuk dijual** - pembeli dapat menyesuaikan dan mengintegrasikan solusi database pilihan mereka sesuai kebutuhan.

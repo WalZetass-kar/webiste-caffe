@@ -43,7 +43,7 @@ export function DashboardSidebar() {
   }, [isActive, visibleMenu]);
 
   return (
-    <aside className="fixed left-0 top-0 z-20 hidden h-screen w-[240px] bg-[#3d3027] lg:flex lg:flex-col rounded-r-3xl">
+    <aside className="fixed left-0 top-0 z-30 hidden h-screen w-[240px] bg-[#3d3027] lg:flex lg:flex-col rounded-r-3xl">
       {/* Header */}
       <div className="flex items-center gap-3 px-5 py-6 border-b border-[#4d4037]">
         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#5a4a3a] text-sm font-bold text-[#d4c5b9]">
