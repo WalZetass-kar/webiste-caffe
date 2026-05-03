@@ -1,6 +1,7 @@
 import { DashboardSidebar } from "@/components/layout/dashboard-sidebar";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { Topbar } from "@/components/layout/topbar";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   return (
@@ -22,6 +23,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <div className="relative flex min-h-screen flex-col gap-6 px-3 py-3 sm:px-4 sm:py-5 lg:px-6 lg:py-6 lg:pt-3">
           <div className="lg:block pl-20 lg:pl-0">
             <Topbar />
+          </div>
+          <div className="pl-20 lg:pl-0">
+            <Breadcrumb />
           </div>
           <main className="relative flex-1">{children}</main>
         </div>

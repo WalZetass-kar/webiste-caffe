@@ -36,9 +36,6 @@ type DashboardPageViewProps = {
   attendance: AttendanceRecord[];
 };
 
-const selectClassName =
-  "min-h-12 w-full rounded-lg border border-cafe-line bg-cafe-surface px-4 py-3 text-sm text-cafe-text outline-none shadow-sm focus:border-cafe-primary/80 focus:ring-2 focus:ring-cafe-primary/25";
-
 export function DashboardPageView({
   branches,
   orders,

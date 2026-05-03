@@ -4,6 +4,12 @@ import { canAccessPath, getDefaultRouteForRole, normalizeUserRole } from "@/lib/
 
 export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+  
+  // Allow access to login page without redirect
+  if (pathname === "/login") {
+    return NextResponse.next();
+  }
+  
   const role = normalizeUserRole(request.cookies.get("cafeflow-role")?.value);
 
   if (canAccessPath(role, pathname)) {

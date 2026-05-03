@@ -20,9 +20,11 @@ export function RealtimeProvider({ children }: { children: React.ReactNode }) {
   const { pushToast } = useToast();
   const [events, setEvents] = useState<RealtimeEventRecord[]>([]);
   const [open, setOpen] = useState(false);
+  const isInitialLoad = useState(true)[0];
 
   useEffect(() => {
     let active = true;
+    let isFirstLoad = true;
 
     const loadInitialEvents = async () => {
       try {
@@ -57,18 +59,24 @@ export function RealtimeProvider({ children }: { children: React.ReactNode }) {
         return [event, ...current].slice(0, 20);
       });
 
-      pushToast({
-        title: event.title,
-        description: event.message,
-        tone:
-          event.tone === "error"
-            ? "error"
-            : event.tone === "warning"
-              ? "warning"
-              : event.tone === "success"
-                ? "success"
-                : "info",
-      });
+      // Only show toast for new events after initial load
+      if (!isFirstLoad) {
+        pushToast({
+          title: event.title,
+          description: event.message,
+          tone:
+            event.tone === "error"
+              ? "error"
+              : event.tone === "warning"
+                ? "warning"
+                : event.tone === "success"
+                  ? "success"
+                  : "info",
+        });
+      } else {
+        // Mark as loaded after first event
+        isFirstLoad = false;
+      }
     };
 
     source.onerror = () => {

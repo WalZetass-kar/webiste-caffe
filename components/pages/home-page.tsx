@@ -111,14 +111,14 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
           scrolled ? "bg-[#4e342e]/95 shadow-[0_22px_60px_rgba(33,17,12,0.4)] backdrop-blur-xl" : "bg-[#4e342e]/80 backdrop-blur-sm"
         }`}
       >
-        <div className="section-shell flex items-center justify-between py-5">
-          <Link href="/" className="flex items-center gap-3 text-[#d7ccc8]">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#8d6e63]/40 bg-[#5d4037]/30 text-sm font-semibold">
+        <div className="section-shell flex items-center justify-between py-3 lg:py-5">
+          <Link href="/" className="flex items-center gap-2 lg:gap-3 text-[#d7ccc8]">
+            <div className="flex h-9 w-9 lg:h-11 lg:w-11 items-center justify-center rounded-full border border-[#8d6e63]/40 bg-[#5d4037]/30 text-xs lg:text-sm font-semibold">
               {brandInitials}
             </div>
             <div>
-              <p className="font-semibold">{settings.cafeName}</p>
-              <p className="text-xs uppercase tracking-[0.28em] text-[#bcaaa4]">Premium Coffee</p>
+              <p className="font-semibold text-sm lg:text-base">{settings.cafeName}</p>
+              <p className="text-[9px] lg:text-xs uppercase tracking-wider lg:tracking-[0.28em] text-[#bcaaa4]">Premium Coffee</p>
             </div>
           </Link>
 
@@ -128,14 +128,14 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
                 {item.label}
               </a>
             ))}
-            <Link href="/dashboard" className="transition-all duration-300 hover:text-[#d7ccc8] hover:tracking-[0.28em]">
-              Dashboard
+            <Link href="/login" className="transition-all duration-300 hover:text-[#d7ccc8] hover:tracking-[0.28em]">
+              Login
             </Link>
           </nav>
 
           <Link
             href="/order"
-            className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#8d6e63] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#a1887f] hover:shadow-lg active:scale-95"
+            className="inline-flex min-h-9 lg:min-h-11 items-center justify-center rounded-full bg-[#8d6e63] px-4 lg:px-5 py-2 lg:py-3 text-xs lg:text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#a1887f] hover:shadow-lg active:scale-95"
           >
             Order Online
           </Link>
@@ -172,19 +172,18 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
         <div className="absolute inset-y-0 left-0 w-full bg-[radial-gradient(circle_at_20%_20%,rgba(141,110,99,0.25),transparent_22%)] z-[1]" />
 
         <div className="section-shell relative flex min-h-screen flex-col justify-center pb-16 pt-32 z-[2]">
-          <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-            <div className="animate-reveal-up space-y-8">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
+            <div className="animate-reveal-up space-y-6 lg:space-y-8">
               <Badge tone="cream" className="border-[#8d6e63]/40 bg-[#8d6e63]/20 px-4 py-1.5 text-[#d7ccc8]">
                 Premium Coffee Experience
               </Badge>
-              <div className="space-y-5">
+              <div className="space-y-4">
                 <p className="text-xs uppercase tracking-[0.4em] text-[#a1887f]">Welcome to {settings.cafeName}</p>
-                <h1 className="max-w-3xl text-balance text-5xl font-semibold leading-[0.94] text-[#efebe9] sm:text-6xl lg:text-7xl">
+                <h1 className="max-w-3xl text-balance text-4xl font-semibold leading-tight text-[#efebe9] sm:text-5xl lg:text-6xl">
                   Cinematic coffee moments, crafted for modern city rituals.
                 </h1>
-                <p className="max-w-2xl text-base leading-8 text-[#d7ccc8]/80 sm:text-lg">
-                  Dari signature espresso hingga pastry hangat, {settings.cafeName} menyatukan atmosfer premium cafe,
-                  pemesanan online cepat, dan pengalaman brand yang terasa lebih eksklusif.
+                <p className="max-w-2xl text-base leading-relaxed text-[#d7ccc8]/80">
+                  Dari signature espresso hingga pastry hangat, {settings.cafeName} menyatukan atmosfer premium cafe dengan pengalaman brand yang eksklusif.
                 </p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">
@@ -203,9 +202,9 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
               </div>
               <div className="grid gap-3 sm:grid-cols-3">
                 {cafeStats.map((stat, index) => (
-                  <div key={stat.label} className={`rounded-[28px] border border-[#d7ccc8]/15 bg-[#d7ccc8]/8 p-5 backdrop-blur-sm animate-scale-in animate-delay-${(index + 3) * 100}`}>
-                    <p className="text-3xl font-semibold text-[#efebe9]">{stat.value}</p>
-                    <p className="mt-2 text-sm text-[#d7ccc8]/70">{stat.label}</p>
+                  <div key={stat.label} className={`rounded-2xl border border-[#d7ccc8]/15 bg-[#d7ccc8]/8 p-4 backdrop-blur-sm animate-scale-in animate-delay-${(index + 3) * 100}`}>
+                    <p className="text-2xl font-semibold text-[#efebe9]">{stat.value}</p>
+                    <p className="mt-1 text-xs text-[#d7ccc8]/70">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -215,8 +214,8 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
               <div className="absolute -left-12 top-12 h-60 w-60 rounded-full bg-[#8d6e63]/20 blur-3xl" />
               <div className="absolute right-10 top-4 h-48 w-48 rounded-full bg-[#a1887f]/20 blur-3xl" />
               <div className="animate-float-slow relative mx-auto aspect-[0.96] max-w-[620px]">
-                <div className="absolute left-0 top-[6%] w-[56%] rotate-[-10deg] overflow-hidden rounded-[32px] border border-[#d7ccc8]/15 bg-[#4e342e] p-3 shadow-[0_30px_70px_rgba(0,0,0,0.5)]">
-                  <div className="relative h-[290px] overflow-hidden rounded-[24px]">
+                <div className="absolute left-0 top-[6%] w-[56%] rotate-[-10deg] overflow-hidden rounded-3xl border border-[#d7ccc8]/15 bg-[#4e342e] p-3 shadow-[0_30px_70px_rgba(0,0,0,0.5)]">
+                  <div className="relative h-[290px] overflow-hidden rounded-2xl">
                     <Image
                       src={heroMenus[0]?.image || galleryImages[0].src}
                       alt={heroMenus[0]?.name ?? "Signature coffee"}
@@ -224,14 +223,14 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
                       className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                    <div className="absolute bottom-5 left-5 right-5">
-                      <p className="text-xs uppercase tracking-[0.3em] text-[#d7ccc8]">Signature</p>
-                      <p className="mt-2 font-serif text-3xl text-white">{heroMenus[0]?.name ?? "House Brew"}</p>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <p className="text-xs uppercase tracking-wider text-[#d7ccc8]">Signature</p>
+                      <p className="mt-2 font-serif text-2xl text-white">{heroMenus[0]?.name ?? "House Brew"}</p>
                     </div>
                   </div>
                 </div>
-                <div className="absolute right-0 top-0 w-[58%] rotate-[13deg] overflow-hidden rounded-[32px] border border-[#d7ccc8]/12 bg-[#5d4037] p-3 shadow-[0_30px_70px_rgba(0,0,0,0.5)]">
-                  <div className="relative h-[340px] overflow-hidden rounded-[24px]">
+                <div className="absolute right-0 top-0 w-[58%] rotate-[13deg] overflow-hidden rounded-3xl border border-[#d7ccc8]/12 bg-[#5d4037] p-3 shadow-[0_30px_70px_rgba(0,0,0,0.5)]">
+                  <div className="relative h-[340px] overflow-hidden rounded-2xl">
                     <Image
                       src={galleryImages[2].src}
                       alt="Barista making coffee"
@@ -240,8 +239,8 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
                     />
                   </div>
                 </div>
-                <div className="absolute bottom-0 right-[8%] w-[62%] rotate-[-8deg] overflow-hidden rounded-[32px] border border-[#d7ccc8]/12 bg-[#4e342e] p-3 shadow-[0_30px_70px_rgba(0,0,0,0.5)]">
-                  <div className="relative h-[240px] overflow-hidden rounded-[24px]">
+                <div className="absolute bottom-0 right-[8%] w-[62%] rotate-[-8deg] overflow-hidden rounded-3xl border border-[#d7ccc8]/12 bg-[#4e342e] p-3 shadow-[0_30px_70px_rgba(0,0,0,0.5)]">
+                  <div className="relative h-[240px] overflow-hidden rounded-2xl">
                     <Image
                       src={heroMenus[1]?.image || galleryImages[3].src}
                       alt={heroMenus[1]?.name ?? "Cafe dish"}
@@ -249,10 +248,10 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
                       className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                    <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4 text-white">
+                    <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-4 text-white">
                       <div>
-                        <p className="text-xs uppercase tracking-[0.3em] text-[#d7ccc8]">Chef Pick</p>
-                        <p className="mt-2 font-serif text-2xl">{heroMenus[1]?.name ?? "Slow Brunch"}</p>
+                        <p className="text-xs uppercase tracking-wider text-[#d7ccc8]">Chef Pick</p>
+                        <p className="mt-2 font-serif text-xl">{heroMenus[1]?.name ?? "Slow Brunch"}</p>
                       </div>
                       <span className="rounded-full border border-[#d7ccc8]/20 bg-[#d7ccc8]/15 px-3 py-1 text-sm backdrop-blur-sm">
                         {heroMenus[1] ? formatCurrency(heroMenus[1].price) : formatCurrency(38000)}
@@ -264,24 +263,24 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
             </div>
           </div>
 
-          <div className="mt-16 grid gap-4 lg:grid-cols-3">
+          <div className="mt-12 lg:mt-16 grid gap-4 md:grid-cols-3">
             {serviceHighlights.map((item, index) => (
-              <div key={item.title} className={`rounded-[28px] border border-[#d7ccc8]/12 bg-[#d7ccc8]/8 p-5 backdrop-blur-sm hover-lift animate-fade-in animate-delay-${(index + 1) * 200}`}>
-                <p className="text-xs uppercase tracking-[0.28em] text-[#a1887f]">{item.label}</p>
-                <h2 className="mt-3 text-2xl font-semibold text-[#efebe9]">{item.title}</h2>
-                <p className="mt-3 text-sm leading-7 text-[#d7ccc8]/75">{item.description}</p>
+              <div key={item.title} className={`rounded-2xl border border-[#d7ccc8]/12 bg-[#d7ccc8]/8 p-5 backdrop-blur-sm hover-lift animate-fade-in animate-delay-${(index + 1) * 200}`}>
+                <p className="text-xs uppercase tracking-wider text-[#a1887f]">{item.label}</p>
+                <h2 className="mt-3 text-xl font-semibold text-[#efebe9]">{item.title}</h2>
+                <p className="mt-2 text-sm leading-relaxed text-[#d7ccc8]/75">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="featured-menu" className="section-shell py-20 sm:py-24">
+      <section id="featured-menu" className="section-shell py-16 sm:py-20">
         <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.34em] text-[#8d6e63]">Featured Menu</p>
-            <h2 className="mt-3 max-w-3xl text-4xl font-semibold text-[#4e342e] sm:text-5xl">
-              Premium favorites plated with a softer, more elevated cafe mood.
+            <p className="text-xs uppercase tracking-wider text-[#8d6e63]">Featured Menu</p>
+            <h2 className="mt-3 max-w-3xl text-3xl font-semibold text-[#4e342e] sm:text-4xl">
+              Premium favorites plated with elevated cafe mood.
             </h2>
           </div>
           <Link
@@ -291,13 +290,13 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
             Explore Full Menu
           </Link>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {featuredMenus.map((item, index) => (
             <article
               key={item.id}
-              className={`group overflow-hidden rounded-[32px] bg-white shadow-[0_18px_40px_rgba(126,89,57,0.12)] transition duration-300 hover:-translate-y-2 animate-scale-in animate-delay-${index * 100}`}
+              className={`group overflow-hidden rounded-3xl bg-white shadow-[0_18px_40px_rgba(126,89,57,0.12)] transition duration-300 hover:-translate-y-2 animate-scale-in animate-delay-${index * 100}`}
             >
-              <div className="relative h-72 overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
                 <Image
                   src={item.image}
                   alt={item.name}
@@ -305,18 +304,18 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
                   className="object-cover transition duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="space-y-4 p-6">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.28em] text-[#8d6e63]">{item.category}</p>
-                    <h3 className="mt-2 text-2xl font-semibold text-[#4e342e]">{item.name}</h3>
+              <div className="space-y-3 p-5">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs uppercase tracking-wider text-[#8d6e63]">{item.category}</p>
+                    <h3 className="mt-2 text-xl font-semibold text-[#4e342e] truncate">{item.name}</h3>
                   </div>
                   <Badge tone={item.status === "Promo" ? "cream" : item.status === "Spesial" ? "green" : "blue"}>
                     {item.status}
                   </Badge>
                 </div>
-                <p className="text-sm leading-7 text-[#6d4c41]">{item.description}</p>
-                <div className="flex items-center justify-between">
+                <p className="text-sm leading-relaxed text-[#6d4c41] line-clamp-2">{item.description}</p>
+                <div className="flex items-center justify-between pt-2">
                   <p className="text-lg font-semibold text-[#5d4037]">{formatCurrency(item.price)}</p>
                   <Link
                     href={`/order/${item.slug}`}
@@ -331,46 +330,46 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
         </div>
       </section>
 
-      <section className="section-shell pb-20 sm:pb-24">
+      <section className="section-shell pb-16 sm:pb-20">
         <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.34em] text-[#8d6e63]">Best Seller</p>
-            <h2 className="mt-3 max-w-3xl text-4xl font-semibold text-[#4e342e] sm:text-5xl">
-              Menu recommendation yang dibentuk dari pesanan pelanggan paling sering dipilih.
+            <p className="text-xs uppercase tracking-wider text-[#8d6e63]">Best Seller</p>
+            <h2 className="mt-3 max-w-3xl text-3xl font-semibold text-[#4e342e] sm:text-4xl">
+              Menu rekomendasi dari pesanan terpopuler.
             </h2>
           </div>
-          <p className="max-w-xl text-sm leading-7 text-[#6d4c41]">
-            Rekomendasi ini akan terus bergerak mengikuti order terbanyak, jadi homepage selalu terasa lebih hidup.
+          <p className="max-w-xl text-sm leading-relaxed text-[#6d4c41]">
+            Rekomendasi berdasarkan order terbanyak pelanggan.
           </p>
         </div>
-        <div className="grid gap-5 lg:grid-cols-4">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {recommendedMenus.map((item, index) => (
             <article
               key={item.id}
-              className={`overflow-hidden rounded-[32px] border border-[#bcaaa4] bg-[#efebe9] shadow-soft hover-lift animate-fade-in animate-delay-${index * 100}`}
+              className={`overflow-hidden rounded-3xl border border-[#bcaaa4] bg-[#efebe9] shadow-soft hover-lift animate-fade-in animate-delay-${index * 100}`}
             >
-              <div className="relative h-52 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
                 <Image src={item.image} alt={item.name} fill className="object-cover" />
-                <div className="absolute left-4 top-4 rounded-full bg-[#4e342e]/85 px-3 py-1 text-xs uppercase tracking-[0.22em] text-[#d7ccc8]">
+                <div className="absolute left-4 top-4 rounded-full bg-[#4e342e]/85 px-3 py-1 text-xs uppercase tracking-wider text-[#d7ccc8]">
                   Top {index + 1}
                 </div>
               </div>
-              <div className="space-y-4 p-5">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.24em] text-[#8d6e63]">{item.category}</p>
-                    <h3 className="mt-2 text-2xl font-semibold text-[#4e342e]">{item.name}</h3>
+              <div className="space-y-3 p-5">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs uppercase tracking-wider text-[#8d6e63]">{item.category}</p>
+                    <h3 className="mt-2 text-xl font-semibold text-[#4e342e] truncate">{item.name}</h3>
                   </div>
-                  <Badge tone="cream">{item.orderCount} sold</Badge>
+                  <Badge tone="cream">{item.orderCount}</Badge>
                 </div>
-                <p className="text-sm leading-7 text-[#6d4c41]">{item.description}</p>
-                <div className="flex items-center justify-between">
+                <p className="text-sm leading-relaxed text-[#6d4c41] line-clamp-2">{item.description}</p>
+                <div className="flex items-center justify-between pt-2">
                   <p className="text-lg font-semibold text-[#5d4037]">{formatCurrency(item.price)}</p>
                   <Link
                     href={`/order/${item.slug}`}
                     className="inline-flex min-h-10 items-center justify-center rounded-full bg-[#6d4c41] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#8d6e63]"
                   >
-                    Order Now
+                    Order
                   </Link>
                 </div>
               </div>
@@ -379,28 +378,28 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
         </div>
       </section>
 
-      <section className="section-shell pb-20 sm:pb-24">
-        <div className="grid gap-5 lg:grid-cols-4">
+      <section className="section-shell pb-16 sm:pb-20">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {menuCategories.map((category, index) => (
-            <article key={category.title} className={`overflow-hidden rounded-[32px] bg-white shadow-soft hover-scale animate-scale-in animate-delay-${index * 100}`}>
-              <div className="relative h-48 overflow-hidden">
+            <article key={category.title} className={`overflow-hidden rounded-3xl bg-white shadow-soft hover-scale animate-scale-in animate-delay-${index * 100}`}>
+              <div className="relative h-44 overflow-hidden">
                 <Image src={category.image} alt={category.title} fill className="object-cover transition duration-500 group-hover:scale-110" />
               </div>
-              <div className="space-y-3 p-5">
-                <div className="flex items-center justify-between gap-4">
-                  <h3 className="text-2xl font-semibold text-[#4e342e]">{category.title}</h3>
+              <div className="space-y-2 p-5">
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="text-xl font-semibold text-[#4e342e]">{category.title}</h3>
                   <span className="text-sm text-[#8d6e63]">{category.itemCount}</span>
                 </div>
-                <p className="text-sm leading-7 text-[#6d4c41]">{category.description}</p>
+                <p className="text-sm leading-relaxed text-[#6d4c41]">{category.description}</p>
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="about" className="bg-[#4e342e] py-20 text-[#d7ccc8] sm:py-24">
-        <div className="section-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div className="relative min-h-[420px] overflow-hidden rounded-[36px] animate-slide-in-left">
+      <section id="about" className="bg-[#4e342e] py-16 text-[#d7ccc8] sm:py-20">
+        <div className="section-shell grid gap-10 lg:grid-cols-2 lg:gap-12 lg:items-center">
+          <div className="relative min-h-[380px] overflow-hidden rounded-3xl animate-slide-in-left">
             <Image
               src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80"
               alt="Cafe interior"
@@ -408,32 +407,30 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6 rounded-[26px] border border-[#d7ccc8]/15 bg-[#d7ccc8]/12 p-5 backdrop-blur-sm">
-              <p className="text-xs uppercase tracking-[0.32em] text-[#d7ccc8]">Signature House Coffee</p>
-              <p className="mt-3 font-serif text-3xl">Roasted for balance, served with warmth.</p>
+            <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-[#d7ccc8]/15 bg-[#d7ccc8]/12 p-5 backdrop-blur-sm">
+              <p className="text-xs uppercase tracking-wider text-[#d7ccc8]">Signature House Coffee</p>
+              <p className="mt-3 font-serif text-2xl">Roasted for balance, served with warmth.</p>
             </div>
           </div>
-          <div className="space-y-6 animate-slide-in-right">
-            <p className="text-xs uppercase tracking-[0.34em] text-[#a1887f]">About {settings.cafeName}</p>
-            <h2 className="max-w-3xl text-4xl font-semibold leading-tight text-[#efebe9] sm:text-5xl">
-              Built around premium coffee, quiet luxury interiors, and a smoother ordering rhythm.
+          <div className="space-y-5 animate-slide-in-right">
+            <p className="text-xs uppercase tracking-wider text-[#a1887f]">About {settings.cafeName}</p>
+            <h2 className="max-w-3xl text-3xl font-semibold leading-tight text-[#efebe9] sm:text-4xl">
+              Premium coffee, luxury interiors, and smoother ordering.
             </h2>
-            <p className="text-base leading-8 text-[#d7ccc8]/75">
-              {settings.cafeName} menghadirkan pengalaman cafe modern yang menggabungkan kopi spesialti, comfort food, dan
-              service flow yang cepat. Dari counter hingga mobile ordering, setiap detail dirancang agar pelanggan
-              merasa masuk ke brand yang rapi, hangat, dan premium.
+            <p className="text-base leading-relaxed text-[#d7ccc8]/75">
+              {settings.cafeName} menghadirkan pengalaman cafe modern dengan kopi spesialti, comfort food, dan service yang cepat.
             </p>
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-[28px] border border-[#d7ccc8]/15 bg-[#d7ccc8]/8 p-5">
-                <p className="text-xs uppercase tracking-[0.28em] text-[#a1887f]">Our Craft</p>
-                <p className="mt-3 text-sm leading-7 text-[#d7ccc8]/75">
-                  Espresso blend house-roasted, milk texturing yang konsisten, dan plating yang tetap terasa branded.
+              <div className="rounded-2xl border border-[#d7ccc8]/15 bg-[#d7ccc8]/8 p-4">
+                <p className="text-xs uppercase tracking-wider text-[#a1887f]">Our Craft</p>
+                <p className="mt-2 text-sm leading-relaxed text-[#d7ccc8]/75">
+                  Espresso house-roasted, milk texturing konsisten, dan plating branded.
                 </p>
               </div>
-              <div className="rounded-[28px] border border-[#d7ccc8]/15 bg-[#d7ccc8]/8 p-5">
-                <p className="text-xs uppercase tracking-[0.28em] text-[#a1887f]">Signature Pairing</p>
-                <p className="mt-3 text-sm leading-7 text-[#d7ccc8]/75">
-                  Menu pastry dan brunch dipilih untuk menyeimbangkan rasa kopi, matcha, dan minuman musiman kami.
+              <div className="rounded-2xl border border-[#d7ccc8]/15 bg-[#d7ccc8]/8 p-4">
+                <p className="text-xs uppercase tracking-wider text-[#a1887f]">Signature Pairing</p>
+                <p className="mt-2 text-sm leading-relaxed text-[#d7ccc8]/75">
+                  Menu pastry dan brunch untuk menyeimbangkan rasa kopi dan matcha.
                 </p>
               </div>
             </div>
@@ -441,22 +438,22 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
         </div>
       </section>
 
-      <section id="gallery" className="section-shell py-20 sm:py-24">
+      <section id="gallery" className="section-shell py-16 sm:py-20">
         <div className="mb-10">
-          <p className="text-xs uppercase tracking-[0.34em] text-[#8d6e63]">Gallery</p>
-          <h2 className="mt-3 text-4xl font-semibold text-[#4e342e] sm:text-5xl">
-            A visual moodboard of coffee, dessert, and cinematic interiors.
+          <p className="text-xs uppercase tracking-wider text-[#8d6e63]">Gallery</p>
+          <h2 className="mt-3 text-3xl font-semibold text-[#4e342e] sm:text-4xl">
+            Visual moodboard of coffee, dessert, and interiors.
           </h2>
         </div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {galleryImages.map((image, index) => (
             <article
               key={image.title}
-              className={`group overflow-hidden rounded-[34px] bg-white shadow-soft hover-lift animate-fade-in animate-delay-${index * 100} ${
+              className={`group overflow-hidden rounded-3xl bg-white shadow-soft hover-lift animate-fade-in animate-delay-${index * 100} ${
                 index === 1 ? "md:col-span-2" : ""
               }`}
             >
-              <div className={`relative ${index === 1 ? "h-[420px]" : "h-[340px]"}`}>
+              <div className={`relative ${index === 1 ? "h-[380px]" : "h-[320px]"}`}>
                 <Image
                   src={image.src}
                   alt={image.title}
@@ -465,7 +462,7 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5">
-                  <p className="font-serif text-2xl text-white">{image.title}</p>
+                  <p className="font-serif text-xl text-white">{image.title}</p>
                 </div>
               </div>
             </article>
@@ -473,56 +470,56 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
         </div>
       </section>
 
-      <section className="section-shell pb-20 sm:pb-24">
+      <section className="section-shell pb-16 sm:pb-20">
         <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.34em] text-[#8d6e63]">Customer Stories</p>
-            <h2 className="mt-3 text-4xl font-semibold text-[#4e342e] sm:text-5xl">
-              Reviews that match the warmth of the room and the quality in the cup.
+            <p className="text-xs uppercase tracking-wider text-[#8d6e63]">Customer Stories</p>
+            <h2 className="mt-3 text-3xl font-semibold text-[#4e342e] sm:text-4xl">
+              Reviews that match the warmth and quality.
             </h2>
           </div>
           <Badge tone="slate" className="px-4 py-2">
-            ThemeForest-inspired premium layout
+            Premium layout
           </Badge>
         </div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {ratings.length > 0
               ? ratings.slice(0, 3).map((rating, index) => (
-                  <article key={rating.id} className={`rounded-[32px] bg-white p-6 shadow-soft hover-lift animate-scale-in animate-delay-${index * 100}`}>
+                  <article key={rating.id} className={`rounded-3xl bg-white p-6 shadow-soft hover-lift animate-scale-in animate-delay-${index * 100}`}>
                     <div className="flex items-center justify-between gap-4">
                       <div>
-                        <p className="text-xl font-semibold text-[#4e342e]">{rating.customerName}</p>
+                        <p className="text-lg font-semibold text-[#4e342e]">{rating.customerName}</p>
                         <p className="mt-1 text-sm text-[#8d6e63]">Table {rating.tableNumber ?? "-"}</p>
                       </div>
                       <span className="rounded-full bg-[#efebe9] px-3 py-1 text-sm font-semibold text-[#5d4037]">
                         {((rating.serviceRating + rating.foodRating) / 2).toFixed(1)}
                       </span>
                     </div>
-                    <p className="mt-5 text-sm leading-8 text-[#6d4c41]">{rating.comment || "Pelanggan tidak menambahkan komentar."}</p>
+                    <p className="mt-4 text-sm leading-relaxed text-[#6d4c41]">{rating.comment || "Pelanggan tidak menambahkan komentar."}</p>
                   </article>
                 ))
               : testimonials.map((testimonial, index) => (
-                  <article key={testimonial.name} className={`rounded-[32px] bg-white p-6 shadow-soft hover-lift animate-scale-in animate-delay-${index * 100}`}>
+                  <article key={testimonial.name} className={`rounded-3xl bg-white p-6 shadow-soft hover-lift animate-scale-in animate-delay-${index * 100}`}>
                     <div className="flex items-center justify-between gap-4">
                       <div>
-                        <p className="text-xl font-semibold text-[#4e342e]">{testimonial.name}</p>
+                        <p className="text-lg font-semibold text-[#4e342e]">{testimonial.name}</p>
                         <p className="mt-1 text-sm text-[#8d6e63]">{testimonial.role}</p>
                       </div>
                       <span className="rounded-full bg-[#efebe9] px-3 py-1 text-sm font-semibold text-[#5d4037]">
                         5.0
                       </span>
                     </div>
-                    <p className="mt-5 text-sm leading-8 text-[#6d4c41]">{testimonial.quote}</p>
+                    <p className="mt-4 text-sm leading-relaxed text-[#6d4c41]">{testimonial.quote}</p>
                   </article>
                 ))}
           </div>
         </section>
 
-        <section className="section-shell py-20 sm:py-24">
+        <section className="section-shell py-16 sm:py-20">
           <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="text-xs uppercase tracking-[0.34em] text-[#8d6e63]">Customer Feedback</p>
-              <h2 className="mt-3 text-4xl font-semibold text-[#4e342e] sm:text-5xl">
+              <p className="text-xs uppercase tracking-wider text-[#8d6e63]">Customer Feedback</p>
+              <h2 className="mt-3 text-3xl font-semibold text-[#4e342e] sm:text-4xl">
                 Bagikan rating pelayanan dan makanan Anda
               </h2>
             </div>
@@ -533,8 +530,8 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
               Beri Rating Sekarang
             </Link>
           </div>
-          <div className="rounded-[34px] border border-[#bcaaa4] bg-gradient-to-br from-white/40 via-white/20 to-transparent p-8 backdrop-blur-xl">
-            <p className="text-lg leading-8 text-[#4e342e] max-w-2xl">
+          <div className="rounded-3xl border border-[#bcaaa4] bg-gradient-to-br from-white/40 via-white/20 to-transparent p-8 backdrop-blur-xl">
+            <p className="text-base leading-relaxed text-[#4e342e] max-w-2xl">
               Bantu kami tingkatkan pelayanan dan kualitas makanan dengan rating sederhana. 
               Nama, skor pelayanan & makanan (1-5), dan komentar opsional.
             </p>
@@ -551,27 +548,56 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
 
       <FAQ />
 
-      <footer id="contact" className="bg-[#3e2723] py-16 text-[#d7ccc8]">
+      <section className="section-shell py-16 sm:py-20">
+        <div className="rounded-3xl border border-[#8d6e63]/40 bg-gradient-to-br from-[#4e342e] to-[#5d4037] p-8 sm:p-12 text-center">
+          <div className="max-w-2xl mx-auto space-y-6">
+            <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] mx-auto">
+              <svg className="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+            </div>
+            <h2 className="text-3xl font-bold text-[#efebe9]">Tertarik dengan Website Ini?</h2>
+            <p className="text-base leading-relaxed text-[#d7ccc8]/90">
+              Hubungi kami untuk membeli template website cafe management system lengkap dengan semua fitur yang ada
+            </p>
+            <a
+              href="https://wa.me/6289880982388?text=Halo,%20saya%20tertarik%20dengan%20website%20CafeFlow"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-8 py-4 text-base font-semibold text-white transition hover:bg-[#20BA5A] hover:shadow-xl active:scale-95"
+            >
+              <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+              Hubungi via WhatsApp
+            </a>
+            <p className="text-sm text-[#d7ccc8]/70">
+              📱 089880982388
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_0.6fr_0.5fr]">
+      <footer id="contact" className="bg-[#3e2723] py-12 text-[#d7ccc8]">
+        <div className="section-shell grid gap-8 md:grid-cols-2 lg:grid-cols-[1fr_auto_auto]">
           <div>
             <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#d7ccc8]/20 bg-[#d7ccc8]/12 text-sm font-semibold">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#d7ccc8]/20 bg-[#d7ccc8]/12 text-sm font-semibold">
                 {brandInitials}
               </div>
               <div>
-                <p className="font-semibold">{settings.cafeName}</p>
-                <p className="text-xs uppercase tracking-[0.28em] text-[#bcaaa4]">Cafe & Ordering System</p>
+                <p className="font-semibold text-sm">{settings.cafeName}</p>
+                <p className="text-[10px] uppercase tracking-wider text-[#bcaaa4]">Cafe & Ordering System</p>
               </div>
             </div>
-            <p className="mt-5 max-w-xl text-sm leading-8 text-[#d7ccc8]/70">
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-[#d7ccc8]/70">
               {settings.footerText}
             </p>
           </div>
 
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-[#a1887f]">Navigation</p>
-            <div className="mt-5 grid gap-3 text-sm text-[#d7ccc8]/75">
+            <p className="text-xs uppercase tracking-wider text-[#a1887f]">Navigation</p>
+            <div className="mt-4 grid gap-2 text-sm text-[#d7ccc8]/75">
               {navItems.map((item) => (
                 <a key={item.href} href={item.href} className="transition hover:text-[#efebe9]">
                   {item.label}
@@ -584,13 +610,13 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
           </div>
 
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-[#a1887f]">Contact</p>
-            <div className="mt-5 space-y-3 text-sm text-[#d7ccc8]/75">
-              <p>{settings.address}</p>
+            <p className="text-xs uppercase tracking-wider text-[#a1887f]">Contact</p>
+            <div className="mt-4 space-y-2 text-sm text-[#d7ccc8]/75">
+              <p className="line-clamp-2">{settings.address}</p>
               <p>{settings.email}</p>
               <p>{settings.phone}</p>
             </div>
-            <div className="mt-6 flex gap-3">
+            <div className="mt-5 flex gap-2">
               {socials.map((social) => (
                 <a
                   key={social.label}
@@ -599,7 +625,7 @@ export function HomePageView({ menus, recommendedMenus, ratings }: HomePageViewP
                   rel="noreferrer"
                   aria-label={social.label}
                   title={social.label}
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#d7ccc8]/18 bg-[#d7ccc8]/10 text-[#d7ccc8]/80 transition hover:bg-[#d7ccc8]/18 hover:text-[#efebe9]"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#d7ccc8]/18 bg-[#d7ccc8]/10 text-[#d7ccc8]/80 transition hover:bg-[#d7ccc8]/18 hover:text-[#efebe9]"
                 >
                   {social.icon}
                 </a>

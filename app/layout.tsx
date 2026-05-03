@@ -21,10 +21,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "CafeFlow",
-  description: "Cafe POS, mobile ordering, dan dashboard operasional dengan tampilan cafe modern.",
+  title: "CafeFlow - Sistem Manajemen Cafe Modern",
+  description: "Sistem manajemen cafe lengkap dengan fitur order online, inventory management, staff management, dan reporting. Template website cafe profesional untuk bisnis F&B.",
   manifest: "/manifest.webmanifest",
   applicationName: "CafeFlow",
+  keywords: ["cafe management", "restaurant system", "pos system", "inventory management", "cafe website", "online ordering", "sistem cafe", "manajemen restoran"],
+  authors: [{ name: "CafeFlow" }],
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",

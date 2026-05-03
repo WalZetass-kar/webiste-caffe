@@ -136,7 +136,16 @@ export function DashboardSidebar() {
       </nav>
 
       {/* Footer */}
-      <div className="border-t border-[#4d4037] p-4">
+      <div className="border-t border-[#4d4037] p-4 space-y-3 relative z-50">
+        <Link
+          href="/logout"
+          className="relative z-50 flex items-center justify-center gap-2 rounded-xl bg-[#5a4a3a] px-4 py-2.5 text-sm font-medium text-[#f5f0e8] transition-all duration-200 hover:bg-[#6a5a4a] cursor-pointer"
+        >
+          <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+          </svg>
+          Logout
+        </Link>
         <div className="flex items-center gap-3 rounded-xl bg-[#4d4037] p-3">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#5a4a3a]">
             <svg className="h-4 w-4 text-[#d4c5b9]" fill="currentColor" viewBox="0 0 24 24">
@@ -144,7 +153,7 @@ export function DashboardSidebar() {
             </svg>
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-xs font-medium text-[#f5f0e8] truncate">Powered by Coffee</p>
+            <p className="text-xs font-medium text-[#f5f0e8] truncate">{roleLabels[role]}</p>
             <p className="text-xs text-[#a89885] truncate">v1.0.0</p>
           </div>
         </div>

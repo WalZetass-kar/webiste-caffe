@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /dashboard
+Disallow: /menu
+Disallow: /pesanan
+Disallow: /cabang
+Disallow: /supply
+Disallow: /aset
+Disallow: /staff
+Disallow: /laporan
+Disallow: /identitas
+Disallow: /audit
+
+Sitemap: https://yourdomain.com/sitemap.xml
